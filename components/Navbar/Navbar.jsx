@@ -33,7 +33,7 @@ const Navbar = () => {
           }`}
         id="navigationBar"
       >
-        <div class="container">
+        <div className="container">
           <Link
             className="navbar-brand"
             href="/"
@@ -57,7 +57,7 @@ const Navbar = () => {
             aria-expanded={collapsed ? false : true}
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-default">
+            <span className="navbar-toggler-default">
               <svg
                 width="14"
                 height="14"
@@ -70,7 +70,7 @@ const Navbar = () => {
                 ></path>
               </svg>
             </span>
-            <span class="navbar-toggler-toggled">
+            <span className="navbar-toggler-toggled">
               <svg
                 width="14"
                 height="14"
@@ -88,23 +88,23 @@ const Navbar = () => {
             className={collapsed ? "collapse navbar-collapse" : "collapse navbar-collapse show"}
             id="navbarSupportedContent"
           >
-            {menuData.map((menuItem) => (
-              <ul
-                class="navbar-nav ms-xl-5"
-                key={menuItem.id}
-              >
-                {menuItem.path ? (
-                  <li className={`nav-item`}>
-                    <Link
-                      href={menuItem.path}
-                      className={`nav-link`}
-                    >
-                      {menuItem.title}
-                    </Link>
-                  </li>
-                ) : (
-                  <>
-                    <li className={`nav-item dropdown`}>
+            <ul className="navbar-nav ms-xl-5">
+              {menuData.map((menuItem) => (
+                <li
+                  className={`${menuItem.path ? " nav-item " : "nav-item dropdown"}`}
+                  key={menuItem.id}
+                >
+                  {menuItem.path ? (
+                    <>
+                      <Link
+                        href={menuItem.path}
+                        className={`nav-link`}
+                      >
+                        {menuItem.title}
+                      </Link>
+                    </>
+                  ) : (
+                    <>
                       <a
                         className="nav-link dropdown-toggle"
                         role="button"
@@ -113,9 +113,9 @@ const Navbar = () => {
                         {menuItem.title}
                         <Icon.CaretDown size={16} />
                       </a>
-                      <ul class="dropdown-menu">
-                        <li class="dropdown-menu-wrapper">
-                          <ul class="list-unstyled">
+                      <ul className="dropdown-menu">
+                        <li className="dropdown-menu-wrapper">
+                          <ul className="list-unstyled">
                             {menuItem.submenu.map((submenuItem) => (
                               <li
                                 className="dropdown-menu-item"
@@ -132,13 +132,13 @@ const Navbar = () => {
                           </ul>
                         </li>
                       </ul>
-                    </li>
-                  </>
-                )}
-              </ul>
-            ))}
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item ms-lg-6 ms-sm-0">
+                    </>
+                  )}
+                </li>
+              ))}
+            </ul>
+            <ul className="navbar-nav ms-auto">
+              <li className="nav-item ms-lg-6 ms-sm-0">
                 <a
                   className="btn btn-navigation w-100"
                   href="/"
