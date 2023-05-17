@@ -35,9 +35,9 @@
 
 @font-face {
   font-family: "Satoshi";
-  src: url("/fonts/Satoshi-Variable.woff2") format("woff2"),
-    url("/fonts/Satoshi-Variable.woff") format("woff"),
-    url("/fonts/Satoshi-Variable.ttf") format("truetype");
+  src: url("../public/fonts/Satoshi-Variable.woff2") format("woff2"),
+    url("../public/fonts/Satoshi-Variable.woff") format("woff"),
+    url("../public/fonts/Satoshi-Variable.ttf") format("truetype");
   font-weight: 300 900;
   font-display: swap;
   font-style: normal;
@@ -56,9 +56,9 @@
 
 @font-face {
   font-family: "Satoshi";
-  src: url("/fonts/Satoshi-VariableItalic.woff2") format("woff2"),
-    url("/fonts/Satoshi-VariableItalic.woff") format("woff"),
-    url("/fonts/Satoshi-VariableItalic.ttf") format("truetype");
+  src: url("../public/fonts/Satoshi-VariableItalic.woff2") format("woff2"),
+    url("../public/fonts/Satoshi-VariableItalic.woff") format("woff"),
+    url("../public/fonts/Satoshi-VariableItalic.ttf") format("truetype");
   font-weight: 300 900;
   font-display: swap;
   font-style: italic;
@@ -66,9 +66,9 @@
 
 @font-face {
   font-family: "Satoshi";
-  src: url("/fonts/Satoshi-Light.woff2") format("woff2"),
-    url("/fonts/Satoshi-Light.woff") format("woff"),
-    url("/fonts/Satoshi-Light.ttf") format("truetype");
+  src: url("../public/fonts/Satoshi-Light.woff2") format("woff2"),
+    url("../public/fonts/Satoshi-Light.woff") format("woff"),
+    url("../public/fonts/Satoshi-Light.ttf") format("truetype");
   font-weight: 300;
   font-display: swap;
   font-style: normal;
@@ -76,9 +76,9 @@
 
 @font-face {
   font-family: "Satoshi";
-  src: url("/fonts/Satoshi-LightItalic.woff2") format("woff2"),
-    url("/fonts/Satoshi-LightItalic.woff") format("woff"),
-    url("/fonts/Satoshi-LightItalic.ttf") format("truetype");
+  src: url("../public/fonts/Satoshi-LightItalic.woff2") format("woff2"),
+    url("../public/fonts/Satoshi-LightItalic.woff") format("woff"),
+    url("../public/fonts/Satoshi-LightItalic.ttf") format("truetype");
   font-weight: 300;
   font-display: swap;
   font-style: italic;
@@ -86,9 +86,9 @@
 
 @font-face {
   font-family: "Satoshi";
-  src: url("/fonts/Satoshi-Regular.woff2") format("woff2"),
-    url("/fonts/Satoshi-Regular.woff") format("woff"),
-    url("/fonts/Satoshi-Regular.ttf") format("truetype");
+  src: url("../public/fonts/Satoshi-Regular.woff2") format("woff2"),
+    url("../public/fonts/Satoshi-Regular.woff") format("woff"),
+    url("../public/fonts/Satoshi-Regular.ttf") format("truetype");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
@@ -96,9 +96,9 @@
 
 @font-face {
   font-family: "Satoshi";
-  src: url("/fonts/Satoshi-Italic.woff2") format("woff2"),
-    url("/fonts/Satoshi-Italic.woff") format("woff"),
-    url("/fonts/Satoshi-Italic.ttf") format("truetype");
+  src: url("../public/fonts/Satoshi-Italic.woff2") format("woff2"),
+    url("../public/fonts/Satoshi-Italic.woff") format("woff"),
+    url("../public/fonts/Satoshi-Italic.ttf") format("truetype");
   font-weight: 400;
   font-display: swap;
   font-style: italic;
@@ -106,9 +106,9 @@
 
 @font-face {
   font-family: "Satoshi";
-  src: url("/fonts/Satoshi-Medium.woff2") format("woff2"),
-    url("/fonts/Satoshi-Medium.woff") format("woff"),
-    url("/fonts/Satoshi-Medium.ttf") format("truetype");
+  src: url("../public/fonts/Satoshi-Medium.woff2") format("woff2"),
+    url("../public/fonts/Satoshi-Medium.woff") format("woff"),
+    url("../public/fonts/Satoshi-Medium.ttf") format("truetype");
   font-weight: 500;
   font-display: swap;
   font-style: normal;
@@ -116,9 +116,9 @@
 
 @font-face {
   font-family: "Satoshi";
-  src: url("/fonts/Satoshi-MediumItalic.woff2") format("woff2"),
-    url("/fonts/Satoshi-MediumItalic.woff") format("woff"),
-    url("/fonts/Satoshi-MediumItalic.ttf") format("truetype");
+  src: url("../public/fonts/Satoshi-MediumItalic.woff2") format("woff2"),
+    url("../public/fonts/Satoshi-MediumItalic.woff") format("woff"),
+    url("../public/fonts/Satoshi-MediumItalic.ttf") format("truetype");
   font-weight: 500;
   font-display: swap;
   font-style: italic;
@@ -126,9 +126,8 @@
 
 @font-face {
   font-family: "Satoshi";
-  src: url("/fonts/Satoshi-Bold.woff2") format("woff2"),
-    url("/fonts/Satoshi-Bold.woff") format("woff"),
-    url("/fonts/Satoshi-Bold.ttf") format("truetype");
+  src: url("../public/fonts/Satoshi-Bold.woff2") format("woff2"),
+    url("../public/fonts/Satoshi-Bold.woff") format("woff"), url("../public/fonts/Satoshi-Bold.ttf") format("truetype");
   font-weight: 700;
   font-display: swap;
   font-style: normal;
@@ -136,9 +135,9 @@
 
 @font-face {
   font-family: "Satoshi";
-  src: url("/fonts/Satoshi-BoldItalic.woff2") format("woff2"),
-    url("/fonts/Satoshi-BoldItalic.woff") format("woff"),
-    url("/fonts/Satoshi-BoldItalic.ttf") format("truetype");
+  src: url("../public/fonts/Satoshi-BoldItalic.woff2") format("woff2"),
+    url("../public/fonts/Satoshi-BoldItalic.woff") format("woff"),
+    url("../public/fonts/Satoshi-BoldItalic.ttf") format("truetype");
   font-weight: 700;
   font-display: swap;
   font-style: italic;
@@ -146,9 +145,9 @@
 
 @font-face {
   font-family: "Satoshi";
-  src: url("/fonts/Satoshi-Black.woff2") format("woff2"),
-    url("/fonts/Satoshi-Black.woff") format("woff"),
-    url("/fonts/Satoshi-Black.ttf") format("truetype");
+  src: url("../public/fonts/Satoshi-Black.woff2") format("woff2"),
+    url("../public/fonts/Satoshi-Black.woff") format("woff"),
+    url("../public/fonts/Satoshi-Black.ttf") format("truetype");
   font-weight: 900;
   font-display: swap;
   font-style: normal;
@@ -156,9 +155,9 @@
 
 @font-face {
   font-family: "Satoshi";
-  src: url("/fonts/Satoshi-BlackItalic.woff2") format("woff2"),
-    url("/fonts/Satoshi-BlackItalic.woff") format("woff"),
-    url("/fonts/Satoshi-BlackItalic.ttf") format("truetype");
+  src: url("../public/fonts/Satoshi-BlackItalic.woff2") format("woff2"),
+    url("../public/fonts/Satoshi-BlackItalic.woff") format("woff"),
+    url("../public/fonts/Satoshi-BlackItalic.ttf") format("truetype");
   font-weight: 900;
   font-display: swap;
   font-style: italic;
