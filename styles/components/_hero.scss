@@ -1,0 +1,111 @@
+/********** 
+8. Hero home Styles 
+**********/
+// Hero Section CSS
+.hero {
+  position: relative;
+  background-color: $color-bg;
+  &-shape-wrapper {
+    overflow: hidden;
+    bottom: 0%;
+  }
+  &-shape {
+    top: 0%;
+    width: 620px;
+    height: 620px;
+    right: 0%;
+    z-index: 0;
+    text-align: left;
+    overflow: hidden;
+    @include media-breakpoint-down-xxl {
+      width: 545px;
+      height: 545px;
+    }
+    @include media-breakpoint-down-xl {
+      width: 350px;
+      height: 350px;
+    }
+    @include media-breakpoint-down-lg {
+      width: 552px;
+      height: 552px;
+      right: 8%;
+    }
+    @include media-breakpoint-down-md {
+      width: 500px;
+      height: 500px;
+      right: 0%;
+    }
+    @include media-breakpoint-down-sm {
+      width: 90vw;
+      height: 90vw;
+      right: 0%;
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      width: 920px;
+      left: 50%;
+      opacity: 0.5;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &-content {
+    h1 {
+      font-weight: $bold-font-weight;
+      margin-bottom: 24px;
+      line-height: 80px;
+      @include media-breakpoint-down-xl {
+        font-size: $base-font-size * 3;
+        line-height: 60px;
+      }
+      @include media-breakpoint-down-sm {
+        font-size: $base-font-size * 2.5;
+        line-height: 48px;
+      }
+    }
+    p {
+      font-weight: $medium-font-weight;
+      font-size: $base-font-size * 1.25;
+      margin-bottom: 32px;
+      line-height: 32px;
+      color: $color-text;
+      letter-spacing: -0.01em;
+    }
+    .review-wrapper {
+      display: flex;
+      margin-top: 48px;
+      align-items: center;
+      font-weight: $medium-font-weight;
+      @include media-breakpoint-down-lg {
+        margin-top: 0px;
+      }
+      .star-block-hero {
+        display: flex;
+        width: 24px;
+        height: 24px;
+        margin-right: 16px;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-secondary;
+      }
+    }
+  }
+  &-banner {
+    position: relative;
+    @include media-breakpoint-down-lg {
+      margin-top: 40px;
+    }
+    &-image {
+      position: relative;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+  .btn {
+    @include media-breakpoint-down-lg {
+      margin-bottom: 20px !important;
+    }
+  }
+}

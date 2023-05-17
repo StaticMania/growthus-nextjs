@@ -1,0 +1,296 @@
+/********** 
+  6. Custom Styles 
+**********/
+// section-header style
+.section-header {
+  text-align: center;
+  margin-bottom: 64px;
+  @include media-breakpoint-down-md {
+    margin-bottom: 40px;
+  }
+  h2 {
+    margin-bottom: 16px;
+    color: $color-section-header;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+.page-heading {
+  h1 {
+    color: $color-section-header;
+  }
+  h6 {
+    color: $color-blue-100;
+    font-size: $base-font-size * 1.25;
+  }
+  .breadcrumb {
+    &-item {
+      font-weight: $medium-font-weight;
+      font-size: $base-font-size;
+      line-height: 170%;
+      a {
+        color: $color-gray;
+      }
+      &.active {
+        color: $color-gray;
+        font-weight: $extbold-font-weight;
+      }
+    }
+  }
+  .breadcrumb-item + .breadcrumb-item::before {
+    color: $color-dark;
+  }
+}
+//Single Page Hero
+.page-hero {
+  padding-top: 220px;
+  padding-bottom: 60px;
+  background-color: $color-bg;
+  @include media-breakpoint-down-lg {
+    padding-top: 200px;
+    padding-bottom: 60px;
+    text-align: center;
+  }
+}
+.blog-single-page-hero {
+  padding-top: 668px;
+  padding-bottom: 80px;
+  @include media-breakpoint-down-xl {
+    padding-top: 512px;
+  }
+  @include media-breakpoint-down-lg {
+    padding-top: 480px;
+  }
+  @include media-breakpoint-down-md {
+    padding-top: 512px;
+  }
+  @include media-breakpoint-down-sm {
+    padding-top: 224px;
+  }
+}
+// Privacy-Policy page style
+.privacy,
+.terms-condition {
+  .card {
+    box-shadow: none;
+    border-bottom: $base-border-width solid $color-text-light;
+    border-radius: 0;
+    @include media-breakpoint-down-lg {
+      padding: 32px 0 0 0;
+    }
+    @include media-breakpoint-down-md {
+      text-align: center;
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+    &-body {
+      padding: 0 0 72px 0;
+
+      @include media-breakpoint-down-sm {
+        padding: 0 0 32px 0;
+      }
+      .card-title {
+        margin-bottom: 32px;
+      }
+      .card-text {
+        font-size: $base-font-size * 1.125;
+        font-weight: $medium-font-weight;
+        line-height: 1.7;
+      }
+      li {
+        font-size: $base-font-size * 1.125;
+        font-weight: $medium-font-weight;
+        font-family: $font-primary;
+        margin-bottom: 32px;
+        line-height: 1.7;
+      }
+    }
+  }
+}
+
+// 404 page style
+.error {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  @include media-breakpoint-down-md {
+    height: auto;
+    padding-top: 150px;
+  }
+  &-image {
+    max-height: 500px;
+    max-width: 100%;
+  }
+  &-content {
+    h1 {
+      line-height: 1;
+      margin-bottom: 0;
+      font-size: 154px;
+    }
+    h2 {
+      line-height: 1;
+    }
+  }
+}
+// cta style
+.cta {
+  overflow: hidden;
+  background-color: #173641;
+  .shape {
+    .shape-left {
+      left: 0;
+    }
+    .shape-right {
+      right: 0;
+    }
+  }
+  .btn {
+    min-width: 120px;
+  }
+}
+// footer style
+.footer {
+  &-description {
+    margin-bottom: 80px;
+    p {
+      color: $color-text-light;
+    }
+    .footer-submit-form {
+      .from-group {
+        position: relative;
+        .input-group {
+          margin: 0 auto;
+          @include media-breakpoint-down-xl {
+            width: 100%;
+          }
+          @include media-breakpoint-down-lg {
+            width: 56%;
+          }
+          @include media-breakpoint-down-md {
+            width: 100%;
+          }
+          @include media-breakpoint-down-sm {
+            width: 100%;
+          }
+          .form-control {
+            position: relative;
+            padding: 16px 56px 16px 20px;
+            border-radius: $lg-border-radius;
+            border: none;
+            width: 70%;
+            z-index: 0;
+            height: 50px;
+            background: $color-gray-100;
+            color: $color-header;
+            border: 1px solid $color-gray-100;
+            &:focus {
+              outline: 0;
+              box-shadow: 0 0 0 4px rgba($color: $color-gray-800, $alpha: 0.7);
+            }
+          }
+          ::placeholder {
+            color: $color-header !important;
+          }
+          .submit {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 6px;
+            button {
+              height: 38px;
+              background: $color-dark;
+              font-weight: 600;
+              color: $color-white;
+              position: relative;
+              align-items: center;
+              z-index: 9;
+              border-radius: $lg-border-radius;
+              width: 40px;
+              justify-content: center;
+              border: none;
+              svg {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                margin-left: 2px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &-widget {
+    a {
+      color: $color-text-light;
+      transition: $base-transition;
+      font-size: $base-font-size * 0.875;
+      font-weight: $medium-font-weight;
+      &:hover {
+        color: $color-primary;
+      }
+    }
+    p {
+      color: $color-text-light;
+      font-size: $base-font-size * 0.875;
+      font-weight: $medium-font-weight;
+    }
+  }
+}
+blockquote {
+  margin-bottom: 32px;
+  padding: 28px 30px;
+  border: 1px none $color-dark;
+  border-radius: 20px;
+  background-color: $color-gray-100;
+  .comment {
+    font-size: 18px;
+    font-weight: 600;
+    width: 90%;
+    &-author {
+      &-thumb {
+        img {
+          width: 60px;
+          height: 60px;
+        }
+      }
+      &-desc {
+        h5 {
+          font-size: 18px;
+          margin-bottom: 0;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  h3 {
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 700;
+  }
+}
+
+.community {
+  padding: 100px;
+  @include media-breakpoint-down-lg {
+    padding: 100px 0;
+  }
+  @include media-breakpoint-down-md {
+    padding: 60px 0;
+  }
+  .map {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
+.profile {
+  background-color: $color-bg;
+}

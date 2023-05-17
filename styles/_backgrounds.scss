@@ -1,0 +1,223 @@
+/********** 
+  5. Backgrounds Styles
+**********/
+/**********
+Section Background Styles
+***********/
+$theme-colors: (
+  "primary": $color-primary,
+  "secondary": $color-red,
+  "success": $color-blue,
+  "info": $color-info,
+  "warning": $color-yellow,
+  "danger": $color-red,
+  "dark": $color-dark,
+  "white": $color-white,
+) !default;
+@mixin section-header(
+  $background,
+  $color: if($background == $color-white, $color-dark, $color-white),
+  $color-dark: if($background == $color-white, $color-red, $color-white),
+  $color-paragraph: if($background == $color-white, $color-text, $color-white),
+  $color-border: if($background == $color-white, $color-primary, $color-white),
+  $color-btn: if($background == $color-white, $color-primary, $color-white)
+) {
+  background: $background;
+  color: $color;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $color;
+  }
+  p {
+    color: $color-paragraph;
+  }
+  span {
+    color: $color-dark;
+  }
+  svg {
+    z-index: -1;
+    path {
+      // stroke: $color-dark;
+      opacity: 0.75;
+    }
+  }
+  input.form-control {
+    flex: 1;
+  }
+  .form-control {
+    background-color: $background;
+    border-color: $color-border !important;
+    color: $color-border;
+  }
+  ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $color-border;
+    opacity: 1; /* Firefox */
+  }
+
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $color-border;
+  }
+
+  ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: $color-border;
+  }
+}
+
+/**********
+Section Background Styles
+***********/
+@each $color, $value in $theme-colors {
+  .section-bg-#{$color} {
+    @include section-header($value);
+  }
+}
+
+/**********
+Card Bg Styles
+***********/
+@each $color, $value in $theme-colors {
+  .card-bg-#{$color} {
+    @include section-header($value);
+  }
+}
+
+/**********
+Badge Background  Styles
+***********/
+
+.badge-bg,
+.badge-outline {
+  font-family: $font-primary;
+  font-weight: $bold-font-weight;
+  font-size: 14px;
+  line-height: 140%;
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 15px;
+  padding: 5px 16px;
+}
+@mixin badge($color, $background: mix($color-white, $color, 75%), $border: 1px solid mix($color-black, $color, 10%)) {
+  color: $color;
+  background: $background;
+  border: $border;
+}
+@each $color, $value in $theme-colors {
+  .badge-#{$color} {
+    @include badge($value);
+  }
+}
+
+/**********
+Badge Outline
+***********/
+@mixin badge-outline($color, $border: 1px solid $color) {
+  color: $color;
+  border: 1px solid $color;
+}
+@each $color, $value in $theme-colors {
+  .badge-outline-#{$color} {
+    @include badge-outline($value);
+  }
+}
+
+/* Alerts */
+@mixin alert($color, $background: mix($color-white, $color, 70%), $border: 1px solid mix($color-black, $color, 50%)) {
+  color: mix($color-black, $color, 50%);
+  background-color: $background;
+  border-color: $border;
+}
+@each $color, $value in $theme-colors {
+  .alert-#{$color} {
+    @include alert($value);
+  }
+}
+
+/**********
+Text Colors
+***********/
+.text-primary {
+  color: $color-primary !important;
+}
+.text-secondary-light {
+  color: $color-text-light !important;
+}
+.bg-gray-dark {
+  background-color: $color-gray !important;
+}
+.bg-turquoise {
+  background-color: $color-secondary !important;
+}
+.bg-secondary-dark {
+  background-color: $color-dark !important;
+}
+.bg-gray-light {
+  background-color: $color-gray-100 !important;
+}
+.bg-light-dark {
+  background-color: $color-info-100 !important;
+}
+.bg-orange-light {
+  background-color: $color-yellow-800 !important;
+}
+.bg-primary-light {
+  background-color: #173641 !important;
+}
+
+/* style for SVG*/
+.svg-fill-primary {
+  fill: $color-primary;
+}
+
+.svg-fill-green-dark {
+  fill: #6eedb1;
+}
+.svg-fill-green-light {
+  fill: #def5ee;
+}
+
+.svg-fill-red-light {
+  fill: #ffe3df;
+}
+
+.svg-fill-red-dark {
+  fill: #ff9c86;
+}
+
+.svg-fill-yellow-light {
+  fill: #fff0d2;
+}
+
+.svg-fill-yellow-dark {
+  fill: #fedc43;
+}
+
+.svg-fill-purple-dark {
+  fill: #dfa3ff;
+}
+
+.svg-stroke-default {
+  stroke: #0a2533;
+}
+
+.svg-fill-default {
+  fill: #0a2533;
+}
+
+.svg-stroke-primary {
+  stroke: #05aa77;
+}
+
+.svg-stroke-black {
+  stroke: #000;
+}
+
+.svg-stroke-secondary-dark {
+  stroke: #0a2533;
+}

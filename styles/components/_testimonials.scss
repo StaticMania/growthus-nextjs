@@ -1,0 +1,170 @@
+/********** 
+  Testimonial Section Styles
+**********/
+@use "sass:math";
+.testimonials {
+  overflow: hidden;
+  padding: 100px 0 50px;
+  background: $color-gray-100;
+  @include media-breakpoint-down-md {
+    padding-top: 60px;
+  }
+  h2 {
+    margin-left: 18px;
+  }
+  &-slider,
+  &-sliderTwo {
+    .card {
+      position: relative;
+      box-shadow: none;
+      text-align: left;
+      padding: 16px 16px;
+      margin: 150px 20px 150px 0;
+      .profile {
+        display: flex;
+        background: $color-white;
+        position: absolute;
+        border-radius: $lg-border-radius;
+        top: -13%;
+        left: 50%;
+        transform: translate(-50%, 13%);
+        padding: 10px 12px;
+        box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: 0.05);
+        @include media-breakpoint-down-xxl {
+          top: -11%;
+          transform: translate(-50%, 11%);
+        }
+        @include media-breakpoint-down-xl {
+          top: -11%;
+          transform: translate(-50%, 11%);
+        }
+        img {
+          padding-right: 10px;
+        }
+      }
+      &-body {
+        padding: 24px;
+        .icon {
+          display: flex;
+          margin-top: 8px;
+          margin-bottom: 24px;
+          @include media-breakpoint-down-md {
+            justify-content: center;
+          }
+          img {
+            padding-right: 5px;
+          }
+        }
+        h5 {
+          font-weight: 500;
+          font-size: $base-font-size * 1.25;
+          line-height: 170%;
+          margin-bottom: 24px;
+        }
+        .content {
+          p {
+            font-size: $base-font-size * 0.875;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .slick-list {
+      overflow: visible;
+    }
+    // start slick-dots //
+    .slick-dots {
+      position: absolute;
+      width: 100%;
+      bottom: 90px;
+      text-align: left;
+      margin-left: 18px;
+      @include media-breakpoint-down-xl {
+        bottom: 80px;
+      }
+      @include media-breakpoint-down-lg {
+        bottom: 70px;
+        width: 100%;
+      }
+      @include media-breakpoint-down-md {
+        bottom: 20px;
+        width: 100%;
+      }
+      @include media-breakpoint-down-sm {
+        bottom: 20px;
+        width: 100%;
+      }
+    }
+
+    .slick-dots li {
+      display: inline-block;
+      margin: 0 8px;
+      width: unset;
+      height: unset;
+    }
+
+    .slick-dots li button {
+      background: #c1c1c1;
+      text-indent: -999999999px;
+      width: 22px;
+      height: 3px;
+      outline: 0;
+      border-radius: 3px;
+      transition: 0.5s ease;
+      padding: 0;
+    }
+
+    .slick-dots li.slick-active button {
+      background: $color-primary;
+      width: 40px;
+      opacity: 1;
+    }
+    // start slick-arrow //
+    .prev {
+      right: 0;
+    }
+    .next {
+      right: 50px;
+    }
+    .prev,
+    .next {
+      width: 36px;
+      height: 36px;
+      padding: 0;
+      top: -50px;
+      position: absolute;
+      background: $color-gray-300;
+      @include media-breakpoint-down-md {
+        top: -35px;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+      i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &-sliderTwo {
+    .card {
+      .profile {
+        img {
+          padding-right: 0;
+        }
+      }
+    }
+    .content-author {
+      img {
+        width: 60px;
+        margin-right: 12px;
+      }
+    }
+  }
+}
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}

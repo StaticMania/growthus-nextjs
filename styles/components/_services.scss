@@ -1,0 +1,146 @@
+/********** 
+  10. Services Page and Section Styles
+**********/
+.services {
+  &-item {
+    border: $base-border-width solid$color-gray-300;
+    transition: $base-transition;
+    text-align: left;
+    padding: 32px 42px;
+    border-radius: 8px;
+    img {
+      margin-bottom: 18px;
+    }
+    h3 {
+      text-transform: capitalize;
+      transition: $base-transition;
+      margin-bottom: 18px;
+    }
+    p {
+      margin-bottom: 0;
+      line-height: 28px;
+    }
+    &:hover {
+      background: $color-white;
+    }
+    @include media-breakpoint-down-md {
+      margin-bottom: 48px;
+    }
+  }
+}
+
+//End services-Section
+
+/*Style for Service page hero*/
+.service-hero {
+  background-color: $color-bg;
+  .service-title {
+    font-size: 64px;
+  }
+  .work-content {
+    padding-right: 0;
+    max-width: 100%;
+  }
+  .work-item-container {
+    padding-bottom: 96px;
+  }
+  &-content {
+    .breadcrumb {
+      margin-bottom: 10px;
+      font-size: $base-font-size * 1.25;
+      font-weight: $medium-font-weight;
+      .active {
+        color: $color-gray;
+        font-weight: $extbold-font-weight;
+      }
+      @include media-breakpoint-down-lg {
+        justify-content: center;
+      }
+    }
+    h1 {
+      line-height: 1.2;
+      margin-bottom: 32px;
+      max-width: 600px;
+    }
+    p {
+      margin-bottom: 32px !important;
+      padding-bottom: 0 !important;
+      font-size: $base-font-size;
+      font-weight: $medium-font-weight;
+      max-width: 500px;
+    }
+  }
+}
+
+.service-item {
+  .work-content {
+    @include media-breakpoint-down-lg {
+      text-align: left;
+    }
+    p {
+      margin-bottom: 32px;
+    }
+  }
+  &-list {
+    margin-bottom: 0;
+    li {
+      position: relative;
+      &:last-child {
+        span {
+          margin-bottom: 32px;
+        }
+      }
+      span {
+        display: inline-block;
+        font-size: $base-font-size * 1.125;
+        font-weight: $bold-font-weight;
+        margin-bottom: 24px;
+        margin-left: 32px;
+        position: relative;
+        &::before {
+          width: 10px;
+          height: 10px;
+          content: "";
+          border-radius: 100%;
+          background: $color-text;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: -32px;
+        }
+      }
+    }
+  }
+}
+/* Service Single Page */
+.services-desc {
+  &-hero {
+    background-color: $color-bg;
+  }
+  &-wrapper {
+    margin-bottom: 48px;
+  }
+  &-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    &-icon {
+      flex-shrink: 0;
+      margin-right: 24px;
+      width: 80px;
+      height: 80px;
+      background: $color-gray-100;
+      border-radius: $base-border-radius;
+      position: relative;
+      svg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    h4 {
+      font-size: 32px;
+    }
+  }
+}

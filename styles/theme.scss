@@ -1,0 +1,54 @@
+/*!------------------------------------------------------------------
+[MAIN STYLESHEET]
+PROJECT:	Consultant
+-------------------------------------------------------------------*/
+/* ====== index =====
+1.  Default Styles
+2.  Container and Width Styles
+3.  Spacer Styles
+4.  Button Styles
+5.  Backgrounds Styles
+6.  Custom Styles
+7.  Navbar Section Styles
+8.  Hero Section Styles
+9.  Client Section Styles
+10. Services Page and Section Styles
+11. Work Section Styles
+12. Counter Up Section Styles
+13. Testimonial Section Styles
+14. About page and Section Styles
+15. Team Section Styles
+16. Project Page and Section Styles
+17. Career Page and Section Styles
+18. Contact Page Styles
+19. Blog Page Styles
+20. Pagination Section Styles
+21. Footer Styles
+
+
+===================== */
+
+@import "fonts";
+@import "variables";
+@import "mixins";
+@import "root";
+@import "containers";
+@import "spacer";
+@import "buttons";
+@import "backgrounds";
+@import "components/custom";
+@import "components/navbar";
+@import "components/hero";
+@import "components/client";
+@import "components/services";
+@import "components/work";
+@import "components/counter-up";
+@import "components/testimonials";
+@import "components/about";
+@import "components/team";
+@import "components/project";
+@import "components/career";
+@import "components/contact";
+@import "components/blog";
+@import "components/pagination";
+@import "components/footer";

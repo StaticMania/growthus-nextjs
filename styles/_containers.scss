@@ -1,0 +1,129 @@
+/********** 
+ 2. Container and Width Styles
+**********/
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container-sm, .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container-md, .container-sm, .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container-lg, .container-md, .container-sm, .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1320px;
+  }
+}
+@for $i from 2 to 21 {
+  .w-#{$i*5} {
+    width: #{$i * 5%} !important;
+  }
+}
+
+@include media-breakpoint-up-sm {
+  @for $i from 2 to 21 {
+    .w-sm-#{$i*5} {
+      width: #{$i * 5%} !important;
+    }
+  }
+}
+@include media-breakpoint-up-md {
+  @for $i from 2 to 21 {
+    .w-md-#{$i*5} {
+      width: #{$i * 5%} !important;
+    }
+  }
+}
+@include media-breakpoint-up-lg{
+  @for $i from 2 to 21 {
+    .w-lg-#{$i*5} {
+      width: #{$i * 5%} !important;
+    }
+  }
+}
+@include media-breakpoint-up-xl{
+  @for $i from 2 to 21 {
+    .w-xl-#{$i*5} {
+      width: #{$i * 5%} !important;
+    }
+  }
+}
+
+/**********
+CSS Grid Template  Styles
+***********/
+
+.grid-template-2 {
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  row-gap: 30px;
+}
+
+.grid-template-3 {
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  row-gap: 30px;
+}
+
+.grid-template-4 {
+  grid-template-columns: repeat(4, 1fr);
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  row-gap: 30px;
+}
+
+.grid-template-5 {
+  grid-template-columns: repeat(5, 1fr);
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  row-gap: 30px;
+}
+
+.grid-template-6 {
+  grid-template-columns: repeat(6, 1fr);
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  row-gap: 30px;
+}
+
+/**********
+CSS Grid Template  Styles
+***********/
+@media (max-width: 991.98px) {
+  div[class*=grid-template] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 767.98px) {
+  div[class*=grid-template] {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}

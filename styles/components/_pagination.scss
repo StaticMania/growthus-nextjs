@@ -1,0 +1,61 @@
+/********** 
+  20. Pagination Section Styles
+**********/
+// pagination style
+@use "sass:math";
+.pagination {
+  .page-item {
+    .btn {
+      i {
+        vertical-align: middle;
+      }
+    }
+    &.active {
+      .btn-outline {
+        background-color: $color-secondary;
+        color: $color-section-header !important;
+      }
+    }
+    .page-total {
+      margin-left: 5px;
+    }
+    &:last-child {
+      margin-left: 15px;
+    }
+  }
+}
+.page-link {
+  font-family: $font-primary;
+  position: relative;
+  display: block;
+  color: $color-header;
+  background-color: $color-white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: $medium-font-weight;
+  font-size: $base-font-size * 1.25;
+  &:hover {
+    z-index: 2;
+    color: inherit;
+    background-color: inherit;
+  }
+
+  &:focus {
+    z-index: 3;
+    color: $color-primary;
+    background-color: $color-white;
+    outline: 0;
+    box-shadow: none;
+  }
+}
+
+.page-item {
+  margin-right: 8px;
+  &:last-child {
+    margin-right: 0;
+  }
+  &:not(:first-child) .page-link {
+    margin-left: 0;
+  }
+}

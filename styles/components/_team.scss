@@ -1,0 +1,36 @@
+/********** 
+  15. Team Section Styles
+**********/
+.team {
+  background-color: $color-gray-100;
+  padding: 100px 0;
+  &-join {
+    padding: 0 0 50px;
+  }
+  @include media-breakpoint-down-md {
+    padding: 60px 0;
+  }
+  .btn {
+    font-family: $font-primary;
+  }
+  &-member {
+    position: relative;
+    img {
+      width: 100%;
+      border-radius: $base-border-radius;
+    }
+    &-details {
+      padding-left: 10px;
+      h3 {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-size: 22px;
+      }
+      p {
+        font-weight: $medium-font-weight;
+        font-size: $base-font-size;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

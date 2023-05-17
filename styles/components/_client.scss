@@ -1,0 +1,28 @@
+/********** 
+  9. Client Section Styles
+**********/
+.client {
+  padding: 100px 0;
+  &.border-top {
+    border-top: 1px solid $color-border;
+  }
+  &.border-bottom {
+    border-bottom: 1px solid $color-border;
+  }
+  @include media-breakpoint-down-md {
+    padding: 60px 0;
+  }
+  &-item-wrapper {
+    margin-top: 20px;
+    @include media-breakpoint-down-lg {
+      margin-top: 0;
+      flex-wrap: wrap;
+      row-gap: 50px;
+    }
+  }
+  &-item {
+    @include media-breakpoint-down-lg {
+      flex: 1 1 50%;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+/********** 
+  21. Footer Styles
+**********/
+.footer {
+  background-color: $color-section-header;
+  &-widget {
+    h6 {
+      color: $color-gray-600;
+    }
+  }
+}

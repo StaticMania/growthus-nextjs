@@ -1,0 +1,272 @@
+/********** 
+  11. Work Section Styles
+**********/
+.work {
+  overflow: hidden;
+  position: relative;
+  padding: 100px 0;
+  background-color: $color-bg;
+  @include media-breakpoint-down-md {
+    padding: 60px 0;
+  }
+  &-item-container {
+    padding-top: 96px;
+    padding-bottom: 64px;
+    @include media-breakpoint-down-lg {
+      padding-top: 48px;
+      padding-bottom: 48px;
+    }
+    @include media-breakpoint-down-sm {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+  &-item {
+    position: relative;
+    @include media-breakpoint-down-lg {
+      margin-top: 48px;
+      margin-bottom: 48px;
+    }
+    &-shape-wrapper {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    &-shape {
+      position: absolute;
+      top: -7%;
+      width: 530px;
+      height: 575px;
+      right: 15.5%;
+      overflow: hidden;
+      border-radius: 8px;
+      @include media-breakpoint-down-xxl {
+        right: 8%;
+      }
+      @include media-breakpoint-down-xl {
+        right: 4%;
+        width: 470px;
+        height: 470px;
+      }
+      @include media-breakpoint-down-lg {
+        right: 14%;
+        width: 570px;
+        height: 590px;
+      }
+      @include media-breakpoint-down-md {
+        right: 15%;
+        width: 450px;
+        height: 470px;
+      }
+      @include media-breakpoint-down-sm {
+        right: 25%;
+        width: 350px;
+        height: 350px;
+      }
+
+      img {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        left: 50%;
+        opacity: 0.5;
+        transform: translate(-50%, -50%);
+        border-radius: 8px;
+      }
+    }
+    .right-shape {
+      left: 15.5%;
+      @include media-breakpoint-down-xxl {
+        left: 8%;
+      }
+      @include media-breakpoint-down-xl {
+        left: 5%;
+      }
+      @include media-breakpoint-down-lg {
+        left: 14%;
+      }
+      @include media-breakpoint-down-md {
+        right: unset;
+        left: 14%;
+      }
+      @include media-breakpoint-down-sm {
+        left: 25%;
+      }
+    }
+    &-wraper {
+      position: relative;
+      bottom: 0%;
+      &-banner {
+        position: relative;
+        text-align: center;
+        img {
+          max-width: 100%;
+          border-radius: 8px;
+          @include media-breakpoint-down-md {
+            width: 470px;
+          }
+          @include media-breakpoint-down-sm {
+            width: 360px;
+          }
+        }
+      }
+      &-shape {
+        top: -12%;
+      }
+    }
+    .work-shape-one,
+    .work-shape-two,
+    .work-shape-three {
+      position: absolute;
+      top: 90%;
+      right: -30px;
+      img {
+        border-radius: 8px;
+      }
+      @include media-breakpoint-down-sm {
+        right: -8px;
+      }
+    }
+    .work-shape-one {
+      width: 100%;
+      max-width: 220px;
+      padding: 24px;
+      display: flex;
+      background-color: $color-gray-100;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+      align-items: center;
+      border-radius: $sm-border-radius;
+      &-icon {
+        background: $color-secondary;
+        padding: 8px 8px 4px 8px;
+        border-radius: $sm-border-radius;
+      }
+      i {
+        font-size: 32px;
+        line-height: 1;
+        color: $color-dark;
+      }
+      &-content {
+        margin-left: 20px;
+        h5 {
+          margin-bottom: 6px;
+        }
+        span {
+          font-size: 16px;
+          font-weight: $medium-font-weight;
+        }
+      }
+    }
+    .work-shape-two {
+      top: 70%;
+      left: -5%;
+      width: 100%;
+      max-width: 250px;
+      padding: 16px;
+      background-color: $color-gray-100;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+      align-items: center;
+      border-radius: $sm-border-radius;
+      &-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        span {
+          font-weight: $medium-font-weight;
+        }
+        .badge-primary {
+          background-color: $color-secondary;
+          color: $color-white;
+          padding: 4px;
+          line-height: 1;
+          border-color: $color-secondary;
+        }
+      }
+      &-content {
+        background-color: $color-secondary;
+        padding: 8px;
+        border-radius: $sm-border-radius;
+        h5 {
+          color: $color-dark;
+          margin-bottom: 6px;
+        }
+        span {
+          color: $color-dark;
+          font-size: 14px;
+          font-weight: $medium-font-weight;
+        }
+      }
+    }
+    .work-shape-three {
+      right: -15px;
+      top: 60%;
+      width: 100%;
+      max-width: 250px;
+      padding: 16px;
+      background-color: $color-gray-100;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+      align-items: center;
+      border-radius: $sm-border-radius;
+      &-head {
+        margin-bottom: 8px;
+      }
+      &-content {
+        background-color: $color-secondary;
+        padding: 8px;
+        border-radius: $sm-border-radius;
+        &-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 0;
+          &:not(:last-child) {
+            border-bottom: 1px solid $color-border;
+          }
+          h5 {
+            color: $color-dark;
+            font-size: 18px;
+            margin-bottom: 0;
+          }
+          span {
+            color: $color-dark;
+            font-size: 14px;
+            font-weight: $medium-font-weight;
+          }
+          i {
+            color: $color-dark;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+  &-content {
+    text-align: left;
+    max-width: 500px;
+    padding-left: 48px;
+    h2 {
+      margin-bottom: 32px;
+    }
+    p {
+      margin-bottom: 32px;
+      line-height: 170%;
+    }
+    @include media-breakpoint-down-lg {
+      padding-top: 0;
+      text-align: center;
+    }
+    i {
+      font-family: "fontawesome" !important;
+    }
+  }
+  &-left-content {
+    padding-left: 0;
+    @include media-breakpoint-down-lg {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+  }
+}

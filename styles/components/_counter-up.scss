@@ -1,0 +1,54 @@
+/********** 
+  12. Counter Up Section Styles
+**********/
+@use "sass:math";
+.counter-up {
+  // ******start-counter-up******
+  .counter-wraper {
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    text-align: center;
+    @include media-breakpoint-down-md {
+      margin-bottom: 24px;
+    }
+    &-item {
+      @include media-breakpoint-down-md {
+        margin-bottom: 24px;
+      }
+      .counter-percent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 8px;
+        span.counter,
+        span.percent {
+          font-size: 50px;
+          line-height: 1.1;
+          color: $color-section-header;
+          font-weight: 700;
+
+          @include media-breakpoint-down-md {
+            font-size: 32px;
+          }
+          @include media-breakpoint-down-sm {
+            font-size: 24px;
+          }
+        }
+        span.percent {
+          margin-left: 5px;
+        }
+      }
+
+      h3 {
+        font-size: 18px;
+        color: $color-section-header;
+      }
+    }
+  }
+}

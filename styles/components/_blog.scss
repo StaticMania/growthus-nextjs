@@ -1,0 +1,267 @@
+/********** 
+  19. Blog Page Styles
+**********/
+/* Hero Blog Posts Styles */
+@use "sass:math";
+
+.blog {
+  .badge {
+    color: $color-white;
+    border: $base-border-width solid $color-primary;
+  }
+  .card {
+    align-items: center;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    &:not(:first-child) {
+      margin: 50px 0 0 0;
+    }
+    .blog-post-item-thumb {
+      width: 45%;
+      margin-right: 70px;
+      overflow: hidden;
+      border-radius: 20px;
+      @include media-breakpoint-down-xl {
+        width: 100%;
+        margin-right: 64px;
+      }
+      @include media-breakpoint-down-lg {
+        width: 100%;
+        margin: 0 0 64px 0;
+      }
+      img {
+        transform: scale(1);
+        transition: all 0.5s ease-in-out;
+        width: 100%;
+      }
+    }
+    @include media-breakpoint-down-lg {
+      padding: 0;
+    }
+    &:hover {
+      .blog-post-item-thumb {
+        img {
+          transform: scale(1.06);
+          transition: all 0.5s ease-in-out;
+        }
+      }
+    }
+  }
+  .blog-post-content {
+    width: 55%;
+    @include media-breakpoint-up-lg {
+      max-width: 600px;
+    }
+    .blog-post-meta {
+      span {
+        font-weight: bold;
+        font-size: 14px;
+        color: $color-primary;
+      }
+    }
+    .blog-post-body {
+      &-title {
+        a {
+          h3 {
+            margin-bottom: 20px;
+            transition: $base-transition;
+            &:hover {
+              color: $color-primary;
+            }
+          }
+        }
+        p {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    @include media-breakpoint-down-xl {
+      width: 100%;
+    }
+    @include media-breakpoint-down-lg {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+  }
+
+  // blog-details style
+  &-details {
+    margin-top: -640px;
+    @include media-breakpoint-down-xl {
+      margin-top: -416px;
+    }
+    @include media-breakpoint-down-lg {
+      margin-top: -448px;
+    }
+    @include media-breakpoint-down-md {
+      margin-top: -512px;
+    }
+    @include media-breakpoint-down-sm {
+      margin-top: -176px;
+    }
+
+    .card {
+      box-shadow: none;
+      border-radius: 0;
+      padding: 64px 0 0 0;
+      background: none;
+      @include media-breakpoint-down-xl {
+        padding: 16px 0 0 0;
+      }
+      @include media-breakpoint-down-lg {
+        text-align: center;
+        padding: 64px 0 0 0;
+      }
+      @include media-breakpoint-down-sm {
+        padding: 0;
+      }
+      img {
+        margin-top: 30px;
+        margin-bottom: 40px;
+        border-radius: 16px;
+      }
+      h3 {
+        margin-bottom: 48px;
+      }
+      p {
+        font-weight: $medium-font-weight;
+        margin-bottom: 48px;
+        line-height: 1.6;
+        @include media-breakpoint-up-xxl {
+          font-size: $base-font-size * 1.125;
+        }
+      }
+      h2 {
+        color: $color-dark;
+      }
+    }
+  }
+}
+// profile section style
+.profile {
+  h4 {
+    font-weight: $medium-font-weight;
+    @include media-breakpoint-down-xl {
+      text-align: center;
+    }
+  }
+  .content {
+    display: flex;
+    align-items: center;
+    @include media-breakpoint-down-xl {
+      justify-content: center;
+    }
+    h3 {
+      font-size: 24px;
+      font-weight: $medium-font-weight;
+    }
+    h4 {
+      font-size: 18px;
+    }
+  }
+}
+// related-blog style
+.related-blog {
+  h2 {
+    @include media-breakpoint-down-lg {
+      text-align: center;
+    }
+  }
+  .badge {
+    color: $color-primary;
+    border: $base-border-width solid $color-primary;
+  }
+  .card {
+    box-shadow: none;
+    border-radius: 0;
+    padding: 48px 0 0 0;
+    @include media-breakpoint-down-xl {
+      padding: 32px 0 0 0;
+    }
+    @include media-breakpoint-down-lg {
+      text-align: center;
+      padding: 16px 0 0 0;
+    }
+    .blog-post-item-thumb {
+      margin-bottom: 24px;
+      border-radius: 16px;
+      overflow: hidden;
+      @include media-breakpoint-down-lg {
+        margin-bottom: 32px;
+      }
+    }
+    .blog-post-content {
+      @include media-breakpoint-down-lg {
+        margin-bottom: 32px;
+      }
+      .blog-post-meta {
+        span {
+          font-weight: $bold-font-weight;
+          font-size: 14px;
+          color: $color-primary;
+        }
+      }
+      .blog-post-body {
+        &-title {
+          a {
+            h3 {
+              font-size: 24px;
+              line-height: 32px;
+              margin-bottom: 32px;
+              &:hover {
+                color: $color-primary;
+              }
+            }
+          }
+          p {
+            margin-bottom: 32px;
+          }
+        }
+      }
+    }
+  }
+}
+/* Hero Blog Single page Styles */
+.blog-details {
+  .badge {
+    color: $color-primary;
+    border: $base-border-width solid $color-primary;
+  }
+  .blog-featured-image {
+    border-radius: 8px;
+  }
+  &-content {
+    h2 {
+      font-size: $base-font-size * 1.875;
+      margin-bottom: 24px;
+    }
+    p {
+      line-height: 170%;
+      margin-bottom: 32px;
+    }
+    ul {
+      margin: 48px 0;
+      li {
+        padding-left: 40px;
+        margin-bottom: 32px;
+        position: relative;
+        span {
+          line-height: 170%;
+        }
+        &:before {
+          position: absolute;
+          content: "";
+          width: 16px;
+          height: 16px;
+          background: $color-dark;
+          border-radius: 100%;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}

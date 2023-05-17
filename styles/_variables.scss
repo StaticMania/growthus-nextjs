@@ -1,0 +1,74 @@
+//Import fonts from https://fonts.google.com/
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+// @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800&display=swap");
+// Font Variables
+$font-primary: "Satoshi", sans-serif !default;
+$base-font-size: 16px;
+$sm-font-size: 14px;
+
+$regular-font-weight: 400;
+$medium-font-weight: 500;
+$semibold-font-weight: 600;
+$bold-font-weight: 700;
+$extbold-font-weight: 800;
+
+$base-letter-spacing: -0.01em;
+
+//Color Variables
+$color-white: #fff;
+$color-black: #000;
+$color-gray: #173641;
+$color-gray-800: #3f4e50;
+$color-gray-600: #718284;
+$color-gray-300: #e5e5e5;
+$color-gray-100: #fafafa;
+$color-primary: #5c7656;
+$color-primary-800: #84a17d;
+$color-primary-600: #adc9a6;
+$color-primary-300: #e2ecdf;
+$color-primary-100: #f3f7f2;
+$color-dark: #153c3c;
+$color-dark-800: #416262;
+$color-dark-600: #6c8989;
+$color-dark-300: #dde4e4;
+$color-dark-100: #f2f8f8;
+$color-red: #a25353;
+$color-red-800: #cf7777;
+$color-red-600: #e9afaf;
+$color-red-300: #f2cfcf;
+$color-red-100: #faf0f0;
+$color-yellow: #a27d53;
+$color-yellow-800: #cfa677;
+$color-yellow-600: #e9ceaf;
+$color-yellow-300: #f2e2cf;
+$color-yellow-100: #faf5f0;
+$color-blue: #5d9898;
+$color-blue-800: #86c1c1;
+$color-blue-600: #bcdcdc;
+$color-blue-300: #d7eaea;
+$color-blue-100: #f2f8f8;
+$color-info: #0dcaf0;
+$color-info-800: #30d6f7;
+$color-info-600: #76e6fc;
+$color-info-300: #a1ebfa;
+$color-info-100: #b9edf7;
+
+$color-secondary: #a0e1da;
+$color-bg: #f5fdff;
+$color-header: $color-gray;
+$color-section-header: #0a2533;
+$color-navbar: #0a2533;
+$color-text: #455157;
+$color-text-light: $color-dark-100;
+$color-border: #ebf2f3;
+// Transition Variables
+$base-transition: all 0.3s ease-in-out;
+
+//border radius
+$base-border-radius: 8px;
+$lg-border-radius: 16px !default;
+$sm-border-radius: 4px;
+
+//Others Varibles
+$base-border-width: 1px;
+$base-box-shadow: 0px 20px 60px rgba(50, 61, 88, 0.09);

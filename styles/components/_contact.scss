@@ -1,0 +1,111 @@
+/********** 
+  18. Contact Page Styles
+**********/
+@use "sass:math";
+.contact {
+  &-team {
+    background-color: $color-bg;
+  }
+}
+.contact-form {
+  form {
+    .form-label {
+      font-weight: $medium-font-weight;
+      margin-bottom: 8px;
+      margin-right: 16px;
+      color: $color-header;
+      font-size: 20px;
+      font-family: $font-primary;
+    }
+    .form-control,
+    .form-select {
+      border-radius: $base-border-radius;
+      padding: 16px 20px;
+      line-height: 1.4;
+      color: $color-text;
+      &:focus {
+        color: $color-header;
+        background-color: $color-white;
+        border-color: $color-primary;
+        outline: 0;
+        box-shadow: none;
+      }
+    }
+  }
+  label.file-input {
+    font-family: $font-primary;
+    background-color: transparent;
+    color: $color-text;
+    padding: 16px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid $color-dark;
+    margin-bottom: 24px;
+    svg {
+      margin-right: 8px;
+    }
+  }
+
+  #file-chosen {
+    margin-left: 5px;
+    font-family: $font-primary;
+  }
+}
+/* Style for contact Details section*/
+.contact-details {
+  .work-item-container {
+    padding-bottom: 64px;
+    @include media-breakpoint-down-md {
+      padding-bottom: 0;
+    }
+  }
+  .work-item {
+    margin-top: 48px;
+    @include media-breakpoint-down-md {
+      margin-bottom: 0;
+    }
+  }
+  &-item {
+    display: flex;
+    margin-bottom: 24px;
+    &-icon {
+      flex-shrink: 0;
+      margin-right: 16px;
+    }
+    &-body {
+      flex-grow: 1;
+      h5 {
+        @include media-breakpoint-down-md {
+          font-size: 20px;
+        }
+      }
+      p {
+        padding-bottom: 0 !important;
+        font-weight: $medium-font-weight;
+        @include media-breakpoint-down-md {
+          margin-bottom: 16px !important;
+        }
+      }
+    }
+  }
+}
+
+::-webkit-input-placeholder {
+  /* Edge */
+  font-size: $base-font-size;
+  line-height: 160%;
+  color: $color-text;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-size: $base-font-size;
+  line-height: 160%;
+  color: $color-text;
+}
+
+::placeholder {
+  font-size: $base-font-size;
+  line-height: 160%;
+  color: $color-text;
+}

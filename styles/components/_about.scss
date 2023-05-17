@@ -1,0 +1,133 @@
+/********** 
+  14. About page and Section Styles
+**********/
+//About Page Styles  for hero section
+.about-hero {
+  background: $color-white;
+  padding-bottom: 70px;
+  .hero-content {
+    h1 {
+      color: $color-dark;
+    }
+  }
+  .hero-thumbnail {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    column-gap: 20px;
+    &-item {
+      flex-basis: 25%;
+      min-width: 25%;
+      max-width: 25%;
+      img {
+        width: 100%;
+        border-radius: $base-border-radius;
+      }
+      &:nth-child(2) {
+        transform: translateY(25%);
+      }
+      &:nth-child(3) {
+        transform: translateY(25%);
+      }
+    }
+  }
+}
+
+/*About page style for About details section*/
+.about-details {
+  p {
+    font-size: $base-font-size * 1.25;
+    line-height: 170%;
+    font-weight: $medium-font-weight;
+  }
+}
+
+/*About page style for About Story section*/
+.about-story {
+  .work-item {
+    a {
+      svg {
+        margin-right: 16px;
+      }
+      &:hover,
+      &:focus {
+        svg {
+          path[class^="svg-stroke"] {
+            stroke: $color-white;
+          }
+        }
+      }
+      &:focus {
+        svg {
+          path[class^="svg-stroke"] {
+            stroke: $color-header;
+          }
+        }
+      }
+    }
+  }
+  &-modal {
+    .modal-dialog {
+      @include media-breakpoint-up-md {
+        max-width: 700px;
+      }
+    }
+    .modal-content {
+      border-radius: 0;
+    }
+    iframe {
+      width: 100%;
+      height: 350px;
+    }
+  }
+}
+
+/* About Contact Section Styles */
+.about-contact {
+  &-wrapper {
+    position: relative;
+    min-height: 800px;
+    width: 100%;
+    background: url(../images/about/map-image.png) no-repeat center;
+    background-size: 100%;
+    @include media-breakpoint-down-md {
+      min-height: 700px;
+    }
+  }
+  .card {
+    position: absolute;
+    flex-direction: row;
+    max-width: 375px;
+    padding: 24px 20px;
+    border-radius: 0;
+    box-shadow: 0px 44px 44px -15px rgba(0, 0, 0, 0.1);
+    p {
+      font-size: $base-font-size * 1.15;
+      font-weight: $bold-font-weight;
+      margin-bottom: 0;
+    }
+    &:nth-child(1) {
+      top: 100px;
+      left: 100px;
+      @include media-breakpoint-down-sm {
+        left: 0;
+      }
+    }
+    &:nth-child(2) {
+      bottom: 300px;
+      right: 0;
+    }
+  }
+  &-info {
+    margin-bottom: 56px;
+    span {
+      color: $color-primary;
+    }
+    p {
+      color: $color-primary;
+      font-size: $base-font-size * 1.15;
+      font-weight: $bold-font-weight;
+      margin-bottom: 0;
+    }
+  }
+}

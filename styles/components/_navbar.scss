@@ -1,0 +1,265 @@
+/********** 
+  7. Navbar Styles 
+**********/
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap; // allow us to do the line break for collapsing content
+  align-items: center;
+  justify-content: space-between; // space out brand from logo
+  padding: 0 16px;
+  transition: all 0.3s cubic-bezier(0.36, 0.03, 0, 0.91);
+  background: transparent;
+  // Navbar button position fixing
+  .container-fluid {
+    max-width: 1500px;
+  }
+  @include media-breakpoint-down-lg {
+    margin: 16px;
+    width: calc(100% - 32px) !important;
+    border-radius: 16px;
+    background: $color-bg;
+  }
+  @include media-breakpoint-down-sm {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+
+// Navbar brand
+//
+// Used for brand, project, or site names.
+
+.navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-right: 16px;
+  font-size: $base-font-size * 1.25;
+  @include media-breakpoint-down-sm {
+    flex: 1;
+  }
+}
+// Navbar nav
+// Custom navbar navigation (doesn't require `.nav`, but does make use of `.nav-link`).
+
+.navbar-nav {
+  display: flex;
+  flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  .nav-item {
+    padding-block: 20px;
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+    @include media-breakpoint-down-lg {
+      padding-block: 0px;
+    }
+  }
+  .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+    font-weight: $bold-font-weight;
+    color: $color-navbar;
+    border: 1px solid transparent;
+    border-radius: $sm-border-radius;
+    font-size: 15px;
+    &.active {
+      color: $color-navbar;
+      border-color: $color-navbar;
+    }
+    &:hover {
+      border-color: $color-navbar;
+    }
+  }
+  .dropdown {
+    .dropdown-menu {
+      box-sizing: content-box;
+      background: $color-white;
+      min-width: 250px;
+      transition: $base-transition;
+      border: 1px solid $color-gray-300;
+      border-radius: $base-border-radius;
+      right: 0;
+      padding: 0;
+      box-shadow: 0px 11px 24px rgba(0, 0, 0, 0.08);
+      &-item {
+        margin: 0;
+        overflow: hidden;
+        &:not(:last-child) {
+          margin-bottom: 5px;
+        }
+        &:first-child {
+          a {
+            border-top-left-radius: $sm-border-radius;
+            border-top-right-radius: $sm-border-radius;
+          }
+        }
+        &:last-child {
+          a {
+            border-bottom-left-radius: $sm-border-radius;
+            border-bottom-right-radius: $sm-border-radius;
+          }
+        }
+        a {
+          display: block;
+          margin-bottom: 0;
+          text-align: left;
+          padding: 12px 16px;
+          transition: $base-transition;
+          font-weight: $bold-font-weight;
+          color: $color-navbar;
+          &:hover {
+            background: $color-gray-100;
+          }
+        }
+      }
+    }
+    &-toggle {
+      &:after {
+        content: "\f107";
+        font-family: FontAwesome;
+        font-size: 16px;
+        line-height: 1;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        border-top: none;
+        padding: 0;
+        margin-left: 0 !important;
+        margin-left: 4px;
+        transform: rotate(0deg);
+        transition: $base-transition;
+      }
+    }
+  }
+  /* Dropdown Menu for large screen */
+  @include media-breakpoint-up-lg {
+    .dropdown {
+      .dropdown-menu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        transform: scaleY(0);
+        top: 100%;
+        transform-origin: 0 0 0;
+      }
+      &:hover {
+        .dropdown-menu {
+          opacity: 1;
+          visibility: visible;
+          transform: scaleY(1);
+          transform-origin: 0 0 0;
+        }
+        .dropdown-toggle {
+          &:after {
+            transform: rotate(180deg);
+            transition: $base-transition;
+          }
+        }
+      }
+    }
+  }
+  /* Dropdown Menu for Small screen */
+  @include media-breakpoint-down-lg {
+    margin-top: 24px !important;
+    .nav-link {
+      padding: 10px 12px;
+    }
+    .dropdown {
+      text-align: center;
+      .dropdown-menu {
+        display: none;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transform: scaleY(0);
+        top: 100%;
+        transform-origin: 0 0 0;
+        left: 0;
+        transition: $base-transition;
+        &-item {
+          a {
+            text-align: center;
+            font-size: 15px;
+          }
+        }
+        &.show {
+          display: block;
+          opacity: 1;
+          visibility: visible;
+          transform: scaleY(1);
+          transform-origin: 0 0 0;
+          height: auto;
+          text-align: center;
+          background: $color-gray-100;
+          width: auto;
+          border-radius: $sm-border-radius;
+          @include media-breakpoint-down-lg {
+            min-height: 300px;
+            max-height: 300px;
+            overflow: scroll;
+          }
+        }
+      }
+      &-toggle {
+        &:after {
+          transform: rotate(00deg);
+          transition: $base-transition;
+        }
+        &.show {
+          &:after {
+            transform: rotate(180deg);
+            transition: $base-transition;
+          }
+        }
+      }
+    }
+  }
+}
+//End Of Navabr
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+// Start of Sticky Navbar
+.sticky-nav {
+  padding: 0 32px !important;
+  background: $color-white;
+  box-shadow: $base-box-shadow;
+  @include media-breakpoint-down-lg {
+    padding: 16px !important;
+  }
+}
+//Customize style for mobile
+
+// Button for toggling the navbar when in its collapsed state
+.navbar-toggler {
+  background-color: $color-primary; // remove default button style
+  border: $base-border-width solid $color-primary; // remove default button style
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-default {
+  display: none;
+}
+.navbar-toggler .navbar-toggler-default {
+  display: -ms-flexbox;
+  display: flex;
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-toggled {
+  display: -ms-flexbox;
+  display: flex;
+}
+.navbar-toggler .navbar-toggler-toggled {
+  display: none;
+}

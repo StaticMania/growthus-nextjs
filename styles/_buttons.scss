@@ -1,0 +1,143 @@
+/********** 
+  4. Button Styles
+**********/
+
+.btn {
+  font-size: $sm-font-size;
+  font-weight: $bold-font-weight;
+  letter-spacing: $base-letter-spacing;
+  padding: 12px 24px;
+  line-height: 24px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: $sm-border-radius;
+  transition: $base-transition;
+  color: $color-gray;
+  i {
+    font-weight: $bold-font-weight;
+    &:before {
+      font-weight: $bold-font-weight;
+    }
+  }
+  .btn-check:focus + &,
+  &:focus {
+    color: $color-gray;
+    outline: 0;
+    box-shadow: none;
+  }
+
+  .btn-check:checked + &,
+  .btn-check:active + &,
+  &:active,
+  &.active {
+    color: $color-gray;
+    box-shadow: none;
+
+    &:focus {
+      color: $color-gray;
+      box-shadow: none;
+    }
+  }
+  &:hover {
+    color: $color-dark;
+  }
+  @include media-breakpoint-down-sm {
+    display: block;
+    width: 100%;
+  }
+  &-primary {
+    color: $color-white;
+    border: $base-border-width solid $color-gray;
+    background-color: $color-gray;
+    &:hover {
+      color: $color-white;
+      background-color: $color-gray-800;
+      border: $base-border-width solid $color-gray-800;
+    }
+    .btn-check:focus + &,
+    &:focus,
+    &:active,
+    &:active:focus,
+    &:hover:focus {
+      color: $color-white !important;
+      background: $color-dark !important;
+      border: $base-border-width solid $color-dark;
+    }
+  }
+  &-secondary {
+    background: $color-secondary;
+    color: $color-dark;
+    border: $base-border-width solid $color-secondary;
+    position: relative;
+    span {
+      i {
+        vertical-align: middle;
+        font-weight: $bold-font-weight;
+      }
+    }
+    &:hover {
+      background: rgba($color: $color-secondary, $alpha: 0.8);
+      color: $color-dark;
+      border: $base-border-width solid $color-secondary;
+      i {
+        color: $color-dark;
+      }
+    }
+    .btn-check:focus + &,
+    &:focus,
+    &:active,
+    &:active:focus,
+    &:hover:focus {
+      background: rgba($color: $color-secondary, $alpha: 0.8);
+      color: $color-dark;
+      border: $base-border-width solid $color-secondary;
+    }
+  }
+  &-navigation {
+    padding: 8px 20px;
+    background-color: $color-secondary;
+    letter-spacing: -0.01em;
+    color: $color-dark;
+    &:hover {
+      background-color: rgba($color: $color-secondary, $alpha: 0.85);
+      color: $color-dark;
+    }
+  }
+  &-outline {
+    background-color: $color-white;
+    color: $color-gray;
+    border: $base-border-width solid $color-gray-300;
+    &:hover,
+    &:active,
+    &:focus,
+    &:active:focus,
+    &:hover:focus {
+      color: $color-gray;
+      border-color: $color-gray-300;
+      background-color: $color-gray-100;
+    }
+  }
+}
+
+/* Custom buttom Sizes and Styles */
+
+.btn-sm,
+.btn-group-sm > .btn {
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-size: $sm-font-size;
+}
+
+.btn-lg,
+.btn-group-lg > .btn {
+  padding: 16px 32px;
+  border-radius: 4px;
+  font-size: $sm-font-size;
+}
+
+.btn-xl {
+  padding: 18px 42px;
+  border-radius: 4px;
+  font-size: $sm-font-size;
+}

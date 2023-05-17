@@ -1,0 +1,227 @@
+/********** 
+ 1. Default  Styles 
+**********/
+@use "sass:math";
+
+/*Font */
+body {
+  font-family: $font-primary;
+  font-size: $base-font-size;
+  font-weight: $regular-font-weight;
+  line-height: 1.4;
+  color: $color-text;
+  background-color: $color-white;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-family: $font-primary;
+  font-weight: $bold-font-weight;
+  line-height: 1.1;
+  color: $color-header;
+  letter-spacing: -0.04em;
+}
+
+h1,
+.h1 {
+  font-size: calc($base-font-size * 1.475 + 2.7vw);
+  font-weight: $extbold-font-weight;
+  @include media-breakpoint-up-hd {
+    font-size: 72px;
+  }
+}
+
+h2,
+.h2 {
+  font-size: calc($base-font-size * 1.45 + 2.1vw);
+  @include media-breakpoint-up-hd {
+    font-size: 56px;
+  }
+}
+
+h3,
+.h3 {
+  font-size: calc($base-font-size * 1.325 + 0.9vw);
+  @include media-breakpoint-up-hd {
+    font-size: 48px;
+  }
+}
+
+h4,
+.h4 {
+  font-size: 40px;
+}
+
+h5,
+.h5 {
+  font-size: 32px;
+}
+
+h6,
+.h6 {
+  font-size: 18px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: $color-text;
+  font-size: $base-font-size;
+  font-family: $font-primary;
+  font-weight: $medium-font-weight;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+}
+a {
+  color: $color-header;
+  text-decoration: none;
+  display: inline-block;
+  transition: $base-transition;
+  &:hover {
+    color: $color-primary;
+  }
+}
+/********** 
+  11. Breadcrumb
+**********/
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0;
+  margin-bottom: 16px;
+  list-style: none;
+}
+@media (max-width: 991.98px) {
+  .breadcrumb {
+    justify-content: center;
+  }
+}
+
+.breadcrumb-item + .breadcrumb-item {
+  padding-left: 8px;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  float: left;
+  padding-right: 8px;
+  color: $color-dark;
+  content: var(--bs-breadcrumb-divider, "/") /* rtl: var(--bs-breadcrumb-divider, "/") */;
+}
+.breadcrumb-item.active {
+  color: $color-gray;
+  font-weight: $extbold-font-weight;
+}
+/********** 
+  10. Badges
+**********/
+.badge {
+  display: inline-block;
+  padding: 6px 8px;
+  font-size: 14px;
+  font-weight: $bold-font-weight;
+  line-height: 1;
+  font-family: $font-primary;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+}
+.badge:empty {
+  display: none;
+}
+.badge-default {
+  background-color: transparent !important;
+  font-size: 14px;
+  line-height: 140%;
+  color: #05aa77;
+  border: 1px solid #05aa77;
+  border-radius: 15px;
+  padding: 8px 16px;
+}
+.badge-lg {
+  padding: 8px 16px;
+}
+
+.btn .badge {
+  position: relative;
+  top: -1px;
+}
+
+/* Card */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: $color-white;
+  background-clip: border-box;
+  border: none;
+  border-radius: $base-border-radius;
+}
+/* caret */
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0;
+  vertical-align: 0;
+  content: "";
+  border-top: none;
+  border-right: none;
+  border-bottom: 0;
+  border-left: none;
+}
+
+// Z-Index
+.zindex-dropdown {
+  z-index: 1000 !important;
+}
+
+.zindex-sticky {
+  z-index: 1020 !important;
+}
+
+.zindex-fixed {
+  z-index: 1030 !important;
+}
+
+.zindex-offcanvas {
+  z-index: 1040 !important;
+}
+
+.zindex-modal-backdrop {
+  z-index: 1050 !important;
+}
+
+.zindex-modal {
+  z-index: 1060 !important;
+}
+
+.zindex-popover {
+  z-index: 1070 !important;
+}
+
+.zindex-tooltip {
+  z-index: 1080 !important;
+}
+
+.zindex-n1 {
+  z-index: -1 !important;
+}
+
+.zindex-1 {
+  z-index: 1 !important;
+}
