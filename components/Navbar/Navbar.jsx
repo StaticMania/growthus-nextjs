@@ -3,14 +3,24 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="">
+    <div className="navbar">
       <div className="">
-        <Link href="/">Grouwthus</Link>
-        <div className="">
-          <Link href="/about">About</Link>
-          <Link href="/services">Services</Link>
-          <Link href="/job">Job</Link>
-          <Link href="/blog">Blog</Link>
+        <Link href="/" className="navbar-brand">
+          Grouwthus
+        </Link>
+        <div className="navbar-nav">
+          <Link href="/about" className="nav-link">
+            About
+          </Link>
+          <Link href="/services" className="nav-link">
+            Services
+          </Link>
+          <Link href="/job" className="nav-link">
+            Job
+          </Link>
+          <Link href="/blog" className="nav-link">
+            Blog
+          </Link>
         </div>
       </div>
     </div>
