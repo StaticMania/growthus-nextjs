@@ -4,17 +4,12 @@ import React from "react";
 import {useEffect, useState} from "react";
 import menuData from "./menuData";
 import Image from "next/image";
+import * as Icon from "@phosphor-icons/react";
 const Navbar = () => {
-  // Navbar toggle
-  const [navbarOpen, setNavbarOpen] = useState(false);
-  const navbarToggleHandler = () => {
-    setNavbarOpen(!navbarOpen);
-  };
-
   // Sticky Navbar
   const [sticky, setSticky] = useState(false);
   const handleStickyNavbar = () => {
-    if (window.scrollY >= 50) {
+    if (window.scrollY >= 20) {
       setSticky(true);
     } else {
       setSticky(false);
@@ -33,8 +28,8 @@ const Navbar = () => {
         className={`
           ${
             sticky
-              ? "navbar navbar-expand-lg position-fixed w-100 zindex-dropdown"
-              : "navbar navbar-expand-lg position-fixed w-100 zindex-dropdown sticky-nav"
+              ? "navbar navbar-expand-lg position-fixed w-100 zindex-dropdown sticky-nav"
+              : "navbar navbar-expand-lg position-fixed w-100 zindex-dropdown "
           }`}
         id="navigationBar"
       >
@@ -93,7 +88,7 @@ const Navbar = () => {
             className={collapsed ? "collapse navbar-collapse" : "collapse navbar-collapse show"}
             id="navbarSupportedContent"
           >
-            {menuData.map((menuItem, index) => (
+            {menuData.map((menuItem) => (
               <ul
                 class="navbar-nav ms-xl-5"
                 key={menuItem.id}
@@ -111,12 +106,12 @@ const Navbar = () => {
                   <>
                     <li className={`nav-item dropdown`}>
                       <a
-                        onClick={() => handleSubmenu(index)}
                         className="nav-link dropdown-toggle"
                         role="button"
                         data-bs-toggle="dropdown"
                       >
                         {menuItem.title}
+                        <Icon.CaretDown size={16} />
                       </a>
                       <ul class="dropdown-menu">
                         <li class="dropdown-menu-wrapper">
@@ -147,8 +142,6 @@ const Navbar = () => {
                 <a
                   className="btn btn-navigation w-100"
                   href="/"
-                  tabindex="-1"
-                  aria-disabled="true"
                 >
                   Let&apos;s Talk
                 </a>

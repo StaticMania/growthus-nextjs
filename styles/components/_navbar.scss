@@ -9,7 +9,7 @@
   justify-content: space-between; // space out brand from logo
   padding: 0 16px;
   transition: all 0.3s cubic-bezier(0.36, 0.03, 0, 0.91);
-  background: red;
+  background: transparent;
   // Navbar button position fixing
   .container-fluid {
     max-width: 1500px;
@@ -120,19 +120,10 @@
     }
     &-toggle {
       &:after {
-        content: "\f107";
-        font-family: FontAwesome;
-        font-size: 16px;
-        line-height: 1;
-        font-style: normal;
-        font-weight: normal;
-        text-decoration: inherit;
-        border-top: none;
-        padding: 0;
-        margin-left: 0 !important;
-        margin-left: 4px;
-        transform: rotate(0deg);
-        transition: $base-transition;
+        display: none;
+      }
+      svg {
+        margin-left: 5px;
       }
     }
   }
@@ -147,6 +138,12 @@
         top: 100%;
         transform-origin: 0 0 0;
       }
+      .dropdown-toggle {
+        svg {
+          transform: rotate(0deg);
+          transition: $base-transition;
+        }
+      }
       &:hover {
         .dropdown-menu {
           opacity: 1;
@@ -155,7 +152,7 @@
           transform-origin: 0 0 0;
         }
         .dropdown-toggle {
-          &:after {
+          svg {
             transform: rotate(180deg);
             transition: $base-transition;
           }
@@ -207,12 +204,12 @@
         }
       }
       &-toggle {
-        &:after {
-          transform: rotate(00deg);
+        svg {
+          transform: rotate(0deg);
           transition: $base-transition;
         }
         &.show {
-          &:after {
+          svg {
             transform: rotate(180deg);
             transition: $base-transition;
           }
