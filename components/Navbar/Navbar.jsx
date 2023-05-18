@@ -21,7 +21,8 @@ const Navbar = () => {
 
   // submenu handler
   const [collapsed, setCollapsed] = useState(true);
-
+  // Menu acive
+  const [active, setActive] = useState(null);
   return (
     <>
       <nav
@@ -98,7 +99,8 @@ const Navbar = () => {
                     <>
                       <Link
                         href={menuItem.path}
-                        className={`nav-link`}
+                        onClick={() => setActive(menuItem)}
+                        className={`nav-link ${active === menuItem ? "active" : ""}`}
                       >
                         {menuItem.title}
                       </Link>

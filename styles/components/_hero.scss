@@ -18,26 +18,26 @@
     text-align: left;
     overflow: hidden;
     @include media-breakpoint-down-xxl {
-      width: 545px;
-      height: 545px;
+      width: 530px;
+      height: 530px;
     }
     @include media-breakpoint-down-xl {
       width: 350px;
       height: 350px;
     }
     @include media-breakpoint-down-lg {
-      width: 552px;
-      height: 552px;
+      width: 542px;
+      height: 542px;
       right: 8%;
     }
     @include media-breakpoint-down-md {
-      width: 500px;
-      height: 500px;
+      width: 490px;
+      height: 490px;
       right: 0%;
     }
     @include media-breakpoint-down-sm {
-      width: 90vw;
-      height: 90vw;
+      width: 85vw;
+      height: 85vw;
       right: 0%;
     }
 
@@ -79,6 +79,7 @@
       font-weight: $medium-font-weight;
       @include media-breakpoint-down-lg {
         margin-top: 0px;
+        justify-content: center;
       }
       .star-block-hero {
         display: flex;
