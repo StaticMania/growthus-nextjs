@@ -3,8 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import * as Icon from "@phosphor-icons/react";
-const Hero = (hero) => {
-  console.log(hero);
+const HeroItems = (hero) => {
   const {title, description, rating, image, imageShape} = hero;
   const imageShapeStyle = {
     position: "absolute",
@@ -13,6 +12,7 @@ const Hero = (hero) => {
     left: "50%",
     opacity: "0.5",
     transform: "translate(-50%, -50%)",
+    height: "auto",
   };
   const imageStyle = {
     maxWidth: "100%",
@@ -95,4 +95,4 @@ const Hero = (hero) => {
   );
 };
 
-export default Hero;
+export default HeroItems;

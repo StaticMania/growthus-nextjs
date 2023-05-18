@@ -1,9 +1,9 @@
 import React from "react";
-import Hero from "./Hero";
+import HeroItems from "./Hero";
 
-function Index() {
+const Hero = () => {
   return (
-    <Hero
+    <HeroItems
       title="We Build Relationships that Drive Growth"
       description="At our agency, we believe in building strong relationships with our clients. Understanding your business goals, we can help you achieve success."
       imageShape="/images/hero/hero-shap.svg"
@@ -11,6 +11,6 @@ function Index() {
       rating="4.8"
     />
   );
-}
+};
 
-export default Index;
+export default Hero;
