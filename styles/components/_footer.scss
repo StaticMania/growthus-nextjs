@@ -3,9 +3,95 @@
 **********/
 .footer {
   background-color: $color-section-header;
+  &-description {
+    margin-bottom: 80px;
+    p {
+      color: $color-text-light;
+    }
+    .footer-submit-form {
+      .from-group {
+        position: relative;
+        .input-group {
+          margin: 0 auto;
+          @include media-breakpoint-down-xl {
+            width: 100%;
+          }
+          @include media-breakpoint-down-lg {
+            width: 56%;
+          }
+          @include media-breakpoint-down-md {
+            width: 100%;
+          }
+          @include media-breakpoint-down-sm {
+            width: 100%;
+          }
+          .form-control {
+            position: relative;
+            padding: 16px 56px 16px 20px;
+            border-radius: $lg-border-radius !important;
+            border: none;
+            width: 70%;
+            z-index: 0;
+            height: 50px;
+            background: $color-gray-100;
+            color: $color-header;
+            border: 1px solid $color-gray-100;
+            &:focus {
+              outline: 0;
+              box-shadow: 0 0 0 4px rgba($color: $color-gray-800, $alpha: 0.7);
+            }
+          }
+          ::placeholder {
+            color: $color-header !important;
+          }
+          .submit {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 6px;
+            button {
+              height: 38px;
+              background: $color-dark;
+              font-weight: 600;
+              color: $color-white;
+              position: relative;
+              align-items: center;
+              z-index: 9;
+              border-radius: $lg-border-radius;
+              width: 40px;
+              justify-content: center;
+              border: none;
+              svg {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                margin-left: 2px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   &-widget {
     h6 {
       color: $color-gray-600;
+    }
+    a {
+      color: $color-text-light;
+      transition: $base-transition;
+      font-size: $base-font-size * 0.875;
+      font-weight: $medium-font-weight;
+      &:hover {
+        color: $color-primary;
+      }
+    }
+    p {
+      color: $color-text-light;
+      font-size: $base-font-size * 0.875;
+      font-weight: $medium-font-weight;
     }
   }
 }

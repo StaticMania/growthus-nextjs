@@ -5,6 +5,8 @@ import BusinessSolution from "@/components/BusinessSolution";
 import WorkProcess from "@/components/WorkProcess";
 import Community from "@/components/Community";
 import Counter from "@/components/Counter";
+import Testimonials from "@/components/Testimonials";
+import CallToAction from "@/components/CallToAction";
 export default function Home() {
   return (
     <>
@@ -14,6 +16,15 @@ export default function Home() {
       <WorkProcess />
       <Community />
       <Counter />
+      <Testimonials />
+      <CallToAction
+        title={
+          <>
+            <span>Sounds Good? </span> <br /> <span>Let’s Grow your Business.</span>
+          </>
+        }
+        link="/"
+      />
     </>
   );
 }

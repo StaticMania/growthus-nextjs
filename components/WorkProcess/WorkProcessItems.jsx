@@ -31,7 +31,7 @@ const WorkProcessItems = ({data}) => {
             <h2>{title}</h2>
             <p>{paragraph}</p>
             <Link
-              href="project.html"
+              href="/"
               className="btn btn-secondary"
             >
               <span className="position-relative">

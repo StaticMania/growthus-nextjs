@@ -40,7 +40,7 @@ const Navbar = () => {
             href="/"
           >
             <Image
-              src="/images/logo.svg"
+              src={menuData.logo}
               alt="logo"
               width={140}
               height={30}
@@ -90,7 +90,7 @@ const Navbar = () => {
             id="navbarSupportedContent"
           >
             <ul className="navbar-nav ms-xl-5">
-              {menuData.map((menuItem) => (
+              {menuData.menuContent.map((menuItem) => (
                 <li
                   className={`${menuItem.path ? " nav-item " : "nav-item dropdown"}`}
                   key={menuItem.id}
@@ -141,12 +141,12 @@ const Navbar = () => {
             </ul>
             <ul className="navbar-nav ms-auto">
               <li className="nav-item ms-lg-6 ms-sm-0">
-                <a
+                <Link
                   className="btn btn-navigation w-100"
-                  href="/"
+                  href={menuData.link}
                 >
                   Let&apos;s Talk
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

@@ -12,8 +12,7 @@
   h2 {
     margin-left: 18px;
   }
-  &-slider,
-  &-sliderTwo {
+  &-slider {
     .card {
       position: relative;
       box-shadow: none;
@@ -22,6 +21,9 @@
       margin: 150px 20px 150px 0;
       .profile {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5px;
         background: $color-white;
         position: absolute;
         border-radius: $lg-border-radius;
@@ -37,9 +39,6 @@
         @include media-breakpoint-down-xl {
           top: -11%;
           transform: translate(-50%, 11%);
-        }
-        img {
-          padding-right: 10px;
         }
       }
       &-body {
@@ -120,25 +119,32 @@
       opacity: 1;
     }
     // start slick-arrow //
-    .prev {
+    .slick-next {
       right: 0;
     }
-    .next {
+    .slick-prev {
       right: 50px;
     }
-    .prev,
-    .next {
+    .slick-prev,
+    .slick-next {
       width: 36px;
       height: 36px;
       padding: 0;
       top: -50px;
       position: absolute;
       background: $color-gray-300;
+      left: auto;
+      color: $color-primary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       @include media-breakpoint-down-md {
         top: -35px;
       }
       &:hover {
         cursor: pointer;
+        background: $color-gray-300;
+        color: $color-primary;
       }
       i {
         position: absolute;
@@ -146,21 +152,8 @@
         left: 50%;
         transform: translate(-50%, -50%);
       }
-    }
-  }
-
-  &-sliderTwo {
-    .card {
-      .profile {
-        img {
-          padding-right: 0;
-        }
-      }
-    }
-    .content-author {
-      img {
-        width: 60px;
-        margin-right: 12px;
+      &:before {
+        display: none;
       }
     }
   }
