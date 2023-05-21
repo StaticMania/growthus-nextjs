@@ -4,8 +4,6 @@ import Image from "next/image";
 
 function TestimonialItems({data}) {
   const {author, designation, paragraph, rating, ratingImage, authorImage, emoji} = data;
-  // const integerValue = 5;
-  // const numberArray = [...Array(integerValue).keys()].map((number) => number + 1);
   return (
     <div className="card item">
       <div className="profile">

@@ -2,6 +2,7 @@
 "Use Client";
 import React from "react";
 import CountUp from "react-countup";
+import CounterData from "./CounterData";
 import {useState} from "react";
 import ScrollTrigger from "react-scroll-trigger";
 const Counter = () => {
@@ -16,54 +17,29 @@ const Counter = () => {
           <div className="row">
             <div className="col-lg-8 mx-auto">
               <div className="counter-wraper py-4 py-md-6 d-md-flex">
-                <div className="counter-up-content mb-3">
-                  <div className="counter-up-content-item">
-                    <div className="counter-percent">
-                      {counterOn && (
-                        <CountUp
-                          start={0}
-                          end={100}
-                          delay={0}
-                          className="counter"
-                        />
-                      )}
-                      <span className="percent">+</span>
+                {CounterData.map((item, i) => {
+                  return (
+                    <div
+                      className="counter-up-content mb-3"
+                      key={i}
+                    >
+                      <div className="counter-up-content-item">
+                        <div className="counter-percent">
+                          {counterOn && (
+                            <CountUp
+                              start={0}
+                              end={`${item.number}`}
+                              delay={0}
+                              className="counter"
+                            />
+                          )}
+                          <span className="percent">+</span>
+                        </div>
+                        <h3>{item.text}</h3>
+                      </div>
                     </div>
-                    <h3>Project Done</h3>
-                  </div>
-                </div>
-                <div className="counter-up-content">
-                  <div className="counter-up-content-item">
-                    <div className="counter-percent">
-                      {counterOn && (
-                        <CountUp
-                          start={0}
-                          end={45}
-                          delay={0}
-                          className="counter"
-                        />
-                      )}
-                      <span className="percent">+</span>
-                    </div>
-                    <h3>Happy Client</h3>
-                  </div>
-                </div>
-                <div className="counter-up-content">
-                  <div className="counter-up-content-item">
-                    <div className="counter-percent">
-                      {counterOn && (
-                        <CountUp
-                          start={0}
-                          end={10}
-                          delay={0}
-                          className="counter"
-                        />
-                      )}
-                      <span className="percent">+</span>
-                    </div>
-                    <h3>Years Experiences</h3>
-                  </div>
-                </div>
+                  );
+                })}
               </div>
             </div>
           </div>
