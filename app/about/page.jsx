@@ -6,15 +6,22 @@ import Client from "@/components/Client";
 import BusinessSolution from "@/components/BusinessSolution";
 import Community from "@/components/Community";
 import AboutContent from "@/components/AboutSection";
+import {AboutStory, JoinTeam} from "@/components/AboutSection/AboutSectionData";
+import Team from "@/components/Team";
+import TeamData from "@/components/Team/TeamData";
+import CompanyAddress from "@/components/CompanyAddress";
 const page = () => {
   return (
     <>
       <AboutHero />
       <Counter />
-      <AboutContent />
+      <AboutContent data={AboutStory} />
       <BusinessSolution />
       <Community />
       <Client />
+      <Team data={TeamData} />
+      <AboutContent data={JoinTeam} />
+      <CompanyAddress />
       <CallToAction
         title={
           <>

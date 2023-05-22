@@ -4,6 +4,7 @@ const FooterData = {
   copyright: "Copyright 2023 Growthus, All rights reserved!",
   email: "info@growthus.com",
   phone: "+3 230 705 5448",
+  formspreeId: "mpzeewna",
   companyLinks: [
     {
       id: 1,

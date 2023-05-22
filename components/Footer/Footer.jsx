@@ -1,11 +1,23 @@
 "use client";
 import React from "react";
-import {useEffect} from "react";
+import {useState, useEffect} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import FooterContent from "./FooterData";
+import {useForm, ValidationError} from "@formspree/react";
 const FooterData = ({FooterContent}) => {
   const {companyLinks, policyLinks, locations, socialLinks, resources} = FooterContent;
+  const [state, handleSubmit] = useForm(`${FooterContent.formspreeId}`);
+  // const [inputValue, setInputValue] = useState("");
+  // const handleChange = (event) => {
+  //   setInputValue(event.target.value);
+  // };
+  // const handleSubmit = (event) => {
+  //   const emailList = [];
+  //   emailList.push(`Name: ${inputValue}`);
+  //   console.log(emailList);
+  //   event.preventDefault();
+  // };
   return (
     <>
       <footer
@@ -32,7 +44,7 @@ const FooterData = ({FooterContent}) => {
               <div className="footer-description text-center text-lg-start pb-md-6">
                 <p className="mb-3">Stay in touch</p>
                 <form
-                  action="#"
+                  onSubmit={handleSubmit}
                   className="footer-submit-form"
                 >
                   <div className="from-group">
@@ -41,6 +53,14 @@ const FooterData = ({FooterContent}) => {
                         type="email"
                         className="form-control"
                         placeholder="Your email address"
+                        name="email"
+                        // value={inputValue}
+                        // onChange={handleChange}
+                      />
+                      <ValidationError
+                        prefix="Email"
+                        field="email"
+                        errors={state.errors}
                       />
                       <div className="submit">
                         <button type="submit">
@@ -60,6 +80,7 @@ const FooterData = ({FooterContent}) => {
                       </div>
                     </div>
                   </div>
+                  <p className="mt-3">{state.succeeded ? "Thanks for joining!" : ""}</p>
                 </form>
               </div>
             </div>
@@ -179,6 +200,9 @@ const FooterData = ({FooterContent}) => {
 const Footer = () => {
   useEffect(() => {
     import("bootstrap/dist/js/bootstrap.bundle.min.js");
+    const handleChange = (event) => {
+      setInputValue(event.target.value);
+    };
   }, []);
   return <FooterData FooterContent={FooterContent} />;
 };
