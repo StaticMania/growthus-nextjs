@@ -1,8 +1,8 @@
 "use client";
 import {counterData} from "@/Data/Data.js";
-import { useState, useEffect } from "react";
+import {useState, useEffect} from "react";
 const Counter = () => {
-  const CountUpNumber = ({ number }) => {
+  const CountUpNumber = ({number}) => {
     const [count, setCount] = useState(0);
 
     useEffect(() => {
@@ -23,9 +23,12 @@ const Counter = () => {
         <div className="row">
           <div className="col-lg-8 mx-auto">
             <div className="counter-wraper py-4 py-md-6 d-md-flex">
-              {CounterData.map((item, i) => {
+              {counterData.map((item, i) => {
                 return (
-                  <div className="counter-up-content mb-3" key={i}>
+                  <div
+                    className="counter-up-content mb-3"
+                    key={i}
+                  >
                     <div className="counter-up-content-item">
                       <div className="counter-percent">
                         {<CountUpNumber number={item.number} />}
