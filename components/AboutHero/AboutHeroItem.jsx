@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import AboutHeroData from "./AboutHeroData";
 function AboutHeroItem({data}) {
   const {images} = data;
   const imageStyle = {
