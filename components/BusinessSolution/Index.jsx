@@ -1,7 +1,7 @@
 import React from "react";
 import SectionHeader from "../Common/SectionTitle";
 import BusinessSolutionItems from "./BusinessSolutionItems";
-import BusinessSolutionData from "./BusinessSolutionData";
+import {BusinessSolutionData} from "@/Data/Data.js";
 function BusinessSolution() {
   return (
     <section className="services py-7 py-md-9">

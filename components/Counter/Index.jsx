@@ -1,6 +1,5 @@
 "use client";
-
-import CounterData from "./CounterData";
+import {counterData} from "@/Data/Data.js";
 import { useState, useEffect } from "react";
 const Counter = () => {
   const CountUpNumber = ({ number }) => {
@@ -18,7 +17,6 @@ const Counter = () => {
 
     return <span className="counter">{count}</span>;
   };
-
   return (
     <section className="counter-up pb-lg-7">
       <div className="container">
