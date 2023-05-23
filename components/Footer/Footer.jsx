@@ -3,7 +3,7 @@ import React from "react";
 import {useState, useEffect} from "react";
 import Image from "next/image";
 import Link from "next/link";
-import FooterContent from "./FooterData";
+import {FooterDatas} from "@/Data/Data.js";
 import {useForm, ValidationError} from "@formspree/react";
 const FooterData = ({FooterContent}) => {
   const {companyLinks, policyLinks, locations, socialLinks, resources} = FooterContent;
@@ -204,6 +204,6 @@ const Footer = () => {
       setInputValue(event.target.value);
     };
   }, []);
-  return <FooterData FooterContent={FooterContent} />;
+  return <FooterData FooterContent={FooterDatas} />;
 };
 export default Footer;

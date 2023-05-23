@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import ComapnyLocation from "../Footer/FooterData";
+import {FooterDatas} from "@/Data/Data.js";
 function CompanyAddressItems({data}) {
   const {locations} = data;
   return (
@@ -115,6 +115,6 @@ function CompanyAddressItems({data}) {
 }
 
 const CompanyAddress = () => {
-  return <CompanyAddressItems data={ComapnyLocation} />;
+  return <CompanyAddressItems data={FooterDatas} />;
 };
 export default CompanyAddress;

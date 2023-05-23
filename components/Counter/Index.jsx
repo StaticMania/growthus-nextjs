@@ -2,50 +2,42 @@
 "Use Client";
 import React from "react";
 import CountUp from "react-countup";
-import CounterData from "./CounterData";
-import {useState} from "react";
-import ScrollTrigger from "react-scroll-trigger";
+import {counterData} from "@/Data/Data.js";
 const Counter = () => {
-  const [counterOn, setCounterOn] = useState(true);
   return (
-    <ScrollTrigger
-      onEnter={() => setCounterOn(true)}
-      onExit={() => setCounterOn(false)}
-    >
-      <section className="counter-up pb-lg-7">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-8 mx-auto">
-              <div className="counter-wraper py-4 py-md-6 d-md-flex">
-                {CounterData.map((item, i) => {
-                  return (
-                    <div
-                      className="counter-up-content mb-3"
-                      key={i}
-                    >
-                      <div className="counter-up-content-item">
-                        <div className="counter-percent">
-                          {counterOn && (
-                            <CountUp
-                              start={0}
-                              end={`${item.number}`}
-                              delay={0}
-                              className="counter"
-                            />
-                          )}
-                          <span className="percent">+</span>
-                        </div>
-                        <h3>{item.text}</h3>
-                      </div>
+    <section className="counter-up pb-lg-7">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-8 mx-auto">
+            <div className="counter-wraper py-4 py-md-6 d-md-flex">
+              {counterData.map((item, i) => (
+                <div
+                  className="counter-up-content mb-3"
+                  key={i}
+                >
+                  <div className="counter-up-content-item">
+                    <div className="counter-percent">
+                      {
+                        <CountUp
+                          start={0}
+                          end={`${item.number}`}
+                          enableScrollSpy
+                          scrollSpyOnce
+                          delay={0}
+                          className="counter"
+                        />
+                      }
+                      <span className="percent">+</span>
                     </div>
-                  );
-                })}
-              </div>
+                    <h3>{item.text}</h3>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
-      </section>
-    </ScrollTrigger>
+      </div>
+    </section>
   );
 };
 export default Counter;

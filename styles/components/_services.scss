@@ -36,6 +36,9 @@
   background-color: $color-bg;
   .service-title {
     font-size: 64px;
+    @include media-breakpoint-up-xl {
+      max-width: 450px;
+    }
   }
   .work-content {
     padding-right: 0;
@@ -79,6 +82,23 @@
     }
     p {
       margin-bottom: 32px;
+    }
+  }
+  .work-item-container {
+    &:nth-child(3n + 1) {
+      .work-item-shape {
+        background-color: #b9edf7 !important;
+      }
+    }
+    &:nth-child(3n + 2) {
+      .work-item-shape {
+        background-color: #cfa677 !important;
+      }
+    }
+    &:nth-child(3n + 3) {
+      .work-item-shape {
+        background-color: #173641 !important;
+      }
     }
   }
   &-list {

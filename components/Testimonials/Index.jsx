@@ -3,7 +3,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import TestimonialData from "./TestimonialData";
+import {TestimonialData} from "@/Data/Data.js";
 import TestimonialItems from "./TestimonialItems";
 import {CaretRight, CaretLeft} from "@phosphor-icons/react";
 function SampleNextArrow(props) {

@@ -1,7 +1,7 @@
 import React from "react";
 import SectionHeader from "../Common/SectionTitle";
 import ClientImages from "./ClientImages";
-import ClientImageData from "./ClientImageData";
+import {ClientImageData} from "@/Data/Data.js";
 
 const Client = (props) => {
   return (

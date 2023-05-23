@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React from "react";
 import {useEffect, useState} from "react";
-import menuData from "./menuData";
+import {menuData} from "@/Data/Data.js";
 import Image from "next/image";
 import * as Icon from "@phosphor-icons/react";
 const Navbar = () => {

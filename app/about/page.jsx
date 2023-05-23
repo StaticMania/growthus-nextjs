@@ -6,9 +6,9 @@ import Client from "@/components/Client";
 import BusinessSolution from "@/components/BusinessSolution";
 import Community from "@/components/Community";
 import AboutContent from "@/components/AboutSection";
-import {AboutStory, JoinTeam} from "@/components/AboutSection/AboutSectionData";
+import {AboutStory, JoinTeam} from "@/Data/Data.js";
 import Team from "@/components/Team";
-import TeamData from "@/components/Team/TeamData";
+import {TeamData} from "@/Data/Data.js";
 import CompanyAddress from "@/components/CompanyAddress";
 const page = () => {
   return (
