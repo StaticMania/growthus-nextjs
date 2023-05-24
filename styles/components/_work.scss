@@ -255,8 +255,9 @@
       line-height: 170%;
     }
     @include media-breakpoint-down-lg {
-      padding-top: 0;
+      padding-left: 0;
       text-align: center;
+      margin: 0 auto;
     }
     i {
       font-family: "fontawesome" !important;
