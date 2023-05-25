@@ -1,33 +1,70 @@
 "use client";
-import SectionHeader from "../Common/SectionTitle";
-import BusinessServices from "./BusinessServices";
-import getPostMetadata from "./getPostMetadata";
-const BusinessService = () => {
-  const postMetadata = getPostMetadata();
-  const postPreviews = postMetadata.map((services) => (
-    <BusinessServices
-      key={services.slug}
-      {...services}
-    />
-  ));
+import Image from "next/image";
+import Link from "next/link";
+import {CaretRight} from "@phosphor-icons/react";
+const BusinessServices = ({props}) => {
+  const imageStyle = {
+    maxWidth: "100%",
+    height: "auto",
+    width: "auto",
+  };
   return (
-    <section
-      className="service-item work pb-7"
-      id="service-item"
-    >
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-8 mx-auto">
-            <SectionHeader
-              title="Business Service"
-              paragraph="Discover how our services can grow your business. From digital marketing to web development and design, our team delivers tailored solutions to exceed your expectations."
-            />
+    <div className="row work-item-container align-items-center">
+      <div className="col-lg-6">
+        <div className="work-item">
+          <div className="work-item-shape-wrapper">
+            <div className="work-item-shape">
+              <Image
+                src="/images/work/work-shap.svg"
+                alt="hero images"
+                width={530}
+                height={575}
+                style={imageStyle}
+              />
+            </div>
+          </div>
+          <div className="work-item-wraper">
+            <div className="work-item-wraper-banner">
+              <Image
+                src={props.image}
+                alt="Business images"
+                width={540}
+                height={590}
+                style={imageStyle}
+              />
+            </div>
           </div>
         </div>
       </div>
-      <div className="container">{postPreviews}</div>
-    </section>
+      <div className="col-lg-6">
+        <div className="work-item">
+          <div className="work-content">
+            <h2>{props.title}</h2>
+            <p>{props.paragraph}</p>
+            <ul className="list-unstyled service-item-list">
+              {props.serviceInclude.map((item, i) => (
+                <li key={item.id}>
+                  <span>{item.serviceIncludeItem}</span>
+                </li>
+              ))}
+            </ul>
+            <Link
+              href={`/services/${props.slug}`}
+              className="btn btn-secondary"
+            >
+              <span className="position-relative">
+                Learn More
+                <CaretRight
+                  size={14}
+                  weight="thin"
+                />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
-export default BusinessService;
+export default BusinessServices;

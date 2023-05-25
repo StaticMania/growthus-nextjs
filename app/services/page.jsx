@@ -1,17 +1,15 @@
 import React from "react";
+import fs from "fs";
+import matter from "gray-matter";
 import Client from "@/components/Client";
 import BusinessSolution from "@/components/BusinessSolution";
 import Testimonials from "@/components/Testimonials";
 import CallToAction from "@/components/CallToAction";
 import ServiceHero from "@/components/ServiceHero";
-
 import {ServiceHeroData} from "@/Data/Data.js";
-
 import SectionHeader from "@/components/Common/SectionTitle";
-import BusinessServices from "@/components/BusinessServices/BusinessServices.jsx";
+import BusinessServices from "@/components/BusinessServices/";
 
-import fs from "fs";
-import matter from "gray-matter";
 const page = () => {
   const postMetadata = getPostMetadata();
   const postPreviews = postMetadata.map((services) => (
@@ -23,7 +21,6 @@ const page = () => {
   return (
     <>
       <ServiceHero data={ServiceHeroData} />
-      {/* <BusinessServices /> */}
       <section
         className="service-item work pb-7"
         id="service-item"
@@ -58,7 +55,7 @@ const page = () => {
 
 export default page;
 
-const getPostMetadata = () => {
+export const getPostMetadata = () => {
   const folder = "Data/services/";
   const files = fs.readdirSync(folder);
   const markdownPosts = files.filter((file) => file.endsWith(".md"));
@@ -67,9 +64,9 @@ const getPostMetadata = () => {
   const posts = markdownPosts.map((fileName) => {
     const fileContents = fs.readFileSync(`Data/services/${fileName}`, "utf8");
     const matterResult = matter(fileContents);
-    const matterResultData = {...matterResult.data, slug: fileName.replace(".md", "")};
     return {
-      ...matterResultData,
+      ...matterResult.data,
+      slug: fileName.replace(".md", ""),
     };
   });
 

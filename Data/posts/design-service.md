@@ -1,18 +1,7 @@
 ---
-title: "Design Service"
-paragraph: >
-  "Capture your brand's personality and make a lasting impression with our professional design services. Our team provides customized solutions that meet your unique business needs and enhance your visual identity."
-image: "/images/service/service-item1.png"
-btnLink: "/"
-serviceInclude:
-  - id: 31,
-    serviceIncludeItem: "Brand Identity"
-  - id: 32,
-    serviceIncludeItem: "Website Design"
-  - id: 33,
-    serviceIncludeItem: "Mobile App Design"
-  - id: 34,
-    serviceIncludeItem: "UI/UX Design"
+title: "Building a QR code micro-app"
+subtitle: "Build a serverless 'hello-world' QR code app with Python and AWS."
+date: "2021-08-14"
 ---
 
-fsdalkfjlsadfk
+Ever since the pandemic started, I've noticed QR codes creeping into my daily life. Venue check-ins, digital menus at restaurants, and online payments.
