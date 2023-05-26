@@ -5,29 +5,24 @@ import Testimonials from "@/components/Testimonials";
 import CallToAction from "@/components/CallToAction";
 import ServiceHero from "@/components/ServiceHero";
 
-import {ServiceHeroData} from "@/Data/Data.js";
+import { ServiceHeroData } from "@/Data/Data.js";
 
 import SectionHeader from "@/components/Common/SectionTitle";
 import BusinessServices from "@/components/BusinessServices/BusinessServices.jsx";
 
 import fs from "fs";
 import matter from "gray-matter";
+
 const page = () => {
   const postMetadata = getPostMetadata();
   const postPreviews = postMetadata.map((services) => (
-    <BusinessServices
-      key={services.slug}
-      props={services}
-    />
+    <BusinessServices key={services.slug} props={services} />
   ));
   return (
     <>
       <ServiceHero data={ServiceHeroData} />
       {/* <BusinessServices /> */}
-      <section
-        className="service-item work pb-7"
-        id="service-item"
-      >
+      <section className="service-item work pb-7" id="service-item">
         <div className="container">
           <div className="row">
             <div className="col-lg-8 mx-auto">
@@ -47,7 +42,8 @@ const page = () => {
       <CallToAction
         title={
           <>
-            <span>Sounds Good? </span> <br /> <span>Let’s Grow your Business.</span>
+            <span>Sounds Good? </span> <br />{" "}
+            <span>Let’s Grow your Business.</span>
           </>
         }
         link="/"
@@ -67,7 +63,10 @@ const getPostMetadata = () => {
   const posts = markdownPosts.map((fileName) => {
     const fileContents = fs.readFileSync(`Data/services/${fileName}`, "utf8");
     const matterResult = matter(fileContents);
-    const matterResultData = {...matterResult.data, slug: fileName.replace(".md", "")};
+    const matterResultData = {
+      ...matterResult.data,
+      slug: fileName.replace(".md", ""),
+    };
     return {
       ...matterResultData,
     };
