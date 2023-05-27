@@ -1,11 +1,14 @@
 import fs from "fs";
 import matter from "gray-matter";
-import {getPostMetadata} from "../page";
+import Image from "next/image";
+import Link from "next/link";
+import GetPostMetadata from "@/components/BusinessServices/GetPostMetatData.js";
 import Client from "@/components/Client";
 import Testimonials from "@/components/Testimonials";
 import CallToAction from "@/components/CallToAction";
-import Image from "next/image";
-import Link from "next/link";
+import SectionHeader from "@/components/Common/SectionTitle";
+import {CaseStudy, Caret} from "@/components/caseStudy/";
+import GetcaseStudyMetadata from "@/components/caseStudy/GetCaseStudyData.js";
 export const getPostContent = (slug) => {
   const folder = "Data/services/";
   const file = `${folder}${slug}.md`;
@@ -15,13 +18,14 @@ export const getPostContent = (slug) => {
 };
 
 export const generateStaticParams = async () => {
-  const posts = getPostMetadata();
+  const posts = GetPostMetadata();
   return posts.map((post) => ({
     slug: post.slug,
   }));
 };
 
 const PostPage = (props) => {
+  const caseStudyMetadata = GetcaseStudyMetadata();
   const slug = props.params.slug;
   const post = getPostContent(slug);
   const postParams = post.data;
@@ -119,6 +123,30 @@ const PostPage = (props) => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="project project-white pt-7 pb-9">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8 mx-auto">
+              <SectionHeader
+                title="Feature Work & Case Study"
+                paragraph="Explore our portfolio of successful projects and case studies to see how we've helped businesses like yours achieve their goals. Our work speaks for itself, and we're proud to showcase our expertise and achievements"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="container">
+          <div className="row">
+            {caseStudyMetadata.slice(0, 6).map((caseStudy, i) => (
+              <CaseStudy
+                key={i}
+                props={caseStudy}
+              />
+            ))}
+            <Caret />
           </div>
         </div>
       </section>
