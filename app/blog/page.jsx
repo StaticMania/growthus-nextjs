@@ -2,12 +2,13 @@ import fs from "fs";
 import matter from "gray-matter";
 import Link from "next/link";
 import path from "path";
-
+import {BlogTitle} from "@/Data/Data.js";
 function Blog() {
   const posts = getPostMetadata();
 
   return (
     <div className="my-5 container">
+      <h1>{BlogTitle.title}</h1>
       {posts.map((post) => (
         <div
           key={post.title}

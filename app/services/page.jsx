@@ -1,6 +1,6 @@
 import React from "react";
-import fs from "fs";
-import matter from "gray-matter";
+// import fs from "fs";
+// import matter from "gray-matter";
 import Client from "@/components/Client";
 import BusinessSolution from "@/components/BusinessSolution";
 import Testimonials from "@/components/Testimonials";
@@ -9,15 +9,12 @@ import ServiceHero from "@/components/ServiceHero";
 import {ServiceHeroData} from "@/Data/Data.js";
 import SectionHeader from "@/components/Common/SectionTitle";
 import BusinessServices from "@/components/BusinessServices/";
-
-const page = () => {
-  const postMetadata = getPostMetadata();
-  const postPreviews = postMetadata.map((services) => (
-    <BusinessServices
-      key={services.slug}
-      props={services}
-    />
-  ));
+import GetPostMetadata from "@/components/BusinessServices/GetPostMetatData.js";
+import {CaseStudy, Caret} from "@/components/caseStudy/";
+import GetcaseStudyMetadata from "@/components/caseStudy/GetCaseStudyData.js";
+const Service = () => {
+  const postMetadata = GetPostMetadata();
+  const caseStudyMetadata = GetcaseStudyMetadata();
   return (
     <>
       <ServiceHero data={ServiceHeroData} />
@@ -35,9 +32,38 @@ const page = () => {
             </div>
           </div>
         </div>
-        <div className="container">{postPreviews}</div>
+        <div className="container">
+          {postMetadata.map((services) => (
+            <BusinessServices
+              key={services.slug}
+              props={services}
+            />
+          ))}
+        </div>
       </section>
-
+      <section className="project project-white pt-7 pb-9">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8 mx-auto">
+              <SectionHeader
+                title="Feature Work & Case Study"
+                paragraph="Explore our portfolio of successful projects and case studies to see how we've helped businesses like yours achieve their goals. Our work speaks for itself, and we're proud to showcase our expertise and achievements"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="container">
+          <div className="row">
+            {caseStudyMetadata.slice(0, 6).map((caseStudy, i) => (
+              <CaseStudy
+                key={i}
+                props={caseStudy}
+              />
+            ))}
+            <Caret />
+          </div>
+        </div>
+      </section>
       <BusinessSolution />
       <Client border="border-top" />
       <Testimonials />
@@ -53,22 +79,22 @@ const page = () => {
   );
 };
 
-export default page;
+export default Service;
 
-export const getPostMetadata = () => {
-  const folder = "Data/services/";
-  const files = fs.readdirSync(folder);
-  const markdownPosts = files.filter((file) => file.endsWith(".md"));
+// export const getPostMetadata = () => {
+//   const folder = "Data/services/";
+//   const files = fs.readdirSync(folder);
+//   const markdownPosts = files.filter((file) => file.endsWith(".md"));
 
-  // Get gray-matter data from each file.
-  const posts = markdownPosts.map((fileName) => {
-    const fileContents = fs.readFileSync(`Data/services/${fileName}`, "utf8");
-    const matterResult = matter(fileContents);
-    return {
-      ...matterResult.data,
-      slug: fileName.replace(".md", ""),
-    };
-  });
+//   // Get gray-matter data from each file.
+//   const posts = markdownPosts.map((fileName) => {
+//     const fileContents = fs.readFileSync(`Data/services/${fileName}`, "utf8");
+//     const matterResult = matter(fileContents);
+//     return {
+//       ...matterResult.data,
+//       slug: fileName.replace(".md", ""),
+//     };
+//   });
 
-  return posts;
-};
+//   return posts;
+// };

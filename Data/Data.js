@@ -24,7 +24,7 @@ export const menuData = {
     {
       id: 5,
       title: "Portfolio",
-      path: "/portfolio",
+      path: "/case-study",
       newTab: false,
     },
     {
@@ -536,7 +536,7 @@ export const BusinessServicesData = [
   },
 ];
 
-export const blog = {
+export const BlogTitle = {
   title: " Blog",
   desc: "By fusing strategy & design we help our partners build their brands, drive business, & stand out from the noise in saturated markets! Follow our blog for the latest case studies and projects.",
 };
