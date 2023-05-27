@@ -4,7 +4,7 @@ import fs from "fs";
 import Markdown from "react-markdown";
 import matter from "gray-matter";
 
-const getPostContent = (slug) => {
+export const getPostContent = (slug) => {
   const folder = "Data/posts/";
   const file = `${folder}${slug}.md`;
   const content = fs.readFileSync(file, "utf8");

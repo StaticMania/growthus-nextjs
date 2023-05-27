@@ -6,18 +6,14 @@ import Testimonials from "@/components/Testimonials";
 import CallToAction from "@/components/CallToAction";
 import Image from "next/image";
 import Link from "next/link";
-const getPostContent = (slug) => {
+export const getPostContent = (slug) => {
   const folder = "Data/services/";
   const file = `${folder}${slug}.md`;
   const content = fs.readFileSync(file, "utf8");
   const matterResult = matter(content);
   return matterResult;
 };
-const imageStyle = {
-  width: "auto",
-  maxWidth: "100%",
-  height: "auto",
-};
+
 export const generateStaticParams = async () => {
   const posts = getPostMetadata();
   return posts.map((post) => ({
@@ -29,6 +25,11 @@ const PostPage = (props) => {
   const slug = props.params.slug;
   const post = getPostContent(slug);
   const postParams = post.data;
+  const imageStyle = {
+    width: "auto",
+    maxWidth: "100%",
+    height: "auto",
+  };
   return (
     <>
       <section className="service-hero services-desc-hero pt-8">
