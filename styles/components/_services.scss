@@ -152,6 +152,9 @@
       background: $color-gray-100;
       border-radius: $base-border-radius;
       position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       svg {
         position: absolute;
         left: 50%;

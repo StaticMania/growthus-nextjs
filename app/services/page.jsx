@@ -1,6 +1,3 @@
-import React from "react";
-// import fs from "fs";
-// import matter from "gray-matter";
 import Client from "@/components/Client";
 import BusinessSolution from "@/components/BusinessSolution";
 import Testimonials from "@/components/Testimonials";
@@ -9,12 +6,10 @@ import ServiceHero from "@/components/ServiceHero";
 import {ServiceHeroData} from "@/Data/Data.js";
 import SectionHeader from "@/components/Common/SectionTitle";
 import BusinessServices from "@/components/BusinessServices/";
-import GetPostMetadata from "@/components/BusinessServices/GetPostMetatData.js";
 import {CaseStudy, Caret} from "@/components/caseStudy/";
-import GetcaseStudyMetadata from "@/components/caseStudy/GetCaseStudyData.js";
+import CaseStudyData from "@/Data/caseStudy.js";
+import serviceData from "@/Data/serviceData.js";
 const Service = () => {
-  const postMetadata = GetPostMetadata();
-  const caseStudyMetadata = GetcaseStudyMetadata();
   return (
     <>
       <ServiceHero data={ServiceHeroData} />
@@ -33,7 +28,7 @@ const Service = () => {
           </div>
         </div>
         <div className="container">
-          {postMetadata.map((services) => (
+          {serviceData.map((services) => (
             <BusinessServices
               key={services.slug}
               props={services}
@@ -54,7 +49,7 @@ const Service = () => {
         </div>
         <div className="container">
           <div className="row">
-            {caseStudyMetadata.slice(0, 6).map((caseStudy, i) => (
+            {CaseStudyData.slice(0, 6).map((caseStudy, i) => (
               <CaseStudy
                 key={i}
                 props={caseStudy}

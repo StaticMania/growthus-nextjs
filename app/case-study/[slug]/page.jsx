@@ -1,36 +1,23 @@
-import fs from "fs";
-import Markdown from "react-markdown";
-import matter from "gray-matter";
+"use client";
 import Image from "next/image";
 import CaseStudyHero from "@/components/caseStudy/caseStudyHero.jsx";
-import GetcaseStudyMetadata from "@/components/caseStudy/GetCaseStudyData.js";
-export const getPostContent = (slug) => {
-  const folder = "Data/caseStudy/";
-  const file = `${folder}${slug}.md`;
-  const content = fs.readFileSync(file, "utf8");
-  const matterResult = matter(content);
-  return matterResult;
-};
-export const generateStaticParams = async () => {
-  const posts = GetcaseStudyMetadata();
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
-};
+import CaseStudyData from "@/Data/caseStudy.js";
+
 const BlogPost = (props) => {
   const slug = props.params.slug;
-  const post = getPostContent(slug);
-  const postParams = post.data;
+  const data = CaseStudyData.find((post) => post.slug === slug);
+
   const imageStyle = {
     maxWidth: "100%",
     height: "auto",
     width: "auto",
   };
+
   return (
     <>
       <CaseStudyHero
-        pageTitle={postParams.title}
-        breadcrumbTitle={postParams.title}
+        pageTitle={data.title}
+        breadcrumbTitle={data.title}
       />
 
       <section className="project-desc py-8 py-lg-8">
@@ -39,7 +26,7 @@ const BlogPost = (props) => {
             <div className="col-md-12">
               <div className="project-feature-photo">
                 <Image
-                  src={postParams.featureImage}
+                  src={data.featureImage}
                   alt="Feature Image"
                   width={1000}
                   height={1000}
@@ -55,7 +42,7 @@ const BlogPost = (props) => {
                 <h2>Brand Overview</h2>
               </div>
               <div className="col-md-5">
-                <p>{postParams.brandOverview}</p>
+                <p>{data.brandOverview}</p>
               </div>
             </div>
           </div>
@@ -66,9 +53,9 @@ const BlogPost = (props) => {
               </div>
               <div className="col-md-5">
                 <ul className="list-unstyled service-item-list">
-                  {postParams.services.map((item, i) => (
+                  {data.services.map((item, i) => (
                     <li key={i}>
-                      <span>{item}</span>
+                      <span>{item.item}</span>
                     </li>
                   ))}
                 </ul>
@@ -77,7 +64,7 @@ const BlogPost = (props) => {
           </div>
 
           <div className="row gy-4 mb-5">
-            {postParams.subFeatureImage.slice(0, 2).map((item, i) => (
+            {data.subFeatureImage.slice(0, 2).map((item, i) => (
               <div
                 className="col-md-6"
                 key={i}
@@ -99,13 +86,13 @@ const BlogPost = (props) => {
             <div className="col-lg-10 mx-auto">
               <div className="section-header text-start">
                 <h2 className="mb-4">Visual identity</h2>
-                <p className="mb-5">{postParams.visualIdentity}</p>
+                <p className="mb-5">{data.visualIdentity}</p>
               </div>
             </div>
           </div>
 
           <div className="row gy-4 mb-5">
-            {postParams.subFeatureImage.slice(2, 6).map((item, i) => (
+            {data.subFeatureImage.slice(2, 6).map((item, i) => (
               <div
                 className="col-md-6"
                 key={i}
@@ -128,7 +115,7 @@ const BlogPost = (props) => {
             <div className="col-lg-10 mx-auto">
               <div className="section-header text-start">
                 <h2 className="mb-4">The result</h2>
-                <p className="mb-5">{postParams.finalResult}</p>
+                <p className="mb-5">{data.finalResult}</p>
               </div>
             </div>
           </div>
@@ -136,7 +123,7 @@ const BlogPost = (props) => {
           <div className="row mb-5">
             <div className="container">
               <div className="col-lg-10 mx-auto">
-                {postParams.author.map((item, i) => (
+                {data.author.map((item, i) => (
                   <blockquote key={i}>
                     <div className="comment">{item.quote}</div>
                     <div className="comment-author d-flex align-items-center mt-4">
@@ -166,15 +153,15 @@ const BlogPost = (props) => {
                   Those who have worked <br />
                   in this project
                 </h2>
-                <p className="mb-5">{postParams.workDesription}</p>
+                <p className="mb-5">{data.workDesription}</p>
               </div>
             </div>
             <div className="col-md-5">
               <h4 className="mb-4">Project Management</h4>
               <ul className="list-unstyled service-item-list">
-                {postParams.managementTeam.map((item, i) => (
+                {data.managementTeam.map((item, i) => (
                   <li key={i}>
-                    <span>{item}</span>
+                    <span>{item.item}</span>
                   </li>
                 ))}
               </ul>
@@ -183,9 +170,9 @@ const BlogPost = (props) => {
             <div className="col-md-5">
               <h4 className="mb-4">Design & Development</h4>
               <ul className="list-unstyled service-item-list">
-                {postParams.developmentTeam.map((item, i) => (
+                {data.developmentTeam.map((item, i) => (
                   <li key={i}>
-                    <span>{item}</span>
+                    <span>{item.item}</span>
                   </li>
                 ))}
               </ul>

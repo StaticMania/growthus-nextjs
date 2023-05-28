@@ -1,34 +1,16 @@
-import fs from "fs";
-import matter from "gray-matter";
 import Image from "next/image";
 import Link from "next/link";
-import GetPostMetadata from "@/components/BusinessServices/GetPostMetatData.js";
 import Client from "@/components/Client";
 import Testimonials from "@/components/Testimonials";
 import CallToAction from "@/components/CallToAction";
 import SectionHeader from "@/components/Common/SectionTitle";
 import {CaseStudy, Caret} from "@/components/caseStudy/";
-import GetcaseStudyMetadata from "@/components/caseStudy/GetCaseStudyData.js";
-export const getPostContent = (slug) => {
-  const folder = "Data/services/";
-  const file = `${folder}${slug}.md`;
-  const content = fs.readFileSync(file, "utf8");
-  const matterResult = matter(content);
-  return matterResult;
-};
-
-export const generateStaticParams = async () => {
-  const posts = GetPostMetadata();
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
-};
+import CaseStudyData from "@/Data/caseStudy.js";
+import serviceData from "@/Data/serviceData.js";
 
 const PostPage = (props) => {
-  const caseStudyMetadata = GetcaseStudyMetadata();
   const slug = props.params.slug;
-  const post = getPostContent(slug);
-  const postParams = post.data;
+  const data = serviceData.find((post) => post.slug === slug);
   const imageStyle = {
     width: "auto",
     maxWidth: "100%",
@@ -55,7 +37,7 @@ const PostPage = (props) => {
                 <div className="work-item-wraper">
                   <div className="work-item-wraper-banner">
                     <Image
-                      src={postParams.image}
+                      src={data.image}
                       alt="work images"
                       width={500}
                       height={500}
@@ -77,12 +59,12 @@ const PostPage = (props) => {
                         className="breadcrumb-item active"
                         aria-current="page"
                       >
-                        {postParams.title}
+                        {data.title}
                       </li>
                     </ol>
                   </nav>
-                  <h1 className="service-type">{postParams.title}</h1>
-                  <p>{postParams.serviceDetails}</p>
+                  <h1 className="service-type">{data.title}</h1>
+                  <p>{data.serviceDetails}</p>
                 </div>
               </div>
             </div>
@@ -94,27 +76,31 @@ const PostPage = (props) => {
           <div className="section-header text-start">
             <div className="row">
               <div className="col-lg-7">
-                <h2>{postParams.serviceInfoTitle}</h2>
+                <h2>{data.serviceInfoTitle}</h2>
               </div>
               <div className="col-lg-5">
-                <p>{postParams.serviceInfoDesc}</p>
+                <p>{data.serviceInfoDesc}</p>
               </div>
             </div>
           </div>
         </div>
         <div className="container">
           <div className="row">
-            {postParams.serviceInfoItems.map((items, i) => (
+            {data.serviceInfoItems.map((items, i) => (
               <div
                 className={`col-xl-4 col-md-6 ${i === 1 || i === 3 ? "offset-xl-2" : ""}`}
                 key={i}
               >
                 <div className="services-desc-wrapper">
                   <div className="services-desc-header">
-                    <div
-                      className="services-desc-header-icon"
-                      dangerouslySetInnerHTML={{__html: items.icon}}
-                    ></div>
+                    <div className="services-desc-header-icon">
+                      <Image
+                        src={items.icon}
+                        alt="icon"
+                        width={35}
+                        height={35}
+                      />
+                    </div>
                     <h4>{items.title}</h4>
                   </div>
                   <div className="services-desc-body">
@@ -140,7 +126,7 @@ const PostPage = (props) => {
         </div>
         <div className="container">
           <div className="row">
-            {caseStudyMetadata.slice(0, 6).map((caseStudy, i) => (
+            {CaseStudyData.slice(0, 6).map((caseStudy, i) => (
               <CaseStudy
                 key={i}
                 props={caseStudy}
