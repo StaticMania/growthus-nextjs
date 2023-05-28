@@ -38,6 +38,7 @@ const Navbar = () => {
           <Link
             className="navbar-brand"
             href="/"
+            onClick={() => setActive(null)}
           >
             <Image
               src={menuData.logo}
@@ -123,12 +124,7 @@ const Navbar = () => {
                                 className="dropdown-menu-item"
                                 key={submenuItem.id}
                               >
-                                <Link
-                                  href={submenuItem.path}
-                                  className="block rounded py-2.5 text-sm text-dark hover:opacity-70 dark:text-white lg:px-3"
-                                >
-                                  {submenuItem.title}
-                                </Link>
+                                <Link href={submenuItem.path}>{submenuItem.title}</Link>
                               </li>
                             ))}
                           </ul>
@@ -144,6 +140,7 @@ const Navbar = () => {
                 <Link
                   className="btn btn-navigation w-100"
                   href={menuData.link}
+                  replace
                 >
                   Let&apos;s Talk
                 </Link>

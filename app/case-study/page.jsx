@@ -1,9 +1,10 @@
+"use client";
 import CallToAction from "@/components/CallToAction";
 import CaseStudyHero from "@/components/caseStudy/caseStudyHero.jsx";
 import {CaseStudy} from "@/components/caseStudy/";
-import GetcaseStudyMetadata from "@/components/caseStudy/GetCaseStudyData.js";
-const CaseStudyPage = () => {
-  const caseStudyMetadata = GetcaseStudyMetadata();
+import CaseStudyData from "@/Data/caseStudy.js";
+
+export default async function CaseStudyPage() {
   return (
     <>
       <CaseStudyHero
@@ -13,16 +14,29 @@ const CaseStudyPage = () => {
           </>
         }
       />
-      <div className="container py-10">
-        <div className="row">
-          {caseStudyMetadata.map((caseStudy, i) => (
-            <CaseStudy
-              key={i}
-              props={caseStudy}
-            />
-          ))}
+      <section className="project pt-lg-7 pt-4 pb-lg-7 pb-4">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="isotop-menu button-group-home pt-2 mb-lg-6 mb-4">
+                <button className="is-checked">All project</button>
+                <button>Marketing</button>
+                <button>Design</button>
+                <button>Development</button>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            {CaseStudyData.map((item, i) => (
+              <CaseStudy
+                key={i}
+                props={item}
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
+
       <CallToAction
         title={
           <>
@@ -33,24 +47,4 @@ const CaseStudyPage = () => {
       />
     </>
   );
-};
-
-export default CaseStudyPage;
-
-// export const getPostMetadata = () => {
-//   const folder = "Data/caseStudy/";
-//   const files = fs.readdirSync(folder);
-//   const markdownPosts = files.filter((file) => file.endsWith(".md"));
-
-//   // Get gray-matter data from each file.
-//   const posts = markdownPosts.map((fileName) => {
-//     const fileContents = fs.readFileSync(`Data/caseStudy/${fileName}`, "utf8");
-//     const matterResult = matter(fileContents);
-//     return {
-//       ...matterResult.data,
-//       slug: fileName.replace(".md", ""),
-//     };
-//   });
-
-//   return posts;
-// };
+}
