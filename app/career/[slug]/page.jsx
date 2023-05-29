@@ -3,6 +3,7 @@ import Markdown from "react-markdown";
 import matter from "gray-matter";
 import PageHero from "@/components/Common/PageHero";
 import GetPostMetadata from "@/components/Career/GetPostMetatData.js";
+import CareerForm from "@/components/Career/CareerForm.jsx";
 export const getPostContent = (slug) => {
   const folder = "Data/career/";
   const file = `${folder}${slug}.md`;
@@ -28,17 +29,19 @@ const CareerSingle = (props) => {
         breadcrumbTitle={postParams.title}
       />
 
-      <section class="career-details py-7">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-9">
-              <div class="career-details-content">
+      <section className="career-details py-7">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-9">
+              <div className="career-details-content">
                 <Markdown>{post.content}</Markdown>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <CareerForm />
     </>
   );
 };
