@@ -7,7 +7,7 @@ const caseStudy = [
     thumbnail: "/images/project/project-1.png",
     tag: "Content",
     featureImage: "/images/project/feature-image.png",
-    category: "Design",
+    category: ["Design", "Development"],
     brandOverview:
       "If so, you know how amazing and attractive they look. Yes, it is a smart way to grow the reader’s attention, and the moving text inspires the users to concentrate on that specific part, especially. Don’t you apply this amazing thing on your website yet? Don’t worry; we are offering our helping hand, just hold.",
     services: [
@@ -99,7 +99,7 @@ const caseStudy = [
     thumbnail: "/images/project/project-2.png",
     tag: "3D Design",
     featureImage: "/images/project/feature-image.png",
-    category: "Marketing",
+    category: ["Marketing", "Design"],
     brandOverview:
       "If so, you know how amazing and attractive they look. Yes, it is a smart way to grow the reader’s attention, and the moving text inspires the users to concentrate on that specific part, especially. Don’t you apply this amazing thing on your website yet? Don’t worry; we are offering our helping hand, just hold.",
     services: [
@@ -191,7 +191,7 @@ const caseStudy = [
     thumbnail: "/images/project/project-3.png",
     tag: "Mobile App",
     featureImage: "/images/project/feature-image.png",
-    category: "Development",
+    category: ["Development", "Design"],
     brandOverview:
       "If so, you know how amazing and attractive they look. Yes, it is a smart way to grow the reader’s attention, and the moving text inspires the users to concentrate on that specific part, especially. Don’t you apply this amazing thing on your website yet? Don’t worry; we are offering our helping hand, just hold.",
     services: [
@@ -283,7 +283,7 @@ const caseStudy = [
     thumbnail: "/images/project/project-4.png",
     tag: "Animation",
     featureImage: "/images/project/feature-image.png",
-    category: "Marketing",
+    category: ["Marketing", "Development"],
     brandOverview:
       "If so, you know how amazing and attractive they look. Yes, it is a smart way to grow the reader’s attention, and the moving text inspires the users to concentrate on that specific part, especially. Don’t you apply this amazing thing on your website yet? Don’t worry; we are offering our helping hand, just hold.",
     services: [
@@ -375,7 +375,7 @@ const caseStudy = [
     thumbnail: "/images/project/project-5.png",
     tag: "Content",
     featureImage: "/images/project/feature-image.png",
-    category: "Design",
+    category: ["Design", "Development"],
     brandOverview:
       "If so, you know how amazing and attractive they look. Yes, it is a smart way to grow the reader’s attention, and the moving text inspires the users to concentrate on that specific part, especially. Don’t you apply this amazing thing on your website yet? Don’t worry; we are offering our helping hand, just hold.",
     services: [
@@ -467,7 +467,7 @@ const caseStudy = [
     thumbnail: "/images/project/project-6.png",
     tag: "Redesign",
     featureImage: "/images/project/feature-image.png",
-    category: "Development",
+    category: ["Development", "Marketing"],
     brandOverview:
       "If so, you know how amazing and attractive they look. Yes, it is a smart way to grow the reader’s attention, and the moving text inspires the users to concentrate on that specific part, especially. Don’t you apply this amazing thing on your website yet? Don’t worry; we are offering our helping hand, just hold.",
     services: [
@@ -559,7 +559,7 @@ const caseStudy = [
     thumbnail: "/images/project/project-3.png",
     tag: "Brand Identity",
     featureImage: "/images/project/feature-image.png",
-    category: "Design",
+    category: ["Design", "Marketing"],
     brandOverview:
       "If so, you know how amazing and attractive they look. Yes, it is a smart way to grow the reader’s attention, and the moving text inspires the users to concentrate on that specific part, especially. Don’t you apply this amazing thing on your website yet? Don’t worry; we are offering our helping hand, just hold.",
     services: [
