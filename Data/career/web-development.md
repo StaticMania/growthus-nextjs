@@ -1,5 +1,5 @@
 ---
-title: "Customer Experience Representative"
+title: "Front End Developer"
 publishDate: 25-05-2023
 jobType: remote
 ---
