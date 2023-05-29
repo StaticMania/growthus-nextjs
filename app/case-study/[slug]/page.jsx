@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import CaseStudyHero from "@/components/caseStudy/caseStudyHero.jsx";
+import PageHero from "@/components/Common/PageHero.jsx";
 import CaseStudyData from "@/Data/caseStudy.js";
 
 const BlogPost = (props) => {
@@ -15,7 +15,7 @@ const BlogPost = (props) => {
 
   return (
     <>
-      <CaseStudyHero
+      <PageHero
         pageTitle={data.title}
         breadcrumbTitle={data.title}
       />

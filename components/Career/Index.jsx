@@ -1,8 +1,8 @@
 import React from "react";
 import CareerHeroItem from "./CareerHeroItem";
 import {CareerHeroData} from "@/Data/Data.js";
-function About() {
+function Career() {
   return <CareerHeroItem data={CareerHeroData} />;
 }
 
-export default About;
+export default Career;

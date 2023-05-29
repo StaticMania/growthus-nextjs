@@ -88,14 +88,10 @@
       line-height: 170%;
     }
     ul {
+      padding-left: 12px;
       li {
-        display: flex;
-        span {
-          flex-shrink: 0;
-          margin-right: 8px;
-        }
-        p {
-          flex-grow: 1;
+        &::marker {
+          content: "- ";
         }
       }
     }
