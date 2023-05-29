@@ -1,16 +1,14 @@
 "use client";
 import Image from "next/image";
-import CaseStudyHero from "@/components/caseStudy/caseStudyHero.jsx";
+import PageHero from "@/components/Common/PageHero.jsx";
 import CaseStudyData from "@/Data/caseStudy.js";
 import Link from "next/link";
 
-const BlogPost = (props) => {
+const caseStudyPost = (props) => {
   const slug = props.params.slug;
   const data = CaseStudyData.find((post) => post.slug === slug);
 
-  const relatedPost = CaseStudyData.filter((post) =>
-    post.category.includes(...data.category)
-  );
+  const relatedPost = CaseStudyData.filter((post) => post.category.includes(...data.category));
 
   const imageStyle = {
     maxWidth: "100%",
@@ -20,7 +18,10 @@ const BlogPost = (props) => {
 
   return (
     <>
-      <CaseStudyHero pageTitle={data.title} breadcrumbTitle={data.title} />
+      <PageHero
+        pageTitle={data.title}
+        breadcrumbTitle={data.title}
+      />
 
       <section className="project-desc py-8 py-lg-8">
         <div className="container">
@@ -67,7 +68,10 @@ const BlogPost = (props) => {
 
           <div className="row gy-4 mb-5">
             {data.subFeatureImage.slice(0, 2).map((item, i) => (
-              <div className="col-md-6" key={i}>
+              <div
+                className="col-md-6"
+                key={i}
+              >
                 <div className="project-subfeature-photo">
                   <Image
                     src={item.image}
@@ -92,7 +96,10 @@ const BlogPost = (props) => {
 
           <div className="row gy-4 mb-5">
             {data.subFeatureImage.slice(2, 6).map((item, i) => (
-              <div className="col-md-6" key={i}>
+              <div
+                className="col-md-6"
+                key={i}
+              >
                 <div className="project-subfeature-photo">
                   <Image
                     src={item.image}
@@ -188,10 +195,13 @@ const BlogPost = (props) => {
           </div>
           <div className="row justify-content-center">
             {relatedPost
-              .filter((post) => post.id !== data.id)
+              .filter((post) => post.slug !== data.slug)
               .slice(0, 2)
               .map((item) => (
-                <div className="col-md-5" key={item.id}>
+                <div
+                  className="col-md-5"
+                  key={item.id}
+                >
                   <div className="project-item-wrapper">
                     <Link
                       href={`/case-study/${item.slug}`}
@@ -222,4 +232,4 @@ const BlogPost = (props) => {
   );
 };
 
-export default BlogPost;
+export default caseStudyPost;

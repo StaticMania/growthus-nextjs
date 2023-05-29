@@ -1,11 +1,11 @@
 "use client";
 
 import CallToAction from "@/components/CallToAction";
-import CaseStudyHero from "@/components/caseStudy/caseStudyHero.jsx";
-import { CaseStudy } from "@/components/caseStudy/";
+import PageHero from "@/components/Common/PageHero.jsx";
+import {CaseStudy} from "@/components/caseStudy/";
 import CaseStudyData from "@/Data/caseStudy.js";
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import {useState} from "react";
+import {motion, AnimatePresence} from "framer-motion";
 
 export default function CaseStudyPage() {
   const categories = ["All project", "Design", "Development", "Marketing"];
@@ -14,9 +14,7 @@ export default function CaseStudyPage() {
 
   const handleClick = (category) => {
     if (category !== "All project") {
-      const data = CaseStudyData.filter((item) =>
-        item.category.includes(category)
-      );
+      const data = CaseStudyData.filter((item) => item.category.includes(category));
       setFilterData(data);
       return;
     }
@@ -25,7 +23,7 @@ export default function CaseStudyPage() {
 
   return (
     <>
-      <CaseStudyHero
+      <PageHero
         pageTitle={
           <>
             <span>Let’s See </span> <br /> <span> Our Recent Work </span>
@@ -52,10 +50,16 @@ export default function CaseStudyPage() {
               </div>
             </div>
           </div>
-          <motion.div layout className="row">
+          <motion.div
+            layout
+            className="row"
+          >
             {filterData.map((item) => (
               <AnimatePresence key={item.id}>
-                <CaseStudy key={item.id} props={item} />
+                <CaseStudy
+                  key={item.id}
+                  props={item}
+                />
               </AnimatePresence>
             ))}
           </motion.div>
@@ -65,8 +69,7 @@ export default function CaseStudyPage() {
       <CallToAction
         title={
           <>
-            <span>Sounds Good? </span> <br />{" "}
-            <span>Let’s Grow your Business.</span>
+            <span>Sounds Good? </span> <br /> <span>Let’s Grow your Business.</span>
           </>
         }
         link="/"

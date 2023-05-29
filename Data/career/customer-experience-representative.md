@@ -1,5 +1,5 @@
 ---
-title: "Front End Developer"
+title: "Customer Experience Representative"
 publishDate: 25-05-2023
 jobType: remote
 ---
@@ -34,7 +34,7 @@ If you are going to use a passage of Lorem Ipsum, you need to be sure there isnâ
 
 - 3+ years of inbound sales experience, ideally SaaS and quota carrying.
 
-- You are technically-minded. You can develop a deep knowledge of how Hotjar works, allowing you to speak clearly to customers and communicate their needs to our team.
+- You are technically\*minded. You can develop a deep knowledge of how Hotjar works, allowing you to speak clearly to customers and communicate their needs to our team.
 
 - You are experienced with taking sales calls, diligently following up, and closing deals.
 
