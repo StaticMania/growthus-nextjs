@@ -2,10 +2,15 @@
 import Image from "next/image";
 import CaseStudyHero from "@/components/caseStudy/caseStudyHero.jsx";
 import CaseStudyData from "@/Data/caseStudy.js";
+import Link from "next/link";
 
 const BlogPost = (props) => {
   const slug = props.params.slug;
   const data = CaseStudyData.find((post) => post.slug === slug);
+
+  const relatedPost = CaseStudyData.filter((post) =>
+    post.category.includes(...data.category)
+  );
 
   const imageStyle = {
     maxWidth: "100%",
@@ -15,10 +20,7 @@ const BlogPost = (props) => {
 
   return (
     <>
-      <CaseStudyHero
-        pageTitle={data.title}
-        breadcrumbTitle={data.title}
-      />
+      <CaseStudyHero pageTitle={data.title} breadcrumbTitle={data.title} />
 
       <section className="project-desc py-8 py-lg-8">
         <div className="container">
@@ -65,10 +67,7 @@ const BlogPost = (props) => {
 
           <div className="row gy-4 mb-5">
             {data.subFeatureImage.slice(0, 2).map((item, i) => (
-              <div
-                className="col-md-6"
-                key={i}
-              >
+              <div className="col-md-6" key={i}>
                 <div className="project-subfeature-photo">
                   <Image
                     src={item.image}
@@ -93,10 +92,7 @@ const BlogPost = (props) => {
 
           <div className="row gy-4 mb-5">
             {data.subFeatureImage.slice(2, 6).map((item, i) => (
-              <div
-                className="col-md-6"
-                key={i}
-              >
+              <div className="col-md-6" key={i}>
                 <div className="project-subfeature-photo">
                   <Image
                     src={item.image}
@@ -177,6 +173,48 @@ const BlogPost = (props) => {
                 ))}
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="project py-7">
+        <div className="container">
+          <div className="row justify-content-center ">
+            <div className="col-lg-10">
+              <div className="section-header text-start">
+                <h2>What Next?</h2>
+              </div>
+            </div>
+          </div>
+          <div className="row justify-content-center">
+            {relatedPost
+              .filter((post) => post.id !== data.id)
+              .slice(0, 2)
+              .map((item) => (
+                <div className="col-md-5" key={item.id}>
+                  <div className="project-item-wrapper">
+                    <Link
+                      href={`/case-study/${item.slug}`}
+                      className="project-item"
+                    >
+                      <div className="project-item">
+                        <div className="project-item-thumb">
+                          <Image
+                            src={item.thumbnail}
+                            alt="feature-image"
+                            height={550}
+                            width={530}
+                          />
+                          <span>{item.tag}</span>
+                        </div>
+                        <div className="project-item-content">
+                          <h3>{item.title}</h3>
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+              ))}
           </div>
         </div>
       </section>
