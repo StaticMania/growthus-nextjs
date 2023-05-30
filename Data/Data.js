@@ -1,7 +1,7 @@
 // Navabar Data
 export const menuData = {
   logo: "/images/logo.svg",
-  link: "/asdsa",
+  link: "/contact",
   menuContent: [
     {
       id: 1,
@@ -76,8 +76,8 @@ export const menuData = {
         },
         {
           id: 77,
-          title: "Terms & Consition",
-          path: "/terms",
+          title: "Terms & Conditions",
+          path: "/terms-conditions",
           newTab: false,
         },
         {
@@ -269,39 +269,39 @@ export const FooterDatas = {
     {
       id: 1,
       name: "Services",
-      link: "/",
+      link: "/services",
     },
     {
       id: 2,
       name: "Career",
-      link: "/",
+      link: "/career",
     },
     {
       id: 3,
       name: "Blogs",
-      link: "/",
+      link: "/blog",
     },
     {
       id: 4,
       name: "Contact Us",
-      link: "/",
+      link: "/contact",
     },
   ],
   policyLinks: [
     {
       id: 11,
       name: "Privay Policy",
-      link: "/",
+      link: "/privacy",
     },
     {
       id: 12,
       name: "Terms of Service",
-      link: "/",
+      link: "/terms-conditions",
     },
     {
       id: 13,
       name: "Business Policy",
-      link: "/",
+      link: "/business-policy",
     },
   ],
   locations: [
@@ -337,12 +337,12 @@ export const FooterDatas = {
     {
       id: 41,
       name: "Help & Support",
-      link: "/",
+      link: "/contact",
     },
     {
       id: 42,
       name: "Case Studies",
-      link: "/",
+      link: "/case-study",
     },
   ],
 };
@@ -383,7 +383,7 @@ export const JoinTeam = {
     "Looking for a career in digital marketing? Join our team of experts! We offer opportunities across various departments and a supportive team culture that values collaboration and innovation. With competitive compensation and flexible work arrangements, we're confident that you'll love working with us. Check out our current openings and apply today to take your career to the next level.",
   imageShape: "/images/work/work-shap.svg",
   image: "/images/about/story2.png",
-  btnLinK: "/",
+  btnLinK: "/contact",
 };
 
 // Team Members
@@ -536,11 +536,6 @@ export const BusinessServicesData = [
   },
 ];
 
-export const BlogTitle = {
-  title: " Blog",
-  desc: "By fusing strategy & design we help our partners build their brands, drive business, & stand out from the noise in saturated markets! Follow our blog for the latest case studies and projects.",
-};
-
 // Career Hero Data
 export const CareerHeroData = {
   title: "We are looking for next talent! are you ready?",
@@ -549,4 +544,43 @@ export const CareerHeroData = {
   details:
     "At our agency, we're always looking for talented individuals who are passionate about what they do. We believe that our success is driven by our team, and we are committed to creating an environment where our employees can thrive. We offer a collaborative and dynamic work environment where creativity and innovation are encouraged. Our team members are not just employees, they are partners in our success. We value diversity and are committed to creating an inclusive and supportive work environment. If you are ready to take your career to the next level, then we invite you to join our team. We offer competitive salaries, comprehensive benefits, and opportunities for professional growth and development.",
   image: "/images/career/career-banner.png",
+};
+
+export const ContactFormData = {
+  image: "/images/contact/contact.png",
+  Email: "info@growthus.com",
+  phone: "+96099969996",
+  address: [
+    {
+      name: "London",
+      location: "1421 San Pedro St, Los Angeles, CA 90015",
+    },
+    {
+      name: "Japan",
+      location: "1421 San Pedro St, Los Angeles, CA 90015",
+    },
+  ],
+  experts: [
+    {
+      name: "Marvin McKinney",
+      image: "/images/contact/contact-person1.png",
+      designation: "Founder and CEO",
+      phone: "+96099969996",
+      email: "info@example.com",
+    },
+    {
+      name: "Floyd Miles",
+      image: "/images/contact/contact-person2.png",
+      designation: "Co-Founder and CTO",
+      phone: "+96099969996",
+      email: "info@example.com",
+    },
+    {
+      name: "Kristin Watson",
+      image: "/images/contact/contact-person3.png",
+      designation: "Co-Founder and CTO",
+      phone: "+96099969996",
+      email: "info@example.com",
+    },
+  ],
 };

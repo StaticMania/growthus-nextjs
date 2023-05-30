@@ -1,32 +1,43 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
-
+import {motion} from "framer-motion";
 import React from "react";
-import { CaretRight } from "@phosphor-icons/react";
+import {CaretRight} from "@phosphor-icons/react";
 export const Caret = () => {
   return (
     <div className="col-md-12 text-center mt-4">
-      <Link href="/case-study" className="btn btn-secondary">
+      <Link
+        href="/case-study"
+        className="btn btn-secondary"
+      >
         <span className="position-relative">
           See More
-          <CaretRight size={14} weight="thin" />
+          <CaretRight
+            size={14}
+            weight="thin"
+          />
         </span>
       </Link>
     </div>
   );
 };
-export const CaseStudy = ({ props }) => {
+export const CaseStudy = ({props}) => {
   const imageStyle = {
     maxWidth: "100%",
     height: "auto",
     width: "auto",
   };
   return (
-    <motion.div layout className="col-md-4">
+    <motion.div
+      layout
+      className="col-md-4"
+    >
       <motion.div className="project-item-wrapper">
-        <motion.a href={`/case-study/${props.slug}`} className="project-item">
+        <motion.a
+          href={`/case-study/${props.slug}`}
+          className="project-item"
+        >
           <motion.div className="project-item-thumb">
             <Image
               src={props.thumbnail}

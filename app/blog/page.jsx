@@ -1,49 +1,96 @@
-import fs from "fs";
-import matter from "gray-matter";
 import Link from "next/link";
-import path from "path";
-import {BlogTitle} from "@/Data/Data.js";
+import Image from "next/image";
+import PageHero from "@/components/Common/PageHero.jsx";
+import Caret from "@/components/Common/Caret.jsx";
+import BlogPostMetaData from "@/components/Blog/BlogPostMetaData.js";
+import CallToAction from "@/components/CallToAction";
 function Blog() {
-  const posts = getPostMetadata();
-
+  const posts = BlogPostMetaData();
+  const imageStyle = {
+    width: "auto",
+    maxWidth: "100%",
+    height: "auto",
+  };
   return (
-    <div className="my-5 container">
-      <h1>{BlogTitle.title}</h1>
-      {posts.map((post) => (
-        <div
-          key={post.title}
-          className="p-5 shadow-sm mb-5"
-        >
-          <h4>{post.title}</h4>
-          <p>{post.subtitle}</p>
-          <Link
-            href={`/blog/${post.slug}`}
-            className="btn btn-warning"
-          >
-            Read More
-          </Link>
+    <>
+      <PageHero
+        pageTitle={
+          <>
+            <span>Blog</span>
+          </>
+        }
+      />
+      <section className="blog py-8">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              {posts.map((post, i) => (
+                <article
+                  className="card flex-lg-row"
+                  key={i}
+                >
+                  <div className="blog-post-item-thumb">
+                    <Image
+                      src={post.thumbnail}
+                      alt="featured-thumb1"
+                      className="w-100"
+                      width={500}
+                      height={500}
+                      style={imageStyle}
+                    />
+                  </div>
+                  <div className="blog-post-content">
+                    <div className="blog-post-meta mb-3">
+                      <ul className="list-inline list-unstyled">
+                        <li className="list-inline-item">
+                          {post.tags.map((item, i) => (
+                            <Link
+                              href="/"
+                              key={i}
+                              className="me-1"
+                            >
+                              <span className="badge">{item}</span>
+                            </Link>
+                          ))}
+                        </li>
+                        <li className="list-inline-item">
+                          <span className="ms-2">{post.date}</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="blog-post-body">
+                      <div className="blog-post-body-title">
+                        <Link href={`/blog/${post.slug}`}>
+                          <h3>{post.title}</h3>
+                        </Link>
+                        <p>{post.excerpts}</p>
+                        <Link
+                          href={`/blog/${post.slug}`}
+                          className="btn btn-secondary"
+                        >
+                          <span>
+                            Read the Blog
+                            <Caret />
+                          </span>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
         </div>
-      ))}
-    </div>
+      </section>
+      <CallToAction
+        title={
+          <>
+            <span>Sounds Good? </span> <br /> <span>Let’s Grow your Business.</span>
+          </>
+        }
+      />
+    </>
   );
 }
 
 export default Blog;
-
-export const getPostMetadata = () => {
-  const folder = "Data/posts/";
-  const files = fs.readdirSync(folder);
-  const markdownPosts = files.filter((file) => file.endsWith(".md"));
-
-  const postsData = markdownPosts.map((file) => {
-    const filePath = path.join(folder, file);
-    const content = fs.readFileSync(filePath, "utf8");
-    const data = matter(content);
-    return {
-      ...data.data,
-      slug: file.replace(".md", ""),
-    };
-  });
-
-  return postsData;
-};
