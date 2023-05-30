@@ -3,9 +3,10 @@ title: "How to Create a Successful Content Marketing Strategy"
 date: "2021-08-14"
 excerpt: "Content marketing is a powerful way to engage your target audience, build brand awareness, and drive conversions. But without a solid strategy, your content efforts can fall flat. Learn the essential steps to create a successful content marketing plan"
 tags: 
+  - SEO
   - Marketing
-thumbnail: "/images/blog/featured-image4.png"
-featureImage: "/images/blog/featured-image4.png"
+thumbnail: "/images/blog/featured-thumb4.png"
+featureImage: "/images/blog/featured-thumb4.png"
 auhtor: Kristin Watson
 authorDesignation: Lead Content Writer
 authorImage: "/images/blog/profile-picture.png"

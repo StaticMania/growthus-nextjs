@@ -88,20 +88,7 @@
 
   // blog-details style
   &-details {
-    margin-top: -640px;
-    @include media-breakpoint-down-xl {
-      margin-top: -416px;
-    }
-    @include media-breakpoint-down-lg {
-      margin-top: -448px;
-    }
-    @include media-breakpoint-down-md {
-      margin-top: -512px;
-    }
-    @include media-breakpoint-down-sm {
-      margin-top: -176px;
-    }
-
+    padding-top: 100px;
     .card {
       box-shadow: none;
       border-radius: 0;

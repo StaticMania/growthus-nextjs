@@ -1,9 +1,11 @@
-import Link from "next/link";
-import {getPostMetadata} from "../page";
 import fs from "fs";
+import Link from "next/link";
+import Image from "next/image";
 import Markdown from "react-markdown";
 import matter from "gray-matter";
-
+import RelatedBlog from "@/components/Blog/RelatedBlog";
+import BlogPostMetaData from "@/components/Blog/BlogPostMetaData.js";
+import CallToAction from "@/components/CallToAction";
 export const getPostContent = (slug) => {
   const folder = "Data/posts/";
   const file = `${folder}${slug}.md`;
@@ -12,29 +14,104 @@ export const getPostContent = (slug) => {
   return matterResult;
 };
 export const generateStaticParams = async () => {
-  const posts = getPostMetadata();
+  const posts = BlogPostMetaData();
   return posts.map((post) => ({
     slug: post.slug,
   }));
 };
+
 const BlogPost = (props) => {
   const slug = props.params.slug;
   const post = getPostContent(slug);
   const postParams = post.data;
+  const postFilter = BlogPostMetaData();
+  const relatedPost = postFilter.filter((element) => element.tags.includes(...postParams.tags));
+  const imageStyle = {
+    width: "auto",
+    maxWidth: "100%",
+    height: "auto",
+  };
   return (
-    <div className="my-5 container">
-      <div className="mt-5">
-        <h4>{postParams.title}</h4>
-        <p>{postParams.subtitle}</p>
-        <Link
-          className="btn btn-warning"
-          href="/blog"
-        >
-          Read More
-        </Link>
-        <Markdown>{post.content}</Markdown>
-      </div>
-    </div>
+    <>
+      <section className="blog-details">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-9 mx-auto">
+              <article className="card">
+                <div className="blog-post-meta mb-3">
+                  <ul className="list-inline list-unstyled">
+                    <li className="list-inline-item">
+                      {postParams.tags.map((item, i) => (
+                        <Link
+                          href="/"
+                          key={i}
+                          className="me-1"
+                        >
+                          <span className="badge">{item}</span>
+                        </Link>
+                      ))}
+                    </li>
+                    <li className="list-inline-item">
+                      <span className="ms-2 text-primary">{postParams.date}</span>
+                    </li>
+                  </ul>
+                </div>
+                <h2 className="mb-6">{postParams.title}</h2>
+                <div className="feature-image">
+                  <Image
+                    src={postParams.featureImage}
+                    alt="featured-image"
+                    className="w-100"
+                    width={500}
+                    height={500}
+                    style={imageStyle}
+                  />
+                </div>
+                <Markdown>{post.content}</Markdown>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="project py-7">
+        <div className="container">
+          <div className="row justify-content-center ">
+            <div className="col-lg-10">
+              <div className="section-header text-start">
+                <h2>Related Post</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="related-blog pt-xl-8 pt-4 pb-xl-10 pb-7">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <h2>Related Blog</h2>
+            </div>
+          </div>
+          <div className="row">
+            {relatedPost
+              .filter((post) => post.title !== postParams.title)
+              .map((item, i) => (
+                <RelatedBlog
+                  key={i}
+                  props={item}
+                />
+              ))}
+          </div>
+        </div>
+      </section>
+      <CallToAction
+        title={
+          <>
+            <span>Sounds Good? </span> <br /> <span>Let’s Grow your Business.</span>
+          </>
+        }
+      />
+    </>
   );
 };
 

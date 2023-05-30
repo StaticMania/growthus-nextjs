@@ -33,13 +33,13 @@ const HeroItems = (hero) => {
               <p className="w-lg-75">{description}</p>
               <div className="d-lg-flex">
                 <Link
-                  href="/"
+                  href="/contact"
                   className="btn btn-primary me-sm-4 mb-4 mb-sm-0"
                 >
                   Let’s Talk
                 </Link>
                 <Link
-                  href="/"
+                  href="/case-study"
                   className="btn btn-outline"
                 >
                   Check Our Work

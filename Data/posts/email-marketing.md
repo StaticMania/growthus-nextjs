@@ -3,8 +3,10 @@ title: "Why Email Marketing Still Matters in 2023"
 date: "2021-08-14"
 excerpt: "Despite the rise of social media and other digital channels, email marketing remains one of the most effective ways to reach and engage your audience. In this post, we explore the benefits of email marketing and share tips for creating a successful email campaign."
 tags: 
+  - SEO
   - Development
-thumbnail: "/images/blog/featured-thum6.png"
+  - Content
+thumbnail: "/images/blog/featured-thumb6.png"
 featureImage: "/images/blog/featured-thumb6.png"
 auhtor: Kristin Watson
 authorDesignation: Lead Content Writer

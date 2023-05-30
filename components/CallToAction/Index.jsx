@@ -46,9 +46,8 @@ function CallToAction({title, link}) {
               <div className="position-relative">
                 <h2 className="mb-5 text-white">{title}</h2>
                 <Link
-                  type="submit"
                   className="btn btn-outline mb-3"
-                  href={`${link}`}
+                  href="/contact"
                 >
                   Let’s Talk
                 </Link>

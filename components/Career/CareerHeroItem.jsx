@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 function CareerHeroItem({data}) {
-  const {images} = data;
   const imageStyle = {
     width: "auto",
     maxWidth: "100%",

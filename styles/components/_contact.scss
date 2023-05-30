@@ -5,6 +5,9 @@
 .contact {
   &-team {
     background-color: $color-bg;
+    .section-header {
+      text-align: left;
+    }
   }
 }
 .contact-form {

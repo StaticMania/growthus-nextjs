@@ -4,6 +4,7 @@ date: "2021-08-14"
 excerpt: "n today's digital age, user experience (UX) has become one of the most important factors for website success. Learn why UX matters and how to design a website that delivers a great user experience"
 tags: 
   - Development
+  - SEO
 thumbnail: "/images/blog/featured-thumb3.png"
 featureImage: "/images/blog/featured-thumb3.png"
 auhtor: Kristin Watson

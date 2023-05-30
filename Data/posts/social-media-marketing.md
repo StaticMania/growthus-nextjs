@@ -3,7 +3,8 @@ title: "The Benefits of Social Media Marketing for Your Business"
 date: "2021-08-14"
 excerpt: "Social media has become a vital part of any digital marketing strategy. With over 3 billion active users worldwide, platforms like Facebook, Instagram, and LinkedIn offer businesses a powerful way to connect with their audience and drive engagement. Learn how to harness the power of social media for your business."
 tags: 
-  - SEO
+  - Development
+  - Content
 thumbnail: "/images/blog/featured-thumb4.png"
 featureImage: "/images/blog/featured-thumb4.png"
 auhtor: Kristin Watson
