@@ -4,20 +4,8 @@ import {useState, useEffect} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {FooterDatas} from "@/Data/Data.js";
-import {useForm, ValidationError} from "@formspree/react";
 const FooterData = ({FooterContent}) => {
   const {companyLinks, policyLinks, locations, socialLinks, resources} = FooterContent;
-  const [state, handleSubmit] = useForm(`${FooterContent.formspreeId}`);
-  // const [inputValue, setInputValue] = useState("");
-  // const handleChange = (event) => {
-  //   setInputValue(event.target.value);
-  // };
-  // const handleSubmit = (event) => {
-  //   const emailList = [];
-  //   emailList.push(`Name: ${inputValue}`);
-  //   console.log(emailList);
-  //   event.preventDefault();
-  // };
   return (
     <>
       <footer
@@ -43,10 +31,7 @@ const FooterData = ({FooterContent}) => {
               </div>
               <div className="footer-description text-center text-lg-start pb-md-6">
                 <p className="mb-3">Stay in touch</p>
-                <form
-                  onSubmit={handleSubmit}
-                  className="footer-submit-form"
-                >
+                <form className="footer-submit-form">
                   <div className="from-group">
                     <div className="input-group">
                       <input
@@ -54,13 +39,6 @@ const FooterData = ({FooterContent}) => {
                         className="form-control"
                         placeholder="Your email address"
                         name="email"
-                        // value={inputValue}
-                        // onChange={handleChange}
-                      />
-                      <ValidationError
-                        prefix="Email"
-                        field="email"
-                        errors={state.errors}
                       />
                       <div className="submit">
                         <button type="submit">
@@ -80,7 +58,6 @@ const FooterData = ({FooterContent}) => {
                       </div>
                     </div>
                   </div>
-                  <p className="mt-3">{state.succeeded ? "Thanks for joining!" : ""}</p>
                 </form>
               </div>
             </div>

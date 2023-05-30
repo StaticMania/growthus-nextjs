@@ -2,29 +2,37 @@ import fs from "fs";
 import matter from "gray-matter";
 import Link from "next/link";
 import path from "path";
-import {BlogTitle} from "@/Data/Data.js";
+import PageHero from "@/components/Common/PageHero.jsx";
 function Blog() {
   const posts = getPostMetadata();
 
   return (
-    <div className="my-5 container">
-      <h1>{BlogTitle.title}</h1>
-      {posts.map((post) => (
-        <div
-          key={post.title}
-          className="p-5 shadow-sm mb-5"
-        >
-          <h4>{post.title}</h4>
-          <p>{post.subtitle}</p>
-          <Link
-            href={`/blog/${post.slug}`}
-            className="btn btn-warning"
+    <>
+      <PageHero
+        pageTitle={
+          <>
+            <span>Blog</span>
+          </>
+        }
+      />
+      <div className="my-5 container">
+        {posts.map((post) => (
+          <div
+            key={post.title}
+            className="p-5 shadow-sm mb-5"
           >
-            Read More
-          </Link>
-        </div>
-      ))}
-    </div>
+            <h4>{post.title}</h4>
+            <p>{post.subtitle}</p>
+            <Link
+              href={`/blog/${post.slug}`}
+              className="btn btn-warning"
+            >
+              Read More
+            </Link>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
 
