@@ -1,13 +1,13 @@
 ---
 title: "10 Essential SEO Strategies for Small Businesses"
-date: "2021-08-14"
+date: "26 May 2023"
 excerpt: "You may have seen the animated text on many other websites, haven’t you?If so, you know how amazing. When we just scroll down a well-structured website, we really like to go through the whole writing"
 tags: 
  - Marketing
  - Development
 thumbnail: "/images/blog/featured-thumb1.png"
 featureImage: "/images/blog/featured-thumb1.png"
-auhtor: Kristin Watson
+author: Kristin Watson
 authorDesignation: Lead Content Writer
 authorImage: "/images/blog/profile-picture.png"
 ---

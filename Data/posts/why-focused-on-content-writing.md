@@ -1,12 +1,11 @@
 ---
-title: "The Benefits of Social Media Marketing for Your Business"
-date: "15 May 2023"
-excerpt: "Social media has become a vital part of any digital marketing strategy. With over 3 billion active users worldwide, platforms like Facebook, Instagram, and LinkedIn offer businesses a powerful way to connect with their audience and drive engagement. Learn how to harness the power of social media for your business."
+title: "Why You Should Focus on Improving Content Writing"
+date: "23 May 2023"
+excerpt: "Search engine optimization (SEO) can help you improve your website's search engine rankings, drive more traffic to your site, and ultimately increase your revenue. Discover the key SEO strategies and tools that can take your business to the next level."
 tags: 
-  - Development
   - Content
-thumbnail: "/images/blog/featured-thumb4.png"
-featureImage: "/images/blog/featured-thumb4.png"
+thumbnail: "/images/blog/featured-image.png"
+featureImage: "/images/blog/featured-image.png"
 author: Kristin Watson
 authorDesignation: Lead Content Writer
 authorImage: "/images/blog/profile-picture.png"

@@ -8,7 +8,7 @@ const CareerList = ({props}) => {
           <a href="career-details.html">
             <h3>
               {props.title}
-              <span className="badge new-job">New</span>
+              <span className="badge new-job">{props.tag}</span>
             </h3>
           </a>
           <p>{props.jobType}</p>

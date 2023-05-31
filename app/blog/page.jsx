@@ -63,7 +63,7 @@ function Blog() {
                         <Link href={`/blog/${post.slug}`}>
                           <h3>{post.title}</h3>
                         </Link>
-                        <p>{post.excerpts}</p>
+                        <p>{post.excerpt}</p>
                         <Link
                           href={`/blog/${post.slug}`}
                           className="btn btn-secondary"
