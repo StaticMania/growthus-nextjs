@@ -74,12 +74,27 @@ const BlogPost = (props) => {
         </div>
       </section>
 
-      <section className="project py-7">
+      <section className="profile mt-lg-7">
         <div className="container">
-          <div className="row justify-content-center ">
-            <div className="col-lg-10">
-              <div className="section-header text-start">
-                <h2>Related Post</h2>
+          <div className="row">
+            <div className="col-lg-9 mx-auto">
+              <div className="profile py-5 py-lg-7">
+                <h4 className="mb-4">Written by</h4>
+                <div className="content">
+                  <div className="me-5">
+                    <Image
+                      src={postParams.authorImage}
+                      className="mb-0"
+                      alt="profile"
+                      width={100}
+                      height={100}
+                    />
+                  </div>
+                  <div>
+                    <h3>{postParams.author}</h3>
+                    <h4>{postParams.authorDesignation}</h4>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -95,6 +110,7 @@ const BlogPost = (props) => {
           <div className="row">
             {relatedPost
               .filter((post) => post.title !== postParams.title)
+              .slice(0, 3)
               .map((item, i) => (
                 <RelatedBlog
                   key={i}

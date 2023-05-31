@@ -1,13 +1,13 @@
 ---
 title: "The Power of SEO: Boost Your Online Visibility"
-date: "2021-08-14"
+date: "13 May 2023"
 excerpt: "Search engine optimization (SEO) can help you improve your website's search engine rankings, drive more traffic to your site, and ultimately increase your revenue. Discover the key SEO strategies and tools that can take your business to the next level."
 tags: 
   - SEO
   - Content
 thumbnail: "/images/blog/featured-image.png"
 featureImage: "/images/blog/featured-image.png"
-auhtor: Kristin Watson
+author: Kristin Watson
 authorDesignation: Lead Content Writer
 authorImage: "/images/blog/profile-picture.png"
 ---

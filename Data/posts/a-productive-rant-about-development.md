@@ -1,12 +1,12 @@
 ---
-title: "The Benefits of Social Media Marketing for Your Business"
-date: "15 May 2023"
-excerpt: "Social media has become a vital part of any digital marketing strategy. With over 3 billion active users worldwide, platforms like Facebook, Instagram, and LinkedIn offer businesses a powerful way to connect with their audience and drive engagement. Learn how to harness the power of social media for your business."
+title: "A Productive Rant About Devlopment"
+date: "24 May 2023"
+excerpt: "n today's digital age, user experience (UX) has become one of the most important factors for website success. Learn why UX matters and how to design a website that delivers a great user experience"
 tags: 
   - Development
-  - Content
-thumbnail: "/images/blog/featured-thumb4.png"
-featureImage: "/images/blog/featured-thumb4.png"
+  - SEO
+thumbnail: "/images/blog/featured-thumb3.png"
+featureImage: "/images/blog/featured-thumb3.png"
 author: Kristin Watson
 authorDesignation: Lead Content Writer
 authorImage: "/images/blog/profile-picture.png"

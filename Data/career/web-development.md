@@ -2,6 +2,7 @@
 title: "Front End Developer"
 publishDate: 25-05-2023
 jobType: remote
+tag: 7 days ago
 ---
 
 ### About the team

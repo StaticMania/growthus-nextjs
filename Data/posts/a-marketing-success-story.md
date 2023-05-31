@@ -1,7 +1,7 @@
 ---
-title: "The Benefits of Social Media Marketing for Your Business"
-date: "15 May 2023"
-excerpt: "Social media has become a vital part of any digital marketing strategy. With over 3 billion active users worldwide, platforms like Facebook, Instagram, and LinkedIn offer businesses a powerful way to connect with their audience and drive engagement. Learn how to harness the power of social media for your business."
+title: "A Marketing Success Story You'll Never Believe"
+date: "22 May 2023"
+excerpt: "Despite the rise of social media and other digital channels, email marketing remains one of the most effective ways to reach and engage your audience. In this post, we explore the benefits of email marketing and share tips for creating a successful email campaign."
 tags: 
   - Development
   - Content
