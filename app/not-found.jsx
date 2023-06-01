@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 const NotFound = () => {
   const imageStyle = {
     width: "auto",
@@ -15,12 +14,6 @@ const NotFound = () => {
             <div className="error-content text-center text-lg-start mb-lg-0 mb-6">
               <h1 className="text-primary">404</h1>
               <h2 className="mb-6">Page not found!</h2>
-              <Link
-                href="/"
-                className="btn btn-primary"
-              >
-                Go to Home
-              </Link>
             </div>
           </div>
           <div className="col-md-6">
