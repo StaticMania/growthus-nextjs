@@ -7,7 +7,9 @@ import SectionHeader from "@/components/Common/SectionTitle";
 import {CaseStudy, Caret} from "@/components/caseStudy/";
 import CaseStudyData from "@/Data/caseStudy.js";
 import serviceData from "@/Data/serviceData.js";
-
+export const metadata = {
+  title: "Grouwthus | Services",
+};
 const PostPage = (props) => {
   const slug = props.params.slug;
   const data = serviceData.find((post) => post.slug === slug);

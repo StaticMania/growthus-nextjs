@@ -1,13 +1,13 @@
 import AllBlogs from "@/components/AllBlogs/AllBlogs";
 import BlogPostMetaData from "@/components/Blog/BlogPostMetaData.js";
-import CallToAction from "@/components/CallToAction/Index";
+import CallToAction from "@/components/CallToAction";
 import PageHero from "@/components/Common/PageHero";
-
-const taxonomySingle = ({ params }) => {
+export const metadata = {
+  title: "Taxonomy | Tags",
+};
+const TaxonomySingle = ({params}) => {
   const posts = BlogPostMetaData();
-  const allPostsWithTag = posts.filter((post) =>
-    post.tags.includes(params.tag)
-  );
+  const allPostsWithTag = posts.filter((post) => post.tags.includes(params.tag));
   return (
     <>
       <PageHero
@@ -21,8 +21,7 @@ const taxonomySingle = ({ params }) => {
       <CallToAction
         title={
           <>
-            <span>Sounds Good? </span> <br />{" "}
-            <span>Let’s Grow your Business.</span>
+            <span>Sounds Good? </span> <br /> <span>Let’s Grow your Business.</span>
           </>
         }
       />
@@ -30,4 +29,4 @@ const taxonomySingle = ({ params }) => {
   );
 };
 
-export default taxonomySingle;
+export default TaxonomySingle;

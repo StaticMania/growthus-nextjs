@@ -1,11 +1,6 @@
 "use client";
-
-const Pagination = ({
-  goToNextPage,
-  goToPreviousPage,
-  currentPage,
-  totalPage,
-}) => {
+import {CaretRight, CaretLeft} from "@phosphor-icons/react";
+const Pagination = ({goToNextPage, goToPreviousPage, currentPage, totalPage}) => {
   return (
     <div className="row">
       <div className="pagination pt-4 pt-lg-8 d-lg-flex align-items-center justify-content-lg-start justify-content-center">
@@ -18,7 +13,7 @@ const Pagination = ({
                 disabled={currentPage === 1}
               >
                 <span className="position-relative">
-                  <i className="ph-caret-left"></i>
+                  <CaretLeft size={14} />
                   Previous Page
                 </span>
               </button>
@@ -31,14 +26,13 @@ const Pagination = ({
               >
                 <span className="position-relative">
                   Next Page
-                  <i className="ph-caret-right"></i>
+                  <CaretRight size={14} />
                 </span>
               </button>
             </li>
             <li className="page-item">
               <span className="page-link">
-                {currentPage} /
-                <span className="page-total"> {totalPage} pages </span>
+                {currentPage} /<span className="page-total"> {totalPage} pages </span>
               </span>
             </li>
           </ul>

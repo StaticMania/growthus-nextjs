@@ -9,6 +9,9 @@ import AboutContent from "@/components/AboutSection";
 import {AboutStory, JoinTeam, TeamData} from "@/Data/Data.js";
 import Team from "@/components/Team";
 import CompanyAddress from "@/components/CompanyAddress";
+export const metadata = {
+  title: "Grouwthus | About Us",
+};
 const page = () => {
   return (
     <>

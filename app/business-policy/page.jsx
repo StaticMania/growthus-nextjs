@@ -5,6 +5,9 @@ import matter from "gray-matter";
 import Markdown from "react-markdown";
 import PageHero from "@/components/Common/PageHero";
 import CallToAction from "@/components/CallToAction";
+export const metadata = {
+  title: "Grouwthus | Business Policy",
+};
 const BusinessPolicy = () => {
   const post = getPostMetadata();
   return (

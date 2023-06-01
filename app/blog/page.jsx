@@ -2,6 +2,9 @@ import PageHero from "@/components/Common/PageHero.jsx";
 import BlogPostMetaData from "@/components/Blog/BlogPostMetaData.js";
 import CallToAction from "@/components/CallToAction";
 import AllBlogs from "@/components/AllBlogs/AllBlogs";
+export const metadata = {
+  title: "Grouwthus | Blogs",
+};
 function Blog() {
   const posts = BlogPostMetaData();
 
@@ -18,8 +21,7 @@ function Blog() {
       <CallToAction
         title={
           <>
-            <span>Sounds Good? </span> <br />{" "}
-            <span>Let’s Grow your Business.</span>
+            <span>Sounds Good? </span> <br /> <span>Let’s Grow your Business.</span>
           </>
         }
       />

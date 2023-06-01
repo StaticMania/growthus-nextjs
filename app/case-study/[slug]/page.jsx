@@ -3,7 +3,9 @@ import Image from "next/image";
 import PageHero from "@/components/Common/PageHero.jsx";
 import CaseStudyData from "@/Data/caseStudy.js";
 import Link from "next/link";
-
+export const metadata = {
+  title: "Grouwthus | Case Study",
+};
 const caseStudyPost = (props) => {
   const slug = props.params.slug;
   const data = CaseStudyData.find((post) => post.slug === slug);

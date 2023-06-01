@@ -6,6 +6,9 @@ import matter from "gray-matter";
 import RelatedBlog from "@/components/Blog/RelatedBlog";
 import BlogPostMetaData from "@/components/Blog/BlogPostMetaData.js";
 import CallToAction from "@/components/CallToAction";
+export const metadata = {
+  title: "Grouwthus | Blogs",
+};
 export const getPostContent = (slug) => {
   const folder = "Data/posts/";
   const file = `${folder}${slug}.md`;

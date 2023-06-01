@@ -6,6 +6,9 @@ import {ContactFormData} from "@/Data/Data";
 import ContactAddress from "@/components/contact/ContactAddress";
 import ContactExperts from "@/components/contact/ContactExperts";
 import CallToAction from "@/components/CallToAction";
+export const metadata = {
+  title: "Grouwthus | Contact Us",
+};
 const Contact = () => {
   return (
     <>

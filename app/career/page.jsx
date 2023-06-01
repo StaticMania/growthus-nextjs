@@ -9,19 +9,11 @@ import CompanyAddress from "@/components/CompanyAddress";
 import CallToAction from "@/components/CallToAction";
 import GetPostMetadata from "@/components/Career/GetPostMetatData.js";
 import CareerList from "@/components/Career/CareerList";
+export const metadata = {
+  title: "Grouwthus | Career",
+};
 const Career = () => {
   const postMetadata = GetPostMetadata();
-  // const currentDate = new Date();
-  // console.log(currentDate);
-
-  // const dates = postMetadata.map((item) => {
-  //   console.log(item.publishDate);
-  //   const dateTime = new Date(item?.publishDate);
-  //   if (currentDate > dateTime) {
-  //     return item.publishDate;
-  //   }
-  // });
-  // console.log(dates);
   return (
     <>
       <CareerHero />
