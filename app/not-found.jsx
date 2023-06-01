@@ -1,5 +1,8 @@
 import React from "react";
 import Image from "next/image";
+export const metadata = {
+  title: "Grouwthus | Page Not Found",
+};
 const NotFound = () => {
   const imageStyle = {
     width: "auto",
