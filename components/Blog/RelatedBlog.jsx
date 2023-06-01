@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import {CaretRight} from "@phosphor-icons/react";
-const RelatedBlog = ({props}) => {
+import { CaretRight } from "@phosphor-icons/react";
+const RelatedBlog = ({ props }) => {
   const imageStyle = {
     width: "auto",
     maxWidth: "100%",
@@ -27,11 +27,7 @@ const RelatedBlog = ({props}) => {
               <ul className="list-inline list-unstyled">
                 <li className="list-inline-item">
                   {props.tags.map((item, i) => (
-                    <Link
-                      href="/"
-                      key={i}
-                      className="me-1"
-                    >
+                    <Link href={`/taxonomy/${item}`} key={i} className="me-1">
                       <span className="badge">{item}</span>
                     </Link>
                   ))}
@@ -52,10 +48,7 @@ const RelatedBlog = ({props}) => {
                 >
                   <span>
                     Read the Blog
-                    <CaretRight
-                      size={14}
-                      weight="thin"
-                    />
+                    <CaretRight size={14} weight="thin" />
                   </span>
                 </Link>
               </div>
