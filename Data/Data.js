@@ -47,7 +47,7 @@ export const menuData = {
         {
           id: 72,
           title: "Job Details",
-          path: "/contact",
+          path: "/career",
           newTab: false,
         },
         {
@@ -60,12 +60,6 @@ export const menuData = {
           id: 74,
           title: "Contact",
           path: "/contact",
-          newTab: false,
-        },
-        {
-          id: 75,
-          title: "404",
-          path: "/404",
           newTab: false,
         },
         {
