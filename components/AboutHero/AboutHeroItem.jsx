@@ -1,7 +1,28 @@
-import React from "react";
-import Image from "next/image";
-function AboutHeroItem({data}) {
-  const {images} = data;
+"use client";
+import { motion } from "framer-motion";
+
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
+function AboutHeroItem({ data }) {
+  const { images } = data;
   const imageStyle = {
     width: "auto",
     maxWidth: "100%",
@@ -19,22 +40,25 @@ function AboutHeroItem({data}) {
             </div>
           </div>
         </div>
-        <div className="container hero-thumbnail clearfix">
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate="visible"
+          className="container hero-thumbnail clearfix"
+        >
           {images.map((index, i) => (
-            <div
-              className="hero-thumbnail-item"
-              key={i}
-            >
-              <Image
+            <motion.div className="hero-thumbnail-item" key={i}>
+              <motion.img
                 src={index.image}
                 alt="about-images"
                 width={325}
                 height={370}
+                variants={item}
                 style={imageStyle}
               />
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </section>
       <section className="about-details py-7 pt-lg-8">
         <div className="container">
