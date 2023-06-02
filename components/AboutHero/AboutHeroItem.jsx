@@ -14,7 +14,7 @@ const container = {
 };
 
 const item = {
-  hidden: { y: 20, opacity: 0 },
+  hidden: { y: 40, opacity: 0 },
   visible: {
     y: 0,
     opacity: 1,
@@ -47,7 +47,13 @@ function AboutHeroItem({ data }) {
           className="container hero-thumbnail clearfix"
         >
           {images.map((index, i) => (
-            <motion.div className="hero-thumbnail-item" key={i}>
+            <motion.div
+              transition={{
+                duration: 0.4,
+              }}
+              className="hero-thumbnail-item"
+              key={i}
+            >
               <motion.img
                 src={index.image}
                 alt="about-images"
