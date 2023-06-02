@@ -47,13 +47,7 @@ function AboutHeroItem({ data }) {
           className="container hero-thumbnail clearfix"
         >
           {images.map((index, i) => (
-            <motion.div
-              transition={{
-                duration: 0.4,
-              }}
-              className="hero-thumbnail-item"
-              key={i}
-            >
+            <motion.div className="hero-thumbnail-item" key={i}>
               <motion.img
                 src={index.image}
                 alt="about-images"
