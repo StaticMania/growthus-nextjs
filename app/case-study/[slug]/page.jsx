@@ -10,7 +10,9 @@ const caseStudyPost = (props) => {
   const slug = props.params.slug;
   const data = CaseStudyData.find((post) => post.slug === slug);
 
-  const relatedPost = CaseStudyData.filter((post) => post.category.includes(...data.category));
+  const relatedPost = CaseStudyData.filter((post) =>
+    post.category.includes(...data.category)
+  );
 
   const imageStyle = {
     maxWidth: "100%",
@@ -20,10 +22,7 @@ const caseStudyPost = (props) => {
 
   return (
     <>
-      <PageHero
-        pageTitle={data.title}
-        breadcrumbTitle={data.title}
-      />
+      <PageHero pageTitle={data.title} breadcrumbTitle={data.title} />
 
       <section className="project-desc py-8 py-lg-8">
         <div className="container">
@@ -70,10 +69,7 @@ const caseStudyPost = (props) => {
 
           <div className="row gy-4 mb-5">
             {data.subFeatureImage.slice(0, 2).map((item, i) => (
-              <div
-                className="col-md-6"
-                key={i}
-              >
+              <div className="col-md-6" key={i}>
                 <div className="project-subfeature-photo">
                   <Image
                     src={item.image}
@@ -98,10 +94,7 @@ const caseStudyPost = (props) => {
 
           <div className="row gy-4 mb-5">
             {data.subFeatureImage.slice(2, 6).map((item, i) => (
-              <div
-                className="col-md-6"
-                key={i}
-              >
+              <div className="col-md-6" key={i}>
                 <div className="project-subfeature-photo">
                   <Image
                     src={item.image}
@@ -200,10 +193,7 @@ const caseStudyPost = (props) => {
               .filter((post) => post.slug !== data.slug)
               .slice(0, 2)
               .map((item) => (
-                <div
-                  className="col-md-5"
-                  key={item.id}
-                >
+                <div className="col-md-5" key={item.id}>
                   <div className="project-item-wrapper">
                     <Link
                       href={`/case-study/${item.slug}`}

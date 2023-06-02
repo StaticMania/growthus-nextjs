@@ -1,8 +1,7 @@
-import React from "react";
 import PageHero from "@/components/Common/PageHero";
 import ContactForm from "@/components/contact/ContactForm";
 import SectionTitle from "@/components/Common/SectionTitle";
-import {ContactFormData} from "@/Data/Data";
+import { ContactFormData } from "@/Data/Data";
 import ContactAddress from "@/components/contact/ContactAddress";
 import ContactExperts from "@/components/contact/ContactExperts";
 import CallToAction from "@/components/CallToAction";
@@ -42,7 +41,8 @@ const Contact = () => {
       <CallToAction
         title={
           <>
-            <span>Sounds Good? </span> <br /> <span>Let’s Grow your Business.</span>
+            <span>Sounds Good? </span> <br />{" "}
+            <span>Let’s Grow your Business.</span>
           </>
         }
       />

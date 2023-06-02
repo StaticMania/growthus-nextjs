@@ -2,13 +2,15 @@
 
 import CallToAction from "@/components/CallToAction";
 import PageHero from "@/components/Common/PageHero.jsx";
-import {CaseStudy} from "@/components/caseStudy/";
+import { CaseStudy } from "@/components/caseStudy/";
 import CaseStudyData from "@/Data/caseStudy.js";
-import {useState} from "react";
-import {motion, AnimatePresence} from "framer-motion";
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
 export const metadata = {
   title: "Grouwthus | Case Study",
 };
+
 export default function CaseStudyPage() {
   const categories = ["All project", "Design", "Development", "Marketing"];
   const [filterData, setFilterData] = useState([...CaseStudyData]);
@@ -16,12 +18,18 @@ export default function CaseStudyPage() {
 
   const handleClick = (category) => {
     if (category !== "All project") {
-      const data = CaseStudyData.filter((item) => item.category.includes(category));
+      const data = CaseStudyData.filter((item) =>
+        item.category.includes(category)
+      );
       setFilterData(data);
       return;
     }
     setFilterData(CaseStudyData);
   };
+
+  useEffect(() => {
+    document.title = "Grouwthus | Case Study";
+  }, []);
 
   return (
     <>
@@ -40,7 +48,7 @@ export default function CaseStudyPage() {
                 {categories?.map((btn, index) => (
                   <button
                     key={btn}
-                    className={index === active && "is-checked"}
+                    className={index === active ? "is-checked" : ""}
                     onClick={() => {
                       handleClick(btn);
                       setActive(index);
@@ -52,16 +60,10 @@ export default function CaseStudyPage() {
               </div>
             </div>
           </div>
-          <motion.div
-            layout
-            className="row"
-          >
+          <motion.div layout className="row">
             {filterData.map((item) => (
               <AnimatePresence key={item.id}>
-                <CaseStudy
-                  key={item.id}
-                  props={item}
-                />
+                <CaseStudy key={item.id} props={item} />
               </AnimatePresence>
             ))}
           </motion.div>
@@ -71,7 +73,8 @@ export default function CaseStudyPage() {
       <CallToAction
         title={
           <>
-            <span>Sounds Good? </span> <br /> <span>Let’s Grow your Business.</span>
+            <span>Sounds Good? </span> <br />{" "}
+            <span>Let’s Grow your Business.</span>
           </>
         }
         link="/"

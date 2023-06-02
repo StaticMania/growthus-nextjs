@@ -65,7 +65,7 @@ const servieData = [
     title: "Web Development",
     paragraph:
       "Capture your brand's personality and make a lasting impression with our professional design services. Our team provides customized solutions that meet your unique business needs and enhance your visual identity.",
-    image: "/images/service/service-item1.png",
+    image: "/images/service/service-item2.png",
     btnLink: "/",
     serviceInclude: [
       {
@@ -125,7 +125,7 @@ const servieData = [
     title: "Search Engine Optimization",
     paragraph:
       "Capture your brand's personality and make a lasting impression with our professional design services. Our team provides customized solutions that meet your unique business needs and enhance your visual identity.",
-    image: "/images/service/service-item1.png",
+    image: "/images/service/service-item3.png",
     btnLink: "/",
     serviceInclude: [
       {

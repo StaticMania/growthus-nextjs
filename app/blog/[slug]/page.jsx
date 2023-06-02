@@ -28,7 +28,9 @@ const BlogPost = (props) => {
   const post = getPostContent(slug);
   const postParams = post.data;
   const postFilter = BlogPostMetaData();
-  const relatedPost = postFilter.filter((element) => element.tags.includes(...postParams.tags));
+  const relatedPost = postFilter.filter((element) =>
+    element.tags.includes(...postParams.tags)
+  );
   const imageStyle = {
     width: "auto",
     maxWidth: "100%",
@@ -46,7 +48,7 @@ const BlogPost = (props) => {
                     <li className="list-inline-item">
                       {postParams.tags.map((item, i) => (
                         <Link
-                          href="/"
+                          href={`/taxonomy/${item}`}
                           key={i}
                           className="me-1"
                         >
@@ -55,7 +57,9 @@ const BlogPost = (props) => {
                       ))}
                     </li>
                     <li className="list-inline-item">
-                      <span className="ms-2 text-primary">{postParams.date}</span>
+                      <span className="ms-2 text-primary">
+                        {postParams.date}
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -115,10 +119,7 @@ const BlogPost = (props) => {
               .filter((post) => post.title !== postParams.title)
               .slice(0, 3)
               .map((item, i) => (
-                <RelatedBlog
-                  key={i}
-                  props={item}
-                />
+                <RelatedBlog key={i} props={item} />
               ))}
           </div>
         </div>
@@ -126,7 +127,8 @@ const BlogPost = (props) => {
       <CallToAction
         title={
           <>
-            <span>Sounds Good? </span> <br /> <span>Let’s Grow your Business.</span>
+            <span>Sounds Good? </span> <br />{" "}
+            <span>Let’s Grow your Business.</span>
           </>
         }
       />

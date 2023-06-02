@@ -35,13 +35,13 @@ export const menuData = {
     },
     {
       id: 7,
-      title: "Pages",
+      title: "Others",
       newTab: false,
       submenu: [
         {
           id: 71,
           title: "Service Details",
-          path: "/about",
+          path: "/services/design-service",
           newTab: false,
         },
         {
@@ -260,7 +260,8 @@ export const TestimonialData = [
 //Footer Data
 export const FooterDatas = {
   logo: "/images/footer-logo.svg",
-  footerText: "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing .",
+  footerText:
+    "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing .",
   copyright: "Copyright 2023 Growthus, All rights reserved!",
   email: "info@growthus.com",
   phone: "+3 230 705 5448",
