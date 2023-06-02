@@ -1,11 +1,9 @@
 "use client";
-import Link from "next/link";
-import Image from "next/image";
 import * as Icon from "@phosphor-icons/react";
 
-import { motion } from "framer-motion";
+import {motion} from "framer-motion";
 const HeroItems = (hero) => {
-  const { title, description, rating, image, imageShape } = hero;
+  const {title, description, rating, image, imageShape} = hero;
   const imageShapeStyle = {
     position: "absolute",
     top: "50%",
@@ -21,7 +19,7 @@ const HeroItems = (hero) => {
   };
 
   const container = {
-    hidden: { opacity: 1, scale: 1 },
+    hidden: {opacity: 1, scale: 1},
     visible: {
       opacity: 1,
       scale: 1,
@@ -33,14 +31,14 @@ const HeroItems = (hero) => {
   };
 
   const item1 = {
-    hidden: { y: 50, opacity: 0 },
+    hidden: {y: 50, opacity: 0},
     visible: {
       y: 0,
       opacity: 1,
     },
   };
   const item2 = {
-    hidden: { y: 70, opacity: 0 },
+    hidden: {y: 70, opacity: 0},
     visible: {
       y: 0,
       opacity: 1,
@@ -66,12 +64,7 @@ const HeroItems = (hero) => {
             }}
             className="col-lg-7 col-xl-6"
           >
-            <motion.div
-              className="hero-content text-center text-lg-start"
-              data-aos="fade-up"
-              data-aos-duration="600"
-              data-aos-once="true"
-            >
+            <motion.div className="hero-content text-center text-lg-start">
               <motion.h1>{title}</motion.h1>
               <motion.p className="w-lg-75">{description}</motion.p>
               <motion.div className="d-lg-flex">
@@ -81,17 +74,22 @@ const HeroItems = (hero) => {
                 >
                   Let’s Talk
                 </motion.a>
-                <motion.a href="/case-study" className="btn btn-outline">
+                <motion.a
+                  href="/case-study"
+                  className="btn btn-outline"
+                >
                   Check Our Work
                 </motion.a>
               </motion.div>
               <motion.div className="review-wrapper">
                 <motion.div className="star-block-hero">
-                  <Icon.Star size={18} weight="fill" />
+                  <Icon.Star
+                    size={18}
+                    weight="fill"
+                  />
                 </motion.div>
                 <motion.div>
-                  Rated <motion.strong>{rating}/5</motion.strong> from over{" "}
-                  <motion.strong>500+</motion.strong> reviews.
+                  Rated <motion.strong>{rating}/5</motion.strong> from over <motion.strong>500+</motion.strong> reviews.
                 </motion.div>
               </motion.div>
             </motion.div>
@@ -103,13 +101,7 @@ const HeroItems = (hero) => {
             }}
             className="col-lg-5 col-xl-6"
           >
-            <motion.div
-              className="hero-banner"
-              data-aos="fade-up"
-              data-aos-duration="600"
-              data-aos-delay="200"
-              data-aos-once="true"
-            >
+            <motion.div className="hero-banner">
               <motion.div className="hero-shape-wrapper position-absolute w-100 h-100">
                 <motion.div className="hero-shape position-absolute bg-turquoise rounded-circle">
                   <motion.img

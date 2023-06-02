@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-function CallToAction({title, link}) {
+function CallToAction({title}) {
   return (
     <section className="cta position-relative">
       <div className="shape">

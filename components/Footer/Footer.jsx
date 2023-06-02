@@ -1,20 +1,25 @@
 "use client";
 import React from "react";
-import { useEffect } from "react";
+import {useEffect} from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FooterDatas } from "@/Data/Data.js";
-const FooterData = ({ FooterContent }) => {
-  const { companyLinks, policyLinks, locations, socialLinks, resources } =
-    FooterContent;
+import {FooterDatas} from "@/Data/Data.js";
+const FooterData = ({FooterContent}) => {
+  const {companyLinks, policyLinks, locations, socialLinks, resources} = FooterContent;
   return (
     <>
-      <footer className="footer text-center text-md-start py-7" id="footer">
+      <footer
+        className="footer text-center text-md-start py-7"
+        id="footer"
+      >
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg-3 me-auto mt-4">
               <div className="footer-description text-center text-lg-start">
-                <a href="/" className="mb-5">
+                <a
+                  href="/"
+                  className="mb-5"
+                >
                   <Image
                     src={FooterContent.logo}
                     alt="logo"
@@ -63,7 +68,10 @@ const FooterData = ({ FooterContent }) => {
                 <ul className="list-unstyled">
                   {companyLinks.map((item, i) => (
                     <li key={i}>
-                      <Link href={`${item.link}`} className="py-2">
+                      <Link
+                        href={`${item.link}`}
+                        className="py-2"
+                      >
                         {item.name}
                       </Link>
                     </li>
@@ -75,7 +83,10 @@ const FooterData = ({ FooterContent }) => {
                 <ul className="list-unstyled">
                   {policyLinks.map((item) => (
                     <li key={item.id}>
-                      <Link href={`${item.link}`} className="py-2">
+                      <Link
+                        href={`${item.link}`}
+                        className="py-2"
+                      >
                         {item.name}
                       </Link>
                     </li>
@@ -86,7 +97,10 @@ const FooterData = ({ FooterContent }) => {
 
             <div className="col-12 col-md-4 col-lg-3">
               {locations.map((item) => (
-                <div className="footer-widget pt-3" key={item.id}>
+                <div
+                  className="footer-widget pt-3"
+                  key={item.id}
+                >
                   <h6>{item.name}</h6>
                   <p>{item.address}</p>
                 </div>
@@ -107,10 +121,7 @@ const FooterData = ({ FooterContent }) => {
                     </Link>
                   </li>
                   <li>
-                    <Link href={`tel:${FooterContent.phone}`}>
-                      {" "}
-                      Ph: {FooterContent.phone}{" "}
-                    </Link>
+                    <Link href={`tel:${FooterContent.phone}`}> Ph: {FooterContent.phone} </Link>
                   </li>
                 </ul>
               </div>
@@ -122,7 +133,10 @@ const FooterData = ({ FooterContent }) => {
                 <ul className="list-unstyled">
                   {socialLinks.map((item) => (
                     <li key={item.id}>
-                      <Link href={`${item.link}`} className="py-2">
+                      <Link
+                        href={`${item.link}`}
+                        className="py-2"
+                      >
                         {item.name}
                       </Link>
                     </li>
@@ -134,7 +148,10 @@ const FooterData = ({ FooterContent }) => {
                 <ul className="list-unstyled">
                   {resources.map((item) => (
                     <li key={item.id}>
-                      <Link href={`${item.link}`} className="py-2">
+                      <Link
+                        href={`${item.link}`}
+                        className="py-2"
+                      >
                         {item.name}
                       </Link>
                     </li>
@@ -147,7 +164,7 @@ const FooterData = ({ FooterContent }) => {
           <div className="row clearfix">
             <div className="col-md-12">
               <div className="text-center text-lg-start">
-                <p className="text-secondary-light mb-0">{`Copyright © ${new Date().getFullYear()} Growthus. All right reserved`}</p>
+                <p className="text-secondary-light mb-0">{FooterContent.copyright}</p>
               </div>
             </div>
           </div>
@@ -160,9 +177,6 @@ const FooterData = ({ FooterContent }) => {
 const Footer = () => {
   useEffect(() => {
     import("bootstrap/dist/js/bootstrap.bundle.min.js");
-    const handleChange = (event) => {
-      setInputValue(event.target.value);
-    };
   }, []);
   return <FooterData FooterContent={FooterDatas} />;
 };
