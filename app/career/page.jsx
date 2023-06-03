@@ -7,7 +7,7 @@ import {TeamData} from "@/Data/Data.js";
 import Team from "@/components/Team";
 import CompanyAddress from "@/components/CompanyAddress";
 import CallToAction from "@/components/CallToAction";
-import GetPostMetadata from "@/components/Career/GetPostMetatData.js";
+import GetPostMetadata from "@/components/Career/GetPostMetaData.js";
 import CareerList from "@/components/Career/CareerList";
 export const metadata = {
   title: "Grouwthus | Career",

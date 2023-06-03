@@ -2,7 +2,7 @@ import fs from "fs";
 import Markdown from "react-markdown";
 import matter from "gray-matter";
 import PageHero from "@/components/Common/PageHero";
-import GetPostMetadata from "@/components/Career/GetPostMetatData.js";
+import GetPostMetadata from "@/components/Career/GetPostMetaData.js";
 import CareerForm from "@/components/Career/CareerForm.jsx";
 export const metadata = {
   title: "Grouwthus | Career",
