@@ -5,9 +5,7 @@ import matter from "gray-matter";
 import Markdown from "react-markdown";
 import PageHero from "@/components/Common/PageHero";
 import CallToAction from "@/components/CallToAction";
-export const metadata = {
-  title: "Grouwthus | Terms & Conditions",
-};
+
 const TermsCondition = () => {
   const post = getPostMetadata();
   return (
@@ -35,7 +33,8 @@ const TermsCondition = () => {
       <CallToAction
         title={
           <>
-            <span>Sounds Good? </span> <br /> <span>Let’s Grow your Business.</span>
+            <span>Sounds Good? </span> <br />{" "}
+            <span>Let’s Grow your Business.</span>
           </>
         }
       />

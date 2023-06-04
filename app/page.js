@@ -7,9 +7,7 @@ import Community from "@/components/Community";
 import Counter from "@/components/Counter";
 import Testimonials from "@/components/Testimonials";
 import CallToAction from "@/components/CallToAction";
-export const metadata = {
-  title: "Growthus | Home",
-};
+
 export default function Home() {
   return (
     <>

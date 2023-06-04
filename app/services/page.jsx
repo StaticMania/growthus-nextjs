@@ -9,9 +9,7 @@ import BusinessServices from "@/components/BusinessServices/";
 import { CaseStudy, Caret } from "@/components/caseStudy/";
 import CaseStudyData from "@/Data/caseStudy.js";
 import serviceData from "@/Data/serviceData.js";
-export const metadata = {
-  title: "Grouwthus | Services",
-};
+
 const Service = () => {
   return (
     <>

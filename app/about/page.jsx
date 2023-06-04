@@ -6,12 +6,10 @@ import Client from "@/components/Client";
 import BusinessSolution from "@/components/BusinessSolution";
 import Community from "@/components/Community";
 import AboutContent from "@/components/AboutSection";
-import {AboutStory, JoinTeam, TeamData} from "@/Data/Data.js";
+import { AboutStory, JoinTeam, TeamData } from "@/Data/Data.js";
 import Team from "@/components/Team";
 import CompanyAddress from "@/components/CompanyAddress";
-export const metadata = {
-  title: "Grouwthus | About Us",
-};
+
 const page = () => {
   return (
     <>
@@ -27,7 +25,8 @@ const page = () => {
       <CallToAction
         title={
           <>
-            <span>Sounds Good? </span> <br /> <span>Let’s Grow your Business.</span>
+            <span>Sounds Good? </span> <br />{" "}
+            <span>Let’s Grow your Business.</span>
           </>
         }
       />
