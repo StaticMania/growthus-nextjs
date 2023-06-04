@@ -146,7 +146,6 @@ const PostPage = (props) => {
             <span>Sounds Good? </span> <br /> <span>Let’s Grow your Business.</span>
           </>
         }
-        link="/"
       />
     </>
   );

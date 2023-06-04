@@ -23,11 +23,9 @@ export default function Home() {
       <CallToAction
         title={
           <>
-            <span>Sounds Good? </span> <br />{" "}
-            <span>Let’s Grow your Business.</span>
+            <span>Sounds Good? </span> <br /> <span>Let’s Grow your Business.</span>
           </>
         }
-        link="/"
       />
     </>
   );
