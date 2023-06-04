@@ -4,12 +4,10 @@ import Client from "@/components/Client";
 import Testimonials from "@/components/Testimonials";
 import CallToAction from "@/components/CallToAction";
 import SectionHeader from "@/components/Common/SectionTitle";
-import {CaseStudy, Caret} from "@/components/caseStudy/";
+import { CaseStudy, Caret } from "@/components/caseStudy/";
 import CaseStudyData from "@/Data/caseStudy.js";
 import serviceData from "@/Data/serviceData.js";
-export const metadata = {
-  title: "Grouwthus | Services",
-};
+
 const PostPage = (props) => {
   const slug = props.params.slug;
   const data = serviceData.find((post) => post.slug === slug);
@@ -90,7 +88,9 @@ const PostPage = (props) => {
           <div className="row">
             {data.serviceInfoItems.map((items, i) => (
               <div
-                className={`col-xl-4 col-md-6 ${i === 1 || i === 3 ? "offset-xl-2" : ""}`}
+                className={`col-xl-4 col-md-6 ${
+                  i === 1 || i === 3 ? "offset-xl-2" : ""
+                }`}
                 key={i}
               >
                 <div className="services-desc-wrapper">
@@ -129,10 +129,7 @@ const PostPage = (props) => {
         <div className="container">
           <div className="row">
             {CaseStudyData.slice(0, 6).map((caseStudy, i) => (
-              <CaseStudy
-                key={i}
-                props={caseStudy}
-              />
+              <CaseStudy key={i} props={caseStudy} />
             ))}
             <Caret />
           </div>
@@ -143,7 +140,8 @@ const PostPage = (props) => {
       <CallToAction
         title={
           <>
-            <span>Sounds Good? </span> <br /> <span>Let’s Grow your Business.</span>
+            <span>Sounds Good? </span> <br />{" "}
+            <span>Let’s Grow your Business.</span>
           </>
         }
       />

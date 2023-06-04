@@ -4,9 +4,7 @@ import matter from "gray-matter";
 import PageHero from "@/components/Common/PageHero";
 import GetPostMetadata from "@/components/Career/GetPostMetaData.js";
 import CareerForm from "@/components/Career/CareerForm.jsx";
-export const metadata = {
-  title: "Grouwthus | Career",
-};
+
 export const getPostContent = (slug) => {
   const folder = "Data/career/";
   const file = `${folder}${slug}.md`;

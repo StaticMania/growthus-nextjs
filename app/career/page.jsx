@@ -3,15 +3,13 @@ import CareerHero from "@/components/career";
 import Counter from "@/components/Counter";
 
 import Client from "@/components/Client";
-import {TeamData} from "@/Data/Data.js";
+import { TeamData } from "@/Data/Data.js";
 import Team from "@/components/Team";
 import CompanyAddress from "@/components/CompanyAddress";
 import CallToAction from "@/components/CallToAction";
 import GetPostMetadata from "@/components/Career/GetPostMetaData.js";
 import CareerList from "@/components/Career/CareerList";
-export const metadata = {
-  title: "Grouwthus | Career",
-};
+
 const Career = () => {
   const postMetadata = GetPostMetadata();
   return (
@@ -33,10 +31,7 @@ const Career = () => {
             <div className="col-lg-9 mx-auto">
               <div className="career-item-wrapper">
                 {postMetadata.map((item, i) => (
-                  <CareerList
-                    key={i}
-                    props={item}
-                  />
+                  <CareerList key={i} props={item} />
                 ))}
               </div>
             </div>
@@ -50,7 +45,8 @@ const Career = () => {
       <CallToAction
         title={
           <>
-            <span>Sounds Good? </span> <br /> <span>Let’s Grow your Business.</span>
+            <span>Sounds Good? </span> <br />{" "}
+            <span>Let’s Grow your Business.</span>
           </>
         }
       />

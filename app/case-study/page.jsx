@@ -7,10 +7,6 @@ import CaseStudyData from "@/Data/caseStudy.js";
 import {useEffect, useState} from "react";
 import {motion, AnimatePresence} from "framer-motion";
 
-export const metadata = {
-  title: "Grouwthus | Case Study",
-};
-
 export default function CaseStudyPage() {
   const categories = ["All project", "Design", "Development", "Marketing"];
   const [filterData, setFilterData] = useState([...CaseStudyData]);

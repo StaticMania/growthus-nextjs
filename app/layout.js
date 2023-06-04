@@ -6,10 +6,6 @@ import Modal from "@/components/Modal/Modal";
 import "bootstrap/dist/css/bootstrap.css";
 import "@/styles/theme.scss";
 
-export const metadata = {
-  title: "Grouwthus",
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
