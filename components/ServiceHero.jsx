@@ -1,13 +1,9 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
-const ServiceHero = ({data}) => {
-  const imageStyle = {
-    width: "auto",
-    maxWidth: "100%",
-    height: "auto",
-  };
+import { imageStyle } from "@/Data/Data";
+
+const ServiceHero = () => {
   return (
     <section className="service-hero pt-9">
       <div className="container">
@@ -17,7 +13,7 @@ const ServiceHero = ({data}) => {
               <div className="work-item-shape-wrapper">
                 <div className="work-item-shape bg-primary-light">
                   <Image
-                    src={data.imageShape}
+                    src="/images/work/work-shap.svg"
                     alt="About Story images"
                     width={500}
                     height={500}
@@ -28,7 +24,7 @@ const ServiceHero = ({data}) => {
               <div className="work-item-wraper">
                 <div className="work-item-wraper-banner">
                   <Image
-                    src={data.image}
+                    src="/images/service/service-header-banner.png"
                     alt="About Story images"
                     width={500}
                     height={500}
@@ -41,13 +37,16 @@ const ServiceHero = ({data}) => {
           <div className="col-lg-6">
             <div className="work-item">
               <div className="work-content service-hero-content">
-                <h1 className="service-title">{data.title}</h1>
-                <p>{data.paragraph}</p>
+                <h1 className="service-title">
+                  Services We provide for your Bussiness
+                </h1>
+                <p>
+                  Discover how our services can grow your business. From digital
+                  marketing to web development and design, our team delivers
+                  tailored solutions to exceed your expectations.
+                </p>
 
-                <a
-                  href={data.btnLinK}
-                  className="service-topTobottom"
-                >
+                <a href="#service-item" className="service-topTobottom">
                   <svg
                     width="45"
                     height="63"

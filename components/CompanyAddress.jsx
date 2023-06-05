@@ -1,8 +1,9 @@
 import React from "react";
 import Link from "next/link";
-import {FooterDatas} from "@/Data/Data.js";
-function CompanyAddressItems({data}) {
-  const {locations} = data;
+import { FooterDatas } from "@/Data/Data.js";
+
+const CompanyAddress = () => {
+  const { locations, phone, email } = FooterDatas;
   return (
     <section className="about-contact py-0">
       <div className="container">
@@ -10,10 +11,7 @@ function CompanyAddressItems({data}) {
           <div className="col-md-7 col-lg-6">
             <div className="about-contact-wrapper">
               {locations.map((item, i) => (
-                <div
-                  className="card d-flex"
-                  key={i}
-                >
+                <div className="card d-flex" key={i}>
                   <div className="flex-shrink-0">
                     <svg
                       width="33"
@@ -72,7 +70,7 @@ function CompanyAddressItems({data}) {
               <div className="flex-grow-1 ms-4">
                 <span>Phone Number</span>
                 <p>
-                  <Link href={`tel:${data.phone}`}> {data.phone} </Link>
+                  <Link href={`tel:${phone}`}> {phone} </Link>
                 </p>
               </div>
             </div>
@@ -103,7 +101,7 @@ function CompanyAddressItems({data}) {
               <div className="flex-grow-1 ms-4">
                 <span>Email Address</span>
                 <p>
-                  <Link href={`mailto:${data.email}`}>{data.email}</Link>
+                  <Link href={`mailto:${email}`}>{email}</Link>
                 </p>
               </div>
             </div>
@@ -112,9 +110,6 @@ function CompanyAddressItems({data}) {
       </div>
     </section>
   );
-}
-
-const CompanyAddress = () => {
-  return <CompanyAddressItems data={FooterDatas} />;
 };
+
 export default CompanyAddress;

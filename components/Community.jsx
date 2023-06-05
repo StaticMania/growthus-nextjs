@@ -1,7 +1,6 @@
-import React from "react";
 import Image from "next/image";
-const CommunityItems = (Community) => {
-  const {title, image} = Community;
+
+const Community = () => {
   const mapImage = {
     width: "100%",
     height: "auto",
@@ -12,7 +11,7 @@ const CommunityItems = (Community) => {
         <div className="row">
           <div className="col-lg-8 mx-auto">
             <div className="section-header">
-              <h2>{title}</h2>
+              <h2>Connect with creators worldwide.</h2>
             </div>
           </div>
         </div>
@@ -20,7 +19,7 @@ const CommunityItems = (Community) => {
           <div className="col-lg-12">
             <div className="map position-relative">
               <Image
-                src={image}
+                src={`/images/testimonial/map.svg`}
                 alt="map"
                 width={900}
                 height={550}
@@ -34,4 +33,4 @@ const CommunityItems = (Community) => {
   );
 };
 
-export default CommunityItems;
+export default Community;

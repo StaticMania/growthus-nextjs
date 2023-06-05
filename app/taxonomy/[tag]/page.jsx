@@ -1,10 +1,10 @@
-import AllBlogs from "@/components/AllBlogs/AllBlogs";
-import BlogPostMetaData from "@/components/Blog/BlogPostMetaData.js";
+import AllBlogs from "@/components/AllBlogs";
 import CallToAction from "@/components/CallToAction";
 import PageHero from "@/components/Common/PageHero";
+import getMarkDownData from "@/utils/GetMarkDownData";
 
 const TaxonomySingle = ({ params }) => {
-  const posts = BlogPostMetaData();
+  const posts = getMarkDownData("Data/posts/");
   const allPostsWithTag = posts.filter((post) =>
     post.tags.includes(params.tag)
   );

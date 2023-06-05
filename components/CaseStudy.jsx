@@ -4,6 +4,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import React from "react";
 import { CaretRight } from "@phosphor-icons/react";
+import { imageStyle } from "@/Data/Data";
+
 export const Caret = () => {
   return (
     <div className="col-md-12 text-center mt-4">
@@ -16,12 +18,8 @@ export const Caret = () => {
     </div>
   );
 };
+
 export const CaseStudy = ({ props }) => {
-  const imageStyle = {
-    maxWidth: "100%",
-    height: "auto",
-    width: "auto",
-  };
   return (
     <motion.div
       layout

@@ -2,7 +2,7 @@
 
 import CallToAction from "@/components/CallToAction";
 import PageHero from "@/components/Common/PageHero.jsx";
-import { CaseStudy } from "@/components/caseStudy/";
+import { CaseStudy } from "@/components/CaseStudy";
 import CaseStudyData from "@/Data/caseStudy.js";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";

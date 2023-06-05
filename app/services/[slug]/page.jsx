@@ -1,21 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import Client from "@/components/Client";
-import Testimonials from "@/components/Testimonials";
+import Testimonials from "@/components/Testimonials/Testimonial";
 import CallToAction from "@/components/CallToAction";
 import SectionHeader from "@/components/Common/SectionTitle";
-import { CaseStudy, Caret } from "@/components/caseStudy/";
+import { CaseStudy, Caret } from "@/components/CaseStudy";
 import CaseStudyData from "@/Data/caseStudy.js";
 import serviceData from "@/Data/serviceData.js";
+import { imageStyle } from "@/Data/Data";
 
 const PostPage = (props) => {
   const slug = props.params.slug;
   const data = serviceData.find((post) => post.slug === slug);
-  const imageStyle = {
-    width: "auto",
-    maxWidth: "100%",
-    height: "auto",
-  };
   return (
     <>
       <section className="service-hero services-desc-hero pt-8">

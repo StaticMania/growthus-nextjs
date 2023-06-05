@@ -3,35 +3,23 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import {TestimonialData} from "@/Data/Data.js";
+import { TestimonialData } from "@/Data/Data.js";
 import TestimonialItems from "./TestimonialItems";
-import {CaretRight, CaretLeft} from "@phosphor-icons/react";
+import { CaretRight, CaretLeft } from "@phosphor-icons/react";
 function SampleNextArrow(props) {
-  const {className, onClick} = props;
+  const { className, onClick } = props;
   return (
-    <div
-      className={className}
-      onClick={onClick}
-    >
-      <CaretRight
-        size={16}
-        weight="thin"
-      />
+    <div className={className} onClick={onClick}>
+      <CaretRight size={16} weight="thin" />
     </div>
   );
 }
 
 function SamplePrevArrow(props) {
-  const {className, onClick} = props;
+  const { className, onClick } = props;
   return (
-    <div
-      className={className}
-      onClick={onClick}
-    >
-      <CaretLeft
-        size={16}
-        weight="thin"
-      />
+    <div className={className} onClick={onClick}>
+      <CaretLeft size={16} weight="thin" />
     </div>
   );
 }
@@ -82,10 +70,7 @@ const Testimonial = () => {
                 className="testimonials-slider position-relative"
               >
                 {TestimonialData.map((item) => (
-                  <TestimonialItems
-                    key={item.id}
-                    data={item}
-                  />
+                  <TestimonialItems key={item.id} data={item} />
                 ))}
               </Slider>
             </div>

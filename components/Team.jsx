@@ -1,8 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import SectionHeader from "../Common/SectionTitle";
-function Team({data}) {
-  const {Leads, Members} = data;
+import SectionHeader from "./Common/SectionTitle";
+import { TeamData } from "@/Data/Data";
+function Team() {
+  const { Leads, Members } = TeamData;
   const imageStyle = {
     width: "auto",
     maxWidth: "100%",
@@ -24,10 +25,7 @@ function Team({data}) {
           <div className="col-lg-10 mx-auto">
             <div className="team-wrapper d-grid grid-template-3">
               {Leads.map((index) => (
-                <div
-                  className="team-member"
-                  key={index.id}
-                >
+                <div className="team-member" key={index.id}>
                   <Image
                     src={index.image}
                     alt="team-member-thumb"
@@ -58,10 +56,7 @@ function Team({data}) {
           <div className="col-lg-10 mx-auto">
             <div className="team-wrapper d-grid grid-template-3">
               {Members.map((index) => (
-                <div
-                  className="team-member"
-                  key={index.id}
-                >
+                <div className="team-member" key={index.id}>
                   <Image
                     src={index.image}
                     alt="team-member-thumb"

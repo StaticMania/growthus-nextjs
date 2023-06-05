@@ -3,20 +3,14 @@ import Image from "next/image";
 import PageHero from "@/components/Common/PageHero.jsx";
 import CaseStudyData from "@/Data/caseStudy.js";
 import Link from "next/link";
+import { imageStyle } from "@/Data/Data";
 
 const caseStudyPost = (props) => {
   const slug = props.params.slug;
   const data = CaseStudyData.find((post) => post.slug === slug);
-
   const relatedPost = CaseStudyData.filter((post) =>
     post.category.includes(...data.category)
   );
-
-  const imageStyle = {
-    maxWidth: "100%",
-    height: "auto",
-    width: "auto",
-  };
 
   return (
     <>

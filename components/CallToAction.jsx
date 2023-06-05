@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-function CallToAction({title, link}) {
+function CallToAction({ title, link }) {
   return (
     <section className="cta position-relative">
       <div className="shape">
@@ -45,10 +45,7 @@ function CallToAction({title, link}) {
             <div className="w-100 py-8 py-lg-10 text-center position-relative">
               <div className="position-relative">
                 <h2 className="mb-5 text-white">{title}</h2>
-                <Link
-                  className="btn btn-outline mb-3"
-                  href="/contact"
-                >
+                <Link className="btn btn-outline mb-3" href="/contact">
                   Let’s Talk
                 </Link>
               </div>

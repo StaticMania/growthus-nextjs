@@ -1,7 +1,7 @@
 import React from "react";
-import SectionHeader from "../Common/SectionTitle";
-import ClientImages from "./ClientImages";
-import {ClientImageData} from "@/Data/Data.js";
+import SectionHeader from "./Common/SectionTitle";
+import { ClientImageData } from "@/Data/Data.js";
+import Image from "next/image";
 
 const Client = (props) => {
   return (
@@ -19,10 +19,14 @@ const Client = (props) => {
           <div className="col-md-12">
             <div className="client-item-wrapper d-flex justify-content-between align-items-center text-center">
               {ClientImageData.map((item) => (
-                <ClientImages
-                  key={item.id}
-                  ClientImages={item}
-                />
+                <div className="client-item" key={item.id}>
+                  <Image
+                    src={item.images}
+                    alt="Client images"
+                    width={120}
+                    height={50}
+                  />
+                </div>
               ))}
             </div>
           </div>

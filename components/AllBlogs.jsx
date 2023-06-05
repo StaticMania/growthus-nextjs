@@ -1,16 +1,12 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, {useState} from "react";
-import Caret from "../Common/Caret";
-import Pagination from "../Pagination/Pagination";
-const imageStyle = {
-  width: "auto",
-  maxWidth: "100%",
-  height: "auto",
-};
+import React, { useState } from "react";
+import Caret from "./Common/Caret";
+import Pagination from "./Pagination";
+import { imageStyle } from "@/Data/Data";
 
-const AllBlogs = ({posts}) => {
+const AllBlogs = ({ posts }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
   const totalPage = Math.ceil(posts.length / itemsPerPage);
@@ -35,10 +31,7 @@ const AllBlogs = ({posts}) => {
         <div className="row">
           <div className="col-lg-12">
             {currentPageData.map((post, i) => (
-              <article
-                className="card flex-lg-row"
-                key={i}
-              >
+              <article className="card flex-lg-row" key={i}>
                 <div className="blog-post-item-thumb">
                   <Image
                     src={post.thumbnail}

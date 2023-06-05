@@ -1,17 +1,14 @@
-import React from "react";
-import CareerHero from "@/components/career";
-import Counter from "@/components/Counter";
-
-import Client from "@/components/Client";
-import { TeamData } from "@/Data/Data.js";
 import Team from "@/components/Team";
-import CompanyAddress from "@/components/CompanyAddress";
-import CallToAction from "@/components/CallToAction";
-import GetPostMetadata from "@/components/Career/GetPostMetatData.js";
+import Client from "@/components/Client";
+import Counter from "@/components/Counter";
+import getMarkDownData from "@/utils/GetMarkDownData";
 import CareerList from "@/components/Career/CareerList";
+import CompanyAddress from "@/components/CompanyAddress";
+import CareerHero from "@/components/Career/CareerHero";
+import CallToAction from "@/components/CallToAction";
 
 const Career = () => {
-  const postMetadata = GetPostMetadata();
+  const postMetadata = getMarkDownData("Data/career/");
   return (
     <>
       <CareerHero />
@@ -40,7 +37,7 @@ const Career = () => {
       </section>
 
       <Client border="border-bottom" />
-      <Team data={TeamData} />
+      <Team />
       <CompanyAddress />
       <CallToAction
         title={

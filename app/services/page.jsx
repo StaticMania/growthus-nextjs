@@ -1,19 +1,18 @@
 import Client from "@/components/Client";
-import BusinessSolution from "@/components/BusinessSolution";
-import Testimonials from "@/components/Testimonials";
+import BusinessSolution from "@/components/BusinessSolution/BusinessSolution";
+import Testimonials from "@/components/Testimonials/Testimonial";
 import CallToAction from "@/components/CallToAction";
 import ServiceHero from "@/components/ServiceHero";
-import { ServiceHeroData } from "@/Data/Data.js";
 import SectionHeader from "@/components/Common/SectionTitle";
-import BusinessServices from "@/components/BusinessServices/";
-import { CaseStudy, Caret } from "@/components/caseStudy/";
+import BusinessServices from "@/components/BusinessServices";
+import { CaseStudy, Caret } from "@/components/CaseStudy";
 import CaseStudyData from "@/Data/caseStudy.js";
 import serviceData from "@/Data/serviceData.js";
 
 const Service = () => {
   return (
     <>
-      <ServiceHero data={ServiceHeroData} />
+      <ServiceHero />
       <BusinessSolution />
       <section className="service-item work pb-7" id="service-item">
         <div className="container">

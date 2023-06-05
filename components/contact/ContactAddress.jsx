@@ -1,12 +1,8 @@
-import React from "react";
 import Image from "next/image";
-const ContactAddress = ({ContactAddress}) => {
-  const {address} = ContactAddress;
-  const imageStyle = {
-    maxWidth: "100%",
-    height: "auto",
-    width: "auto",
-  };
+import { imageStyle } from "@/Data/Data";
+const ContactAddress = ({ ContactAddress }) => {
+  const { address } = ContactAddress;
+
   return (
     <section className="service-item contact-details work pt-4 pb-4">
       <div className="container">

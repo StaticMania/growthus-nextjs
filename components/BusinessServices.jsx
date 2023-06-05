@@ -1,13 +1,9 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import {CaretRight} from "@phosphor-icons/react";
-const BusinessServices = ({props}) => {
-  const imageStyle = {
-    maxWidth: "100%",
-    height: "auto",
-    width: "auto",
-  };
+import { CaretRight } from "@phosphor-icons/react";
+import { imageStyle } from "@/Data/Data";
+const BusinessServices = ({ props }) => {
   return (
     <div className="row work-item-container align-items-center">
       <div className="col-lg-6">
@@ -54,10 +50,7 @@ const BusinessServices = ({props}) => {
             >
               <span className="position-relative">
                 Learn More
-                <CaretRight
-                  size={14}
-                  weight="thin"
-                />
+                <CaretRight size={14} weight="thin" />
               </span>
             </Link>
           </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import SectionHeader from "../Common/SectionTitle";
 import WorkProcessItems from "./WorkProcessItems";
-import {WorkProcessData} from "@/Data/Data.js";
+import { WorkProcessData } from "@/Data/Data.js";
 function WorkProcess() {
   return (
     <section className="work">
@@ -16,10 +16,7 @@ function WorkProcess() {
         </div>
 
         {WorkProcessData.map((item) => (
-          <WorkProcessItems
-            data={item}
-            key={item.id}
-          />
+          <WorkProcessItems data={item} key={item.id} />
         ))}
       </div>
     </section>

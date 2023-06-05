@@ -1,14 +1,10 @@
 "use client";
-import React from "react";
+import { imageStyle } from "@/Data/Data";
 import Image from "next/image";
 import Link from "next/link";
-const AboutSection = ({data}) => {
-  const {videoLink} = data;
-  const imageStyle = {
-    width: "auto",
-    maxWidth: "100%",
-    height: "auto",
-  };
+
+const AboutContent = ({ data }) => {
+  const { videoLink, title, paragraph, imageShape, image } = data;
   return (
     <section className="work about-story bg-gray-light py-7">
       <div className="container">
@@ -16,9 +12,13 @@ const AboutSection = ({data}) => {
           <div className="col-lg-6">
             <div className="work-item">
               <div className="work-item-shape-wrapper">
-                <div className={`work-item-shape ${videoLink ? "bg-primary-light" : "bg-light-dark"}`}>
+                <div
+                  className={`work-item-shape ${
+                    videoLink ? "bg-primary-light" : "bg-light-dark"
+                  }`}
+                >
                   <Image
-                    src={data.imageShape}
+                    src={imageShape}
                     alt="About Story images"
                     width={500}
                     height={500}
@@ -29,7 +29,7 @@ const AboutSection = ({data}) => {
               <div className="work-item-wraper">
                 <div className="work-item-wraper-banner">
                   <Image
-                    src={data.image}
+                    src={image}
                     alt="About Story images"
                     width={500}
                     height={500}
@@ -42,13 +42,13 @@ const AboutSection = ({data}) => {
           <div className="col-lg-6">
             <div className="work-item">
               <div className="work-content">
-                <h2>{data.title}</h2>
-                <p>{data.paragraph}</p>
-                {videoLink ? (
+                <h2>{title}</h2>
+                <p>{paragraph}</p>
+                {data?.videoLink ? (
                   <a
                     className="btn btn-primary"
                     data-bs-toggle="modal"
-                    href={data.videoLink}
+                    href={data?.videoLink}
                     role="button"
                   >
                     <svg
@@ -75,10 +75,7 @@ const AboutSection = ({data}) => {
                     Watch the Video
                   </a>
                 ) : (
-                  <Link
-                    href={data.btnLinK}
-                    className="btn btn-secondary"
-                  >
+                  <Link href={data?.btnLinK} className="btn btn-secondary">
                     Join Now
                   </Link>
                 )}
@@ -91,4 +88,4 @@ const AboutSection = ({data}) => {
   );
 };
 
-export default AboutSection;
+export default AboutContent;

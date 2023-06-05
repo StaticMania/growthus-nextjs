@@ -1,14 +1,13 @@
-import React from "react";
 import Counter from "@/components/Counter";
-import AboutHero from "@/components/AboutHero";
 import CallToAction from "@/components/CallToAction";
 import Client from "@/components/Client";
-import BusinessSolution from "@/components/BusinessSolution";
+import BusinessSolution from "@/components/BusinessSolution/BusinessSolution";
 import Community from "@/components/Community";
-import AboutContent from "@/components/AboutSection";
-import { AboutStory, JoinTeam, TeamData } from "@/Data/Data.js";
+import AboutContent from "@/components/AboutContent";
+import { JoinTeam, TeamData, AboutStory } from "@/Data/Data.js";
 import Team from "@/components/Team";
 import CompanyAddress from "@/components/CompanyAddress";
+import AboutHero from "@/components/AboutHero";
 
 const page = () => {
   return (
@@ -19,7 +18,7 @@ const page = () => {
       <BusinessSolution />
       <Community />
       <Client />
-      <Team data={TeamData} />
+      <Team />
       <AboutContent data={JoinTeam} />
       <CompanyAddress />
       <CallToAction

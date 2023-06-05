@@ -1,33 +1,29 @@
 "use client";
 import { motion } from "framer-motion";
+import { AboutHeroData, imageStyle } from "@/Data/Data.js";
 
-const container = {
-  hidden: { opacity: 1, scale: 0 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      delayChildren: 0.3,
-      staggerChildren: 0.2,
+function AboutHero() {
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
     },
-  },
-};
-
-const item = {
-  hidden: { y: 40, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-  },
-};
-
-function AboutHeroItem({ data }) {
-  const { images } = data;
-  const imageStyle = {
-    width: "auto",
-    maxWidth: "100%",
-    height: "auto",
   };
+
+  const item = {
+    hidden: { y: 40, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+  const { images, title, paragraph } = AboutHeroData;
+
   return (
     <>
       <section className="hero about-hero pt-14">
@@ -35,7 +31,7 @@ function AboutHeroItem({ data }) {
           <div className="row">
             <div className="col-lg-10 mx-auto">
               <div className="hero-content text-center">
-                <h1>{data.title}</h1>
+                <h1>{title}</h1>
               </div>
             </div>
           </div>
@@ -65,7 +61,7 @@ function AboutHeroItem({ data }) {
           <div className="row">
             <div className="col-lg-10 mx-auto">
               <div className="text-center">
-                <p className="mb-6">{data.paragraph}</p>
+                <p className="mb-6">{paragraph}</p>
               </div>
             </div>
           </div>
@@ -75,4 +71,4 @@ function AboutHeroItem({ data }) {
   );
 }
 
-export default AboutHeroItem;
+export default AboutHero;

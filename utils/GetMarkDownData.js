@@ -1,8 +1,8 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-export const getPostMetadata = () => {
-  const folder = "Data/posts/";
+
+const getMarkDownData = (folder) => {
   const files = fs.readdirSync(folder);
   const markdownPosts = files.filter((file) => file.endsWith(".md"));
 
@@ -13,9 +13,11 @@ export const getPostMetadata = () => {
     return {
       ...data.data,
       slug: file.replace(".md", ""),
+      content: data.content,
     };
   });
 
   return postsData;
 };
-export default getPostMetadata;
+
+export default getMarkDownData;

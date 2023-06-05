@@ -1,13 +1,10 @@
-import React from "react";
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
 import Markdown from "react-markdown";
 import PageHero from "@/components/Common/PageHero";
 import CallToAction from "@/components/CallToAction";
+import getMarkDownData from "@/utils/GetMarkDownData";
 
 const Privacy = () => {
-  const post = getPostMetadata();
+  const post = getMarkDownData("Data/privacy/");
   return (
     <>
       <PageHero
@@ -43,18 +40,3 @@ const Privacy = () => {
 };
 
 export default Privacy;
-
-export const getPostMetadata = () => {
-  const folder = "Data/privacy/";
-  const files = fs.readdirSync(folder);
-  const markdownPosts = files.filter((file) => file.endsWith(".md"));
-
-  const postsData = markdownPosts.map((file) => {
-    const filePath = path.join(folder, file);
-    const content = fs.readFileSync(filePath, "utf8");
-    const data = matter(content);
-    return data;
-  });
-
-  return postsData;
-};

@@ -443,16 +443,6 @@ export const TeamData = {
   ],
 };
 
-// Service Page Hero Data
-export const ServiceHeroData = {
-  title: "Services We provide for your Bussiness",
-  paragraph:
-    "Discover how our services can grow your business. From digital marketing to web development and design, our team delivers tailored solutions to exceed your expectations.",
-  imageShape: "/images/work/work-shap.svg",
-  image: "/images/service/service-header-banner.png",
-  btnLinK: "#service-item",
-};
-
 //Business Service Data
 export const BusinessServicesData = [
   {
@@ -578,4 +568,11 @@ export const ContactFormData = {
       email: "info@example.com",
     },
   ],
+};
+
+// Common Image style
+export const imageStyle = {
+  width: "auto",
+  maxWidth: "100%",
+  height: "auto",
 };

@@ -2,12 +2,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CaretRight } from "@phosphor-icons/react";
+import { imageStyle } from "@/Data/Data";
 const RelatedBlog = ({ props }) => {
-  const imageStyle = {
-    width: "auto",
-    maxWidth: "100%",
-    height: "auto",
-  };
   return (
     <>
       <div className="col-lg-4">

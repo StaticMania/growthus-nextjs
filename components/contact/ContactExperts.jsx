@@ -1,20 +1,12 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-const ContactExperts = ({contactExperts}) => {
-  const {experts} = contactExperts;
-  const imageStyle = {
-    maxWidth: "100%",
-    height: "auto",
-    width: "auto",
-  };
+import { imageStyle } from "@/Data/Data";
+const ContactExperts = ({ contactExperts }) => {
+  const { experts } = contactExperts;
   return (
     <>
       {experts.map((item, i) => (
-        <div
-          className="team-member"
-          key={i}
-        >
+        <div className="team-member" key={i}>
           <Image
             src={item.image}
             alt="team-member-thumb"
@@ -28,19 +20,13 @@ const ContactExperts = ({contactExperts}) => {
             <p>{item.designation}</p>
             <p className="fw-bold mb-0">
               <strong>Phone: </strong>
-              <Link
-                href={`tel:${item.phone}`}
-                className="text-primary"
-              >
+              <Link href={`tel:${item.phone}`} className="text-primary">
                 {item.phone}
               </Link>
             </p>
             <p className="fw-bold mb-0">
               <strong>E-mail: </strong>
-              <Link
-                href={`mailto:${item.email}`}
-                className="text-primary"
-              >
+              <Link href={`mailto:${item.email}`} className="text-primary">
                 {item.email}
               </Link>
             </p>
