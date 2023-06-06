@@ -9,6 +9,10 @@ import { CaseStudy, Caret } from "@/components/CaseStudy";
 import CaseStudyData from "@/Data/caseStudy.js";
 import serviceData from "@/Data/serviceData.js";
 
+export const metadata = {
+  title: "Growthus | Services",
+};
+
 const Service = () => {
   return (
     <>

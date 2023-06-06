@@ -9,6 +9,10 @@ import Team from "@/components/Team";
 import CompanyAddress from "@/components/CompanyAddress";
 import AboutHero from "@/components/AboutHero";
 
+export const metadata = {
+  title: "Growthus | About Us",
+};
+
 const page = () => {
   return (
     <>

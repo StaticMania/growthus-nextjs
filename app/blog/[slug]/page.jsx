@@ -7,6 +7,17 @@ import { imageStyle } from "@/Data/Data";
 import getMarkDownContent from "@/utils/GetMarkDownContent";
 import getMarkDownData from "@/utils/GetMarkDownData";
 
+export const metadata = {
+  title: "Growthus | Blog",
+};
+
+export const generateStaticParams = async () => {
+  const posts = getMarkDownData("Data/posts/");
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+};
+
 const BlogPost = (props) => {
   const folder = "Data/posts/";
   const slug = props.params.slug;

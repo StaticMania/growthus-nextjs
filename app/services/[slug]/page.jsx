@@ -9,6 +9,10 @@ import CaseStudyData from "@/Data/caseStudy.js";
 import serviceData from "@/Data/serviceData.js";
 import { imageStyle } from "@/Data/Data";
 
+export const metadata = {
+  title: "Growthus | Services",
+};
+
 const PostPage = (props) => {
   const slug = props.params.slug;
   const data = serviceData.find((post) => post.slug === slug);

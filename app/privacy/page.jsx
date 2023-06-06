@@ -3,6 +3,10 @@ import PageHero from "@/components/Common/PageHero";
 import CallToAction from "@/components/CallToAction";
 import getMarkDownData from "@/utils/GetMarkDownData";
 
+export const metadata = {
+  title: "Growthus | Privacy",
+};
+
 const Privacy = () => {
   const post = getMarkDownData("Data/privacy/");
   return (

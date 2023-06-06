@@ -14,6 +14,7 @@ const getMarkDownData = (folder) => {
       ...data.data,
       slug: file.replace(".md", ""),
       content: data.content,
+      category: data.data.category,
     };
   });
 

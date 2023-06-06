@@ -3,6 +3,10 @@ import PageHero from "@/components/Common/PageHero";
 import CallToAction from "@/components/CallToAction";
 import getMarkDownData from "@/utils/GetMarkDownData";
 
+export const metadata = {
+  title: "Growthus | Terms & Conditions",
+};
+
 const TermsCondition = () => {
   const post = getMarkDownData("Data/terms/");
   return (

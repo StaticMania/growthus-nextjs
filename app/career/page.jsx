@@ -7,6 +7,10 @@ import CompanyAddress from "@/components/CompanyAddress";
 import CareerHero from "@/components/Career/CareerHero";
 import CallToAction from "@/components/CallToAction";
 
+export const metadata = {
+  title: "Growthus | Career",
+};
+
 const Career = () => {
   const postMetadata = getMarkDownData("Data/career/");
   return (

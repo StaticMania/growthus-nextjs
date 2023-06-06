@@ -3,6 +3,10 @@ import CallToAction from "@/components/CallToAction";
 import AllBlogs from "@/components/AllBlogs";
 import getMarkDownData from "@/utils/GetMarkDownData";
 
+export const metadata = {
+  title: "Growthus | Blog",
+};
+
 function Blog() {
   const posts = getMarkDownData("Data/posts/");
 

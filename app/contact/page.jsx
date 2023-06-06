@@ -6,6 +6,10 @@ import ContactAddress from "@/components/Contact/ContactAddress";
 import ContactExperts from "@/components/Contact/ContactExperts";
 import CallToAction from "@/components/CallToAction";
 
+export const metadata = {
+  title: "Growthus | Contact Us",
+};
+
 const Contact = () => {
   return (
     <>

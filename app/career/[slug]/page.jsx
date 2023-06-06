@@ -2,6 +2,18 @@ import Markdown from "react-markdown";
 import PageHero from "@/components/Common/PageHero";
 import CareerForm from "@/components/Career/CareerForm.jsx";
 import getMarkDownContent from "@/utils/GetMarkDownContent";
+import getMarkDownData from "@/utils/GetMarkDownData";
+
+export const metadata = {
+  title: "Growthus | Career",
+};
+
+export const generateStaticParams = async () => {
+  const posts = getMarkDownData("Data/career/");
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+};
 
 const CareerSingle = (props) => {
   const folder = "Data/career/";
