@@ -8,7 +8,7 @@ export const metadata = {
 };
 
 const BusinessPolicy = () => {
-  const post = getMarkDownData("Data/businessPolicy/");
+  const post = getMarkDownData("data/businessPolicy/");
   return (
     <>
       <PageHero

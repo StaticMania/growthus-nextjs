@@ -6,8 +6,8 @@ import ServiceHero from "@/components/ServiceHero";
 import SectionHeader from "@/components/Common/SectionTitle";
 import BusinessServices from "@/components/BusinessServices";
 import { CaseStudy, Caret } from "@/components/CaseStudy";
-import CaseStudyData from "@/Data/caseStudy.js";
-import serviceData from "@/Data/serviceData.js";
+import CaseStudyData from "@/data/caseStudy.js";
+import serviceData from "@/data/serviceData.js";
 
 export const metadata = {
   title: "Growthus | Services",

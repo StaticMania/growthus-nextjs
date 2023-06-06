@@ -8,7 +8,7 @@ export const metadata = {
 };
 
 const Privacy = () => {
-  const post = getMarkDownData("Data/privacy/");
+  const post = getMarkDownData("data/privacy/");
   return (
     <>
       <PageHero

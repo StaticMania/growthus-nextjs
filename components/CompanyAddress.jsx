@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { FooterDatas } from "@/Data/Data.js";
+import { FooterDatas } from "@/data/Data.js";
 
 const CompanyAddress = () => {
   const { locations, phone, email } = FooterDatas;

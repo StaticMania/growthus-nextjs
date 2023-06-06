@@ -8,7 +8,7 @@ export const metadata = {
 };
 
 function Blog() {
-  const posts = getMarkDownData("Data/posts/");
+  const posts = getMarkDownData("data/posts/");
 
   return (
     <>

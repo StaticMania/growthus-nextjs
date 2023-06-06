@@ -1,8 +1,8 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-import {useEffect, useState} from "react";
-import {menuData} from "@/Data/Data.js";
+import { useEffect, useState } from "react";
+import { menuData } from "@/data/Data.js";
 import Image from "next/image";
 import * as Icon from "@phosphor-icons/react";
 const Navbar = () => {
@@ -40,17 +40,14 @@ const Navbar = () => {
             href="/"
             onClick={() => setActive(null)}
           >
-            <Image
-              src={menuData.logo}
-              alt="logo"
-              width={140}
-              height={30}
-            />
+            <Image src={menuData.logo} alt="logo" width={140} height={30} />
           </Link>
           <button
             type="button"
             data-bs-toggle="collapse"
-            className={collapsed ? "navbar-toggler collapsed p-3" : "navbar-toggler p-3"}
+            className={
+              collapsed ? "navbar-toggler collapsed p-3" : "navbar-toggler p-3"
+            }
             onClick={() => {
               setCollapsed(!collapsed);
             }}
@@ -87,13 +84,19 @@ const Navbar = () => {
             </span>
           </button>
           <div
-            className={collapsed ? "collapse navbar-collapse" : "collapse navbar-collapse show"}
+            className={
+              collapsed
+                ? "collapse navbar-collapse"
+                : "collapse navbar-collapse show"
+            }
             id="navbarSupportedContent"
           >
             <ul className="navbar-nav ms-xl-5">
               {menuData.menuContent.map((menuItem) => (
                 <li
-                  className={`${menuItem.path ? " nav-item " : "nav-item dropdown"}`}
+                  className={`${
+                    menuItem.path ? " nav-item " : "nav-item dropdown"
+                  }`}
                   key={menuItem.id}
                 >
                   {menuItem.path ? (
@@ -101,7 +104,9 @@ const Navbar = () => {
                       <Link
                         href={menuItem.path}
                         onClick={() => setActive(menuItem)}
-                        className={`nav-link ${active === menuItem ? "active" : ""}`}
+                        className={`nav-link ${
+                          active === menuItem ? "active" : ""
+                        }`}
                       >
                         {menuItem.title}
                       </Link>
@@ -124,7 +129,9 @@ const Navbar = () => {
                                 className="dropdown-menu-item"
                                 key={submenuItem.id}
                               >
-                                <Link href={submenuItem.path}>{submenuItem.title}</Link>
+                                <Link href={submenuItem.path}>
+                                  {submenuItem.title}
+                                </Link>
                               </li>
                             ))}
                           </ul>

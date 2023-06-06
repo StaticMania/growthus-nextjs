@@ -8,7 +8,7 @@ export const metadata = {
 };
 
 const TermsCondition = () => {
-  const post = getMarkDownData("Data/terms/");
+  const post = getMarkDownData("data/terms/");
   return (
     <>
       <PageHero

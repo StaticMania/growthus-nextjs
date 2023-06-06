@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import SectionHeader from "./Common/SectionTitle";
-import { TeamData } from "@/Data/Data";
+import { TeamData } from "@/data/Data";
 function Team() {
   const { Leads, Members } = TeamData;
   const imageStyle = {

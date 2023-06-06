@@ -4,7 +4,7 @@ import Client from "@/components/Client";
 import BusinessSolution from "@/components/BusinessSolution/BusinessSolution";
 import Community from "@/components/Community";
 import AboutContent from "@/components/AboutContent";
-import { JoinTeam, TeamData, AboutStory } from "@/Data/Data.js";
+import { JoinTeam, TeamData, AboutStory } from "@/data/Data.js";
 import Team from "@/components/Team";
 import CompanyAddress from "@/components/CompanyAddress";
 import AboutHero from "@/components/AboutHero";

@@ -3,7 +3,7 @@ import Image from "next/image";
 import Markdown from "react-markdown";
 import RelatedBlog from "@/components/RelatedBlog";
 import CallToAction from "@/components/CallToAction";
-import { imageStyle } from "@/Data/Data";
+import { imageStyle } from "@/data/Data";
 import getMarkDownContent from "@/utils/GetMarkDownContent";
 import getMarkDownData from "@/utils/GetMarkDownData";
 
@@ -12,19 +12,19 @@ export const metadata = {
 };
 
 export const generateStaticParams = async () => {
-  const posts = getMarkDownData("Data/posts/");
+  const posts = getMarkDownData("data/posts/");
   return posts.map((post) => ({
     slug: post.slug,
   }));
 };
 
 const BlogPost = (props) => {
-  const folder = "Data/posts/";
+  const folder = "data/posts/";
   const slug = props.params.slug;
   const post = getMarkDownContent(folder, slug);
   const postParams = post.data;
 
-  const postFilter = getMarkDownData("Data/posts/");
+  const postFilter = getMarkDownData("data/posts/");
   const relatedPost = postFilter.filter((element) =>
     element.tags.includes(...postParams.tags)
   );

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { imageStyle } from "@/Data/Data";
+import { imageStyle } from "@/data/Data";
 
 const ServiceHero = () => {
   return (

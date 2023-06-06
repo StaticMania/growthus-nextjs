@@ -1,4 +1,4 @@
-import { imageStyle } from "@/Data/Data";
+import { imageStyle } from "@/data/Data";
 import Image from "next/image";
 const NotFound = () => {
   return (

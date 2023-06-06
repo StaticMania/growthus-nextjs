@@ -1,7 +1,7 @@
 import React from "react";
 import SectionHeader from "../Common/SectionTitle";
 import WorkProcessItems from "./WorkProcessItems";
-import { WorkProcessData } from "@/Data/Data.js";
+import { WorkProcessData } from "@/data/Data.js";
 function WorkProcess() {
   return (
     <section className="work">

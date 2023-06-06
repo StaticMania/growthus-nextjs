@@ -12,7 +12,7 @@ export const metadata = {
 };
 
 const Career = () => {
-  const postMetadata = getMarkDownData("Data/career/");
+  const postMetadata = getMarkDownData("data/career/");
   return (
     <>
       <CareerHero />

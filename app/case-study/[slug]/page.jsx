@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
 import PageHero from "@/components/Common/PageHero.jsx";
-import CaseStudyData from "@/Data/caseStudy.js";
+import CaseStudyData from "@/data/caseStudy.js";
 import Link from "next/link";
-import { imageStyle } from "@/Data/Data";
+import { imageStyle } from "@/data/Data";
 
 const caseStudyPost = (props) => {
   const slug = props.params.slug;

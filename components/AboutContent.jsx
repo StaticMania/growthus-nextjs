@@ -1,5 +1,5 @@
 "use client";
-import { imageStyle } from "@/Data/Data";
+import { imageStyle } from "@/data/Data";
 import Image from "next/image";
 import Link from "next/link";
 

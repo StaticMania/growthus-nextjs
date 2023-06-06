@@ -9,14 +9,14 @@ export const metadata = {
 };
 
 export const generateStaticParams = async () => {
-  const posts = getMarkDownData("Data/career/");
+  const posts = getMarkDownData("data/career/");
   return posts.map((post) => ({
     slug: post.slug,
   }));
 };
 
 const CareerSingle = (props) => {
-  const folder = "Data/career/";
+  const folder = "data/career/";
   const slug = props.params.slug;
   const post = getMarkDownContent(folder, slug);
   const postParams = post.data;

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { imageStyle } from "@/Data/Data";
+import { imageStyle } from "@/data/Data";
 const ContactExperts = ({ contactExperts }) => {
   const { experts } = contactExperts;
   return (

@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { AboutHeroData, imageStyle } from "@/Data/Data.js";
+import { AboutHeroData, imageStyle } from "@/data/Data.js";
 
 function AboutHero() {
   const container = {

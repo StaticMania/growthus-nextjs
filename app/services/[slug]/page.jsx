@@ -5,9 +5,9 @@ import Testimonials from "@/components/Testimonials/Testimonial";
 import CallToAction from "@/components/CallToAction";
 import SectionHeader from "@/components/Common/SectionTitle";
 import { CaseStudy, Caret } from "@/components/CaseStudy";
-import CaseStudyData from "@/Data/caseStudy.js";
-import serviceData from "@/Data/serviceData.js";
-import { imageStyle } from "@/Data/Data";
+import CaseStudyData from "@/data/caseStudy.js";
+import serviceData from "@/data/serviceData.js";
+import { imageStyle } from "@/data/Data";
 
 export const metadata = {
   title: "Growthus | Services",

@@ -1,7 +1,7 @@
 import React from "react";
 import SectionHeader from "../Common/SectionTitle";
 import BusinessSolutionItems from "./BusinessSolutionItems";
-import {BusinessSolutionData} from "@/Data/Data.js";
+import { BusinessSolutionData } from "@/data/Data.js";
 function BusinessSolution() {
   return (
     <section className="services py-7 py-md-9">
@@ -16,10 +16,7 @@ function BusinessSolution() {
         </div>
         <div className="row">
           {BusinessSolutionData.map((item) => (
-            <BusinessSolutionItems
-              key={item.id}
-              data={item}
-            />
+            <BusinessSolutionItems key={item.id} data={item} />
           ))}
         </div>
       </div>
