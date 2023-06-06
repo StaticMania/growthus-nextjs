@@ -4,8 +4,10 @@ import PageHero from "@/components/Common/PageHero.jsx";
 import CaseStudyData from "@/data/caseStudy.js";
 import Link from "next/link";
 import { imageStyle } from "@/data/Data";
+import useTitle from "@/hooks/useTitle";
 
-const caseStudyPost = (props) => {
+const CaseStudyPost = (props) => {
+  useTitle("Grouwthus | Case Study");
   const slug = props.params.slug;
   const data = CaseStudyData.find((post) => post.slug === slug);
   const relatedPost = CaseStudyData.filter((post) =>
@@ -216,4 +218,4 @@ const caseStudyPost = (props) => {
   );
 };
 
-export default caseStudyPost;
+export default CaseStudyPost;

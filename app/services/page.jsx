@@ -1,3 +1,5 @@
+"use client";
+
 import Client from "@/components/Client";
 import BusinessSolution from "@/components/BusinessSolution/BusinessSolution";
 import Testimonials from "@/components/Testimonials/Testimonial";
@@ -8,12 +10,10 @@ import BusinessServices from "@/components/BusinessServices";
 import { CaseStudy, Caret } from "@/components/CaseStudy";
 import CaseStudyData from "@/data/caseStudy.js";
 import serviceData from "@/data/serviceData.js";
-
-export const metadata = {
-  title: "Growthus | Services",
-};
+import useTitle from "@/hooks/useTitle";
 
 const Service = () => {
+  useTitle("Growthus | Services");
   return (
     <>
       <ServiceHero />
@@ -64,7 +64,6 @@ const Service = () => {
             <span>Let’s Grow your Business.</span>
           </>
         }
-        link="/"
       />
     </>
   );

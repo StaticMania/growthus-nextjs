@@ -1,3 +1,5 @@
+"use client";
+
 import PageHero from "@/components/Common/PageHero";
 import ContactForm from "@/components/Contact/ContactForm";
 import SectionTitle from "@/components/Common/SectionTitle";
@@ -5,12 +7,10 @@ import { ContactFormData } from "@/data/Data";
 import ContactAddress from "@/components/Contact/ContactAddress";
 import ContactExperts from "@/components/Contact/ContactExperts";
 import CallToAction from "@/components/CallToAction";
-
-export const metadata = {
-  title: "Growthus | Contact Us",
-};
+import useTitle from "@/hooks/useTitle";
 
 const Contact = () => {
+  useTitle("Growthus | Contact Us");
   return (
     <>
       <PageHero

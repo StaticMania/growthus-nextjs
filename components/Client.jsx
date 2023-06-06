@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 import SectionHeader from "./Common/SectionTitle";
 import { ClientImageData } from "@/data/Data.js";
 import Image from "next/image";

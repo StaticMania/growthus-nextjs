@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import React from "react";
 import { useEffect, useState } from "react";
 import { menuData } from "@/data/Data.js";
 import Image from "next/image";

@@ -1,14 +1,10 @@
-import React from "react";
+"use client";
 import Image from "next/image";
 import SectionHeader from "./Common/SectionTitle";
-import { TeamData } from "@/data/Data";
-function Team() {
-  const { Leads, Members } = TeamData;
-  const imageStyle = {
-    width: "auto",
-    maxWidth: "100%",
-    height: "auto",
-  };
+import { imageStyle } from "@/data/Data";
+
+function Team({ data }) {
+  const { Leads, Members } = data;
   return (
     <section className="team">
       <div className="container">

@@ -1,3 +1,4 @@
+"use client";
 const ContactForm = () => {
   return (
     <section className="contact-form py-7">
@@ -6,7 +7,7 @@ const ContactForm = () => {
           <div className="col-lg-10 mx-auto">
             <form className="row g-4">
               <div className="col-md-12 col-lg-6">
-                <label for="inputEmail4" className="form-label">
+                <label htmlFor="inputEmail4" className="form-label">
                   My name is
                 </label>
                 <input
@@ -17,7 +18,7 @@ const ContactForm = () => {
                 />
               </div>
               <div className="col-md-12 col-lg-6">
-                <label for="inputEmail42" className="form-label">
+                <label htmlFor="inputEmail42" className="form-label">
                   I work with
                 </label>
                 <input
@@ -28,7 +29,7 @@ const ContactForm = () => {
                 />
               </div>
               <div className="col-md-12 col-lg-6">
-                <label for="goal" className="form-label">
+                <label htmlFor="goal" className="form-label">
                   I’m looking for a partner to help me with
                 </label>
                 <input
@@ -39,13 +40,13 @@ const ContactForm = () => {
                 />
               </div>
               <div className="col-md-12 col-lg-6">
-                <label for="deadline" className="form-label">
+                <label htmlFor="deadline" className="form-label">
                   with an idea of having that completed on
                 </label>
                 <input type="date" className="form-control" id="deadline" />
               </div>
               <div className="col-md-12 col-lg-6">
-                <label for="budget" className="form-label">
+                <label htmlFor="budget" className="form-label">
                   I am hoping to stay around a budget
                 </label>
                 <select
@@ -60,7 +61,7 @@ const ContactForm = () => {
                 </select>
               </div>
               <div className="col-md-12 col-lg-6">
-                <label for="email" className="form-label">
+                <label htmlFor="email" className="form-label">
                   You can reach me at
                 </label>
                 <input
@@ -71,7 +72,7 @@ const ContactForm = () => {
                 />
               </div>
               <div className="col-12">
-                <label for="inputEmail4" className="form-label">
+                <label htmlFor="inputEmail4" className="form-label">
                   to start the conversation. Optionally, I’m sharing more
                 </label>
                 <textarea

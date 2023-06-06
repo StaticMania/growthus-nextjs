@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+
 import SectionHeader from "../Common/SectionTitle";
 import BusinessSolutionItems from "./BusinessSolutionItems";
 import { BusinessSolutionData } from "@/data/Data.js";

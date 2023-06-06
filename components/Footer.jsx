@@ -147,7 +147,9 @@ const FooterData = ({ FooterContent }) => {
           <div className="row clearfix">
             <div className="col-md-12">
               <div className="text-center text-lg-start">
-                <p className="text-secondary-light mb-0">{`Copyright © ${new Date().getFullYear()} Growthus. All right reserved`}</p>
+                <p className="text-secondary-light mb-0">
+                  {FooterContent.copyright}
+                </p>
               </div>
             </div>
           </div>
@@ -160,9 +162,6 @@ const FooterData = ({ FooterContent }) => {
 const Footer = () => {
   useEffect(() => {
     import("bootstrap/dist/js/bootstrap.bundle.min.js");
-    const handleChange = (event) => {
-      setInputValue(event.target.value);
-    };
   }, []);
   return <FooterData FooterContent={FooterDatas} />;
 };

@@ -1,8 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
-import { AboutHeroData, imageStyle } from "@/data/Data.js";
+import { imageStyle } from "@/data/Data.js";
 
-function AboutHero() {
+function AboutHero({ data }) {
+  const { images, title, paragraph } = data;
+
+  // Animation
   const container = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
@@ -14,7 +17,6 @@ function AboutHero() {
       },
     },
   };
-
   const item = {
     hidden: { y: 40, opacity: 0 },
     visible: {
@@ -22,7 +24,6 @@ function AboutHero() {
       opacity: 1,
     },
   };
-  const { images, title, paragraph } = AboutHeroData;
 
   return (
     <>

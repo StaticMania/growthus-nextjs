@@ -1,8 +1,7 @@
-import React from "react";
+"use client";
 import SectionHeader from "../Common/SectionTitle";
 import WorkProcessItems from "./WorkProcessItems";
-import { WorkProcessData } from "@/data/Data.js";
-function WorkProcess() {
+function WorkProcess({ data }) {
   return (
     <section className="work">
       <div className="container">
@@ -15,7 +14,7 @@ function WorkProcess() {
           </div>
         </div>
 
-        {WorkProcessData.map((item) => (
+        {data.map((item) => (
           <WorkProcessItems data={item} key={item.id} />
         ))}
       </div>

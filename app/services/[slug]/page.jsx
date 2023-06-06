@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import Client from "@/components/Client";
@@ -8,12 +10,10 @@ import { CaseStudy, Caret } from "@/components/CaseStudy";
 import CaseStudyData from "@/data/caseStudy.js";
 import serviceData from "@/data/serviceData.js";
 import { imageStyle } from "@/data/Data";
-
-export const metadata = {
-  title: "Growthus | Services",
-};
+import useTitle from "@/hooks/useTitle";
 
 const PostPage = (props) => {
+  useTitle("Growthus | Services");
   const slug = props.params.slug;
   const data = serviceData.find((post) => post.slug === slug);
   return (
@@ -144,7 +144,6 @@ const PostPage = (props) => {
             <span>Let’s Grow your Business.</span>
           </>
         }
-        link="/"
       />
     </>
   );

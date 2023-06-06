@@ -1,9 +1,8 @@
-import React from "react";
+"use client";
 import Link from "next/link";
-import { FooterDatas } from "@/data/Data.js";
 
-const CompanyAddress = () => {
-  const { locations, phone, email } = FooterDatas;
+const CompanyAddress = ({ data }) => {
+  const { locations, phone, email } = data;
   return (
     <section className="about-contact py-0">
       <div className="container">

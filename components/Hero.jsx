@@ -1,9 +1,8 @@
 "use client";
-
 import * as Icon from "@phosphor-icons/react";
-
 import { motion } from "framer-motion";
-const HeroItems = () => {
+
+const Hero = () => {
   const imageShapeStyle = {
     position: "absolute",
     top: "50%",
@@ -18,6 +17,7 @@ const HeroItems = () => {
     height: "auto",
   };
 
+  // Animation
   const container = {
     hidden: { opacity: 1, scale: 1 },
     visible: {
@@ -29,7 +29,6 @@ const HeroItems = () => {
       },
     },
   };
-
   const item1 = {
     hidden: { y: 50, opacity: 0 },
     visible: {
@@ -141,4 +140,4 @@ const HeroItems = () => {
   );
 };
 
-export default HeroItems;
+export default Hero;

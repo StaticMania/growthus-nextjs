@@ -254,9 +254,8 @@ export const TestimonialData = [
 //Footer Data
 export const FooterDatas = {
   logo: "/images/footer-logo.svg",
-  footerText:
-    "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing .",
-  copyright: "Copyright 2023 Growthus, All rights reserved!",
+  footerText: "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing .",
+  copyright: `Copyright © ${new Date().getFullYear()} Growthus. All right reserved`,
   email: "info@growthus.com",
   phone: "+3 230 705 5448",
   formspreeId: "mpzeewna",

@@ -1,5 +1,5 @@
+"use client";
 import Image from "next/image";
-
 const Community = () => {
   const mapImage = {
     width: "100%",

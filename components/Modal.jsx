@@ -1,11 +1,8 @@
-import React from "react";
+"use client";
 
-const Modal = ({videoLink}) => {
+const Modal = ({ videoLink }) => {
   return (
-    <div
-      className="modal fade about-story-modal"
-      id="storyModal"
-    >
+    <div className="modal fade about-story-modal" id="storyModal">
       <div className="modal-dialog modal-dialog-centered">
         <div className="modal-content">
           <div className="modal-body">
