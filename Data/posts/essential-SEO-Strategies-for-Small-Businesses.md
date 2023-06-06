@@ -2,14 +2,15 @@
 title: "10 Essential SEO Strategies for Small Businesses"
 date: "26 May 2023"
 excerpt: "You may have seen the animated text on many other websites, haven’t you?If so, you know how amazing. When we just scroll down a well-structured website, we really like to go through the whole writing"
-tags: 
- - Marketing
- - Development
+tags:
+  - Marketing
+  - SEO
 thumbnail: "/images/blog/featured-thumb1.png"
 featureImage: "/images/blog/featured-thumb1.png"
 author: Kristin Watson
 authorDesignation: Lead Content Writer
 authorImage: "/images/blog/profile-picture.png"
+category: SEO
 ---
 
 User experience (UX) is an important aspect of web design that can make or break the success of a website. In today's digital age, where the competition is fierce and attention spans are short, a website that provides a positive user experience is essential to engage and retain visitors.

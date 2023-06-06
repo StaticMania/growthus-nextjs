@@ -1,29 +1,37 @@
-import React from "react";
+"use client";
 import Hero from "@/components/Hero";
 import Client from "@/components/Client";
-import BusinessSolution from "@/components/BusinessSolution";
-import WorkProcess from "@/components/WorkProcess";
+import BusinessSolution from "@/components/BusinessSolution/BusinessSolution";
+import WorkProcess from "@/components/WorkProcess/WorkProcess";
 import Community from "@/components/Community";
 import Counter from "@/components/Counter";
-import Testimonials from "@/components/Testimonials";
+import Testimonials from "@/components/Testimonials/Testimonial";
 import CallToAction from "@/components/CallToAction";
+import { WorkProcessData } from "@/data/Data";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    document.title = "Growthus | Home";
+  }, []);
+
   return (
     <>
       <Hero />
       <Client border="border-bottom" />
       <BusinessSolution />
-      <WorkProcess />
+      <WorkProcess data={WorkProcessData} />
       <Community />
       <Counter />
       <Testimonials />
       <CallToAction
         title={
           <>
-            <span>Sounds Good? </span> <br /> <span>Let’s Grow your Business.</span>
+            <span>Sounds Good? </span> <br />{" "}
+            <span>Let’s Grow your Business.</span>
           </>
         }
+        link="/"
       />
     </>
   );

@@ -7,22 +7,15 @@ const CareerForm = () => {
             <div className="section-header text-start">
               <h2>Apply for this job</h2>
             </div>
-            <form
-              className="row g-4"
-              method="POST"
-            >
+            <form className="row g-4" method="POST">
               <div className="col-md-12">
-                <label className="form-label d-block"> Upload Your Resume </label>
-                <input
-                  type="file"
-                  id="file-input"
-                  hidden
-                />
+                <label className="form-label d-block">
+                  {" "}
+                  Upload Your Resume{" "}
+                </label>
+                <input type="file" id="file-input" hidden />
 
-                <label
-                  className="file-input"
-                  for="file-input"
-                >
+                <label className="file-input" htmlFor="file-input">
                   <svg
                     width="17"
                     height="20"
@@ -45,10 +38,7 @@ const CareerForm = () => {
                 <span id="file-chosen"></span>
               </div>
               <div className="col-md-6">
-                <label
-                  htmlFor="inputName"
-                  className="form-label"
-                >
+                <label htmlFor="inputName" className="form-label">
                   Your Full Name
                 </label>
                 <input
@@ -60,10 +50,7 @@ const CareerForm = () => {
                 />
               </div>
               <div className="col-md-6">
-                <label
-                  htmlFor="inputEmail142"
-                  className="form-label"
-                >
+                <label htmlFor="inputEmail142" className="form-label">
                   Email Address
                 </label>
                 <input
@@ -75,10 +62,7 @@ const CareerForm = () => {
                 />
               </div>
               <div className="col-md-6">
-                <label
-                  htmlFor="inputPhoneNumber"
-                  className="form-label"
-                >
+                <label htmlFor="inputPhoneNumber" className="form-label">
                   Phone Number
                 </label>
                 <input
@@ -90,10 +74,7 @@ const CareerForm = () => {
                 />
               </div>
               <div className="col-md-6">
-                <label
-                  htmlFor="InputLInkedIN"
-                  className="form-label"
-                >
+                <label htmlFor="InputLInkedIN" className="form-label">
                   Linked In Profile
                 </label>
                 <input
@@ -105,10 +86,7 @@ const CareerForm = () => {
                 />
               </div>
               <div className="col-md-6">
-                <label
-                  htmlFor="inputPortfolioLInk"
-                  className="form-label"
-                >
+                <label htmlFor="inputPortfolioLInk" className="form-label">
                   Portfolio Link
                 </label>
                 <input
@@ -120,10 +98,7 @@ const CareerForm = () => {
                 />
               </div>
               <div className="col-md-6">
-                <label
-                  htmlFor="inputComapnyWebsite"
-                  className="form-label"
-                >
+                <label htmlFor="inputComapnyWebsite" className="form-label">
                   Current Company Websitet
                 </label>
                 <input
@@ -135,11 +110,9 @@ const CareerForm = () => {
                 />
               </div>
               <div className="col-12">
-                <label
-                  htmlFor="inputgulprea"
-                  className="form-label"
-                >
-                  About yourself & tell us why you thought, you are fit on this position?
+                <label htmlFor="inputgulprea" className="form-label">
+                  About yourself & tell us why you thought, you are fit on this
+                  position?
                 </label>
                 <textarea
                   className="form-control"
@@ -150,10 +123,7 @@ const CareerForm = () => {
                 ></textarea>
               </div>
               <div className="col-12">
-                <button
-                  type="submit"
-                  className="btn btn-primary"
-                >
+                <button type="submit" className="btn btn-primary">
                   Apply The Position
                 </button>
               </div>

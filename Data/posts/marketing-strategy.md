@@ -2,7 +2,7 @@
 title: "How to Create a Successful Content Marketing Strategy"
 date: "03 May 2023"
 excerpt: "Content marketing is a powerful way to engage your target audience, build brand awareness, and drive conversions. But without a solid strategy, your content efforts can fall flat. Learn the essential steps to create a successful content marketing plan"
-tags: 
+tags:
   - SEO
   - Marketing
 thumbnail: "/images/blog/featured-thumb4.png"
@@ -10,6 +10,7 @@ featureImage: "/images/blog/featured-thumb4.png"
 author: Kristin Watson
 authorDesignation: Lead Content Writer
 authorImage: "/images/blog/profile-picture.png"
+category: Marketing
 ---
 
 User experience (UX) is an important aspect of web design that can make or break the success of a website. In today's digital age, where the competition is fierce and attention spans are short, a website that provides a positive user experience is essential to engage and retain visitors.

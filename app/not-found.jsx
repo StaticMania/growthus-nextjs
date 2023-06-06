@@ -1,11 +1,6 @@
+import { imageStyle } from "@/data/Data";
 import Image from "next/image";
 const NotFound = () => {
-  const imageStyle = {
-    width: "auto",
-    maxWidth: "100%",
-    height: "auto",
-  };
-
   return (
     <section className="error">
       <div className="container">

@@ -1,8 +1,8 @@
 "use client";
 
-import Navbar from "@/components/Navbar/Navbar";
-import Footer from "@/components/Footer/Footer";
-import Modal from "@/components/Modal/Modal";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Modal from "@/components/Modal";
 import "bootstrap/dist/css/bootstrap.css";
 import "@/styles/theme.scss";
 

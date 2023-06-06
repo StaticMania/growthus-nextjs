@@ -1,39 +1,34 @@
-import fs from "fs";
 import Link from "next/link";
 import Image from "next/image";
 import Markdown from "react-markdown";
-import matter from "gray-matter";
-import RelatedBlog from "@/components/Blog/RelatedBlog";
-import BlogPostMetaData from "@/components/Blog/BlogPostMetaData.js";
+import RelatedBlog from "@/components/RelatedBlog";
 import CallToAction from "@/components/CallToAction";
+import { imageStyle } from "@/data/Data";
+import getMarkDownContent from "@/utils/GetMarkDownContent";
+import getMarkDownData from "@/utils/GetMarkDownData";
 
-export const getPostContent = (slug) => {
-  const folder = "Data/posts/";
-  const file = `${folder}${slug}.md`;
-  const content = fs.readFileSync(file, "utf8");
-  const matterResult = matter(content);
-  return matterResult;
+export const metadata = {
+  title: "Growthus | Blog",
 };
+
 export const generateStaticParams = async () => {
-  const posts = BlogPostMetaData();
+  const posts = getMarkDownData("data/posts/");
   return posts.map((post) => ({
     slug: post.slug,
   }));
 };
 
 const BlogPost = (props) => {
+  const folder = "data/posts/";
   const slug = props.params.slug;
-  const post = getPostContent(slug);
+  const post = getMarkDownContent(folder, slug);
   const postParams = post.data;
-  const postFilter = BlogPostMetaData();
+
+  const postFilter = getMarkDownData("data/posts/");
   const relatedPost = postFilter.filter((element) =>
     element.tags.includes(...postParams.tags)
   );
-  const imageStyle = {
-    width: "auto",
-    maxWidth: "100%",
-    height: "auto",
-  };
+
   return (
     <>
       <section className="blog-details">

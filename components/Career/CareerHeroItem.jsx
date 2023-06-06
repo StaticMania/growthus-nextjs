@@ -1,11 +1,7 @@
 import React from "react";
 import Image from "next/image";
-function CareerHeroItem({data}) {
-  const imageStyle = {
-    width: "auto",
-    maxWidth: "100%",
-    height: "auto",
-  };
+import { imageStyle } from "@/data/Data";
+function CareerHeroItem({ data }) {
   return (
     <>
       <section className="hero career-hero pt-10 pt-lg-14">

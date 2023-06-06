@@ -1,19 +1,27 @@
-import React from "react";
+"use client";
 import Counter from "@/components/Counter";
-import AboutHero from "@/components/AboutHero";
 import CallToAction from "@/components/CallToAction";
 import Client from "@/components/Client";
-import BusinessSolution from "@/components/BusinessSolution";
+import BusinessSolution from "@/components/BusinessSolution/BusinessSolution";
 import Community from "@/components/Community";
-import AboutContent from "@/components/AboutSection";
-import { AboutStory, JoinTeam, TeamData } from "@/Data/Data.js";
+import AboutContent from "@/components/AboutContent";
+import {
+  JoinTeam,
+  TeamData,
+  AboutStory,
+  AboutHeroData,
+  FooterDatas,
+} from "@/data/Data.js";
 import Team from "@/components/Team";
 import CompanyAddress from "@/components/CompanyAddress";
+import AboutHero from "@/components/AboutHero";
+import useTitle from "@/hooks/useTitle";
 
-const page = () => {
+const AboutUs = () => {
+  useTitle("Growthus | About Us");
   return (
     <>
-      <AboutHero />
+      <AboutHero data={AboutHeroData} />
       <Counter />
       <AboutContent data={AboutStory} />
       <BusinessSolution />
@@ -21,7 +29,7 @@ const page = () => {
       <Client />
       <Team data={TeamData} />
       <AboutContent data={JoinTeam} />
-      <CompanyAddress />
+      <CompanyAddress data={FooterDatas} />
       <CallToAction
         title={
           <>
@@ -34,4 +42,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default AboutUs;

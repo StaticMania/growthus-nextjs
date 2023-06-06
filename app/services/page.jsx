@@ -1,24 +1,24 @@
+"use client";
+
 import Client from "@/components/Client";
-import BusinessSolution from "@/components/BusinessSolution";
-import Testimonials from "@/components/Testimonials";
+import BusinessSolution from "@/components/BusinessSolution/BusinessSolution";
+import Testimonials from "@/components/Testimonials/Testimonial";
 import CallToAction from "@/components/CallToAction";
 import ServiceHero from "@/components/ServiceHero";
-import {ServiceHeroData} from "@/Data/Data.js";
 import SectionHeader from "@/components/Common/SectionTitle";
-import BusinessServices from "@/components/BusinessServices/";
-import {CaseStudy, Caret} from "@/components/caseStudy/";
-import CaseStudyData from "@/Data/caseStudy.js";
-import serviceData from "@/Data/serviceData.js";
+import BusinessServices from "@/components/BusinessServices";
+import { CaseStudy, Caret } from "@/components/CaseStudy";
+import CaseStudyData from "@/data/caseStudy.js";
+import serviceData from "@/data/serviceData.js";
+import useTitle from "@/hooks/useTitle";
 
 const Service = () => {
+  useTitle("Growthus | Services");
   return (
     <>
-      <ServiceHero data={ServiceHeroData} />
+      <ServiceHero />
       <BusinessSolution />
-      <section
-        className="service-item work pb-7"
-        id="service-item"
-      >
+      <section className="service-item work pb-7" id="service-item">
         <div className="container">
           <div className="row">
             <div className="col-lg-8 mx-auto">
@@ -31,10 +31,7 @@ const Service = () => {
         </div>
         <div className="container">
           {serviceData.map((services) => (
-            <BusinessServices
-              key={services.slug}
-              props={services}
-            />
+            <BusinessServices key={services.slug} props={services} />
           ))}
         </div>
       </section>
@@ -52,10 +49,7 @@ const Service = () => {
         <div className="container">
           <div className="row">
             {CaseStudyData.slice(0, 6).map((caseStudy, i) => (
-              <CaseStudy
-                key={i}
-                props={caseStudy}
-              />
+              <CaseStudy key={i} props={caseStudy} />
             ))}
             <Caret />
           </div>
@@ -66,7 +60,8 @@ const Service = () => {
       <CallToAction
         title={
           <>
-            <span>Sounds Good? </span> <br /> <span>Let’s Grow your Business.</span>
+            <span>Sounds Good? </span> <br />{" "}
+            <span>Let’s Grow your Business.</span>
           </>
         }
       />

@@ -2,28 +2,28 @@
 
 import CallToAction from "@/components/CallToAction";
 import PageHero from "@/components/Common/PageHero.jsx";
-import {CaseStudy} from "@/components/caseStudy/";
-import CaseStudyData from "@/Data/caseStudy.js";
-import {useEffect, useState} from "react";
-import {motion, AnimatePresence} from "framer-motion";
+import { CaseStudy } from "@/components/CaseStudy";
+import CaseStudyData from "@/data/caseStudy.js";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import useTitle from "@/hooks/useTitle";
 
 export default function CaseStudyPage() {
+  useTitle("Grouwthus | Case Study");
   const categories = ["All project", "Design", "Development", "Marketing"];
   const [filterData, setFilterData] = useState([...CaseStudyData]);
   const [active, setActive] = useState(0);
 
   const handleClick = (category) => {
     if (category !== "All project") {
-      const data = CaseStudyData.filter((item) => item.category.includes(category));
+      const data = CaseStudyData.filter((item) =>
+        item.category.includes(category)
+      );
       setFilterData(data);
       return;
     }
     setFilterData(CaseStudyData);
   };
-
-  useEffect(() => {
-    document.title = "Grouwthus | Case Study";
-  }, []);
 
   return (
     <>
@@ -54,16 +54,10 @@ export default function CaseStudyPage() {
               </div>
             </div>
           </div>
-          <motion.div
-            layout
-            className="row"
-          >
+          <motion.div layout className="row">
             {filterData.map((item) => (
               <AnimatePresence key={item.id}>
-                <CaseStudy
-                  key={item.id}
-                  props={item}
-                />
+                <CaseStudy key={item.id} props={item} />
               </AnimatePresence>
             ))}
           </motion.div>
@@ -73,7 +67,8 @@ export default function CaseStudyPage() {
       <CallToAction
         title={
           <>
-            <span>Sounds Good? </span> <br /> <span>Let’s Grow your Business.</span>
+            <span>Sounds Good? </span> <br />{" "}
+            <span>Let’s Grow your Business.</span>
           </>
         }
       />

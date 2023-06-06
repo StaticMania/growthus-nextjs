@@ -1,13 +1,25 @@
-import AllBlogs from "@/components/AllBlogs/AllBlogs";
-import BlogPostMetaData from "@/components/Blog/BlogPostMetaData.js";
+import AllBlogs from "@/components/AllBlogs";
 import CallToAction from "@/components/CallToAction";
 import PageHero from "@/components/Common/PageHero";
+import getMarkDownData from "@/utils/GetMarkDownData";
+
+export const metadata = {
+  title: "Growthus | Taxonomy",
+};
+
+export const generateStaticParams = async () => {
+  const posts = getMarkDownData("data/posts/");
+  const categories = posts.map((post) => post.category);
+  const uniqueCategories = [...new Set(categories)];
+  return uniqueCategories.map((item) => ({
+    tag: item,
+  }));
+};
 
 const TaxonomySingle = ({ params }) => {
-  const posts = BlogPostMetaData();
-  const allPostsWithTag = posts.filter((post) =>
-    post.tags.includes(params.tag)
-  );
+  const posts = getMarkDownData("data/posts/");
+  const tagData = posts.filter((post) => post.tags.includes(params.tag));
+
   return (
     <>
       <PageHero
@@ -17,7 +29,7 @@ const TaxonomySingle = ({ params }) => {
           </>
         }
       />
-      <AllBlogs posts={allPostsWithTag} />
+      <AllBlogs posts={tagData} />
       <CallToAction
         title={
           <>

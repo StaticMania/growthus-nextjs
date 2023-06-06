@@ -254,7 +254,8 @@ export const TestimonialData = [
 //Footer Data
 export const FooterDatas = {
   logo: "/images/footer-logo.svg",
-  footerText: "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing .",
+  footerText:
+    "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing .",
   copyright: `Copyright © ${new Date().getFullYear()} Growthus. All right reserved`,
   email: "info@growthus.com",
   phone: "+3 230 705 5448",
@@ -387,19 +388,19 @@ export const TeamData = {
       id: 1,
       name: "Marvin McKinney",
       designation: "Founder and CEO",
-      image: "/images/team/team-member1.png ",
+      image: "/images/team/team-member1.png",
     },
     {
       id: 2,
       name: "Floyd Miles McKinney",
       designation: "Co-Founder and CEO",
-      image: "/images/team/team-member2.png ",
+      image: "/images/team/team-member2.png",
     },
     {
       id: 3,
       name: "Kristin Watson",
       designation: "Co-Founder and CEO",
-      image: "/images/team/team-member3.png ",
+      image: "/images/team/team-member3.png",
     },
   ],
   Members: [
@@ -419,7 +420,7 @@ export const TeamData = {
       id: 113,
       name: "Tom Wilson",
       designation: "Trainer",
-      image: "/images/team/team-member6.png ",
+      image: "/images/team/team-member6.png",
     },
     {
       id: 114,
@@ -440,16 +441,6 @@ export const TeamData = {
       image: "/images/team/team-member9.png",
     },
   ],
-};
-
-// Service Page Hero Data
-export const ServiceHeroData = {
-  title: "Services We provide for your Bussiness",
-  paragraph:
-    "Discover how our services can grow your business. From digital marketing to web development and design, our team delivers tailored solutions to exceed your expectations.",
-  imageShape: "/images/work/work-shap.svg",
-  image: "/images/service/service-header-banner.png",
-  btnLinK: "#service-item",
 };
 
 //Business Service Data
@@ -577,4 +568,11 @@ export const ContactFormData = {
       email: "info@example.com",
     },
   ],
+};
+
+// Common Image style
+export const imageStyle = {
+  width: "auto",
+  maxWidth: "100%",
+  height: "auto",
 };

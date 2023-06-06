@@ -2,7 +2,7 @@
 title: "The Importance of User Experience in Web Design"
 date: "27 April 2023"
 excerpt: "n today's digital age, user experience (UX) has become one of the most important factors for website success. Learn why UX matters and how to design a website that delivers a great user experience"
-tags: 
+tags:
   - Development
   - SEO
 thumbnail: "/images/blog/featured-thumb3.png"
@@ -10,6 +10,7 @@ featureImage: "/images/blog/featured-thumb3.png"
 author: Kristin Watson
 authorDesignation: Lead Content Writer
 authorImage: "/images/blog/profile-picture.png"
+category: Development
 ---
 
 User experience (UX) is an important aspect of web design that can make or break the success of a website. In today's digital age, where the competition is fierce and attention spans are short, a website that provides a positive user experience is essential to engage and retain visitors.

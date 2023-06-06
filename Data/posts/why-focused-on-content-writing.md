@@ -2,13 +2,15 @@
 title: "Why You Should Focus on Improving Content Writing"
 date: "23 May 2023"
 excerpt: "Search engine optimization (SEO) can help you improve your website's search engine rankings, drive more traffic to your site, and ultimately increase your revenue. Discover the key SEO strategies and tools that can take your business to the next level."
-tags: 
+tags:
   - Content
+  - SEO
 thumbnail: "/images/blog/featured-image.png"
 featureImage: "/images/blog/featured-image.png"
 author: Kristin Watson
 authorDesignation: Lead Content Writer
 authorImage: "/images/blog/profile-picture.png"
+category: Content
 ---
 
 User experience (UX) is an important aspect of web design that can make or break the success of a website. In today's digital age, where the competition is fierce and attention spans are short, a website that provides a positive user experience is essential to engage and retain visitors.

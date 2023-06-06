@@ -1,12 +1,16 @@
+"use client";
+
 import PageHero from "@/components/Common/PageHero";
-import ContactForm from "@/components/contact/ContactForm";
+import ContactForm from "@/components/Contact/ContactForm";
 import SectionTitle from "@/components/Common/SectionTitle";
-import { ContactFormData } from "@/Data/Data";
-import ContactAddress from "@/components/contact/ContactAddress";
-import ContactExperts from "@/components/contact/ContactExperts";
+import { ContactFormData } from "@/data/Data";
+import ContactAddress from "@/components/Contact/ContactAddress";
+import ContactExperts from "@/components/Contact/ContactExperts";
 import CallToAction from "@/components/CallToAction";
+import useTitle from "@/hooks/useTitle";
 
 const Contact = () => {
+  useTitle("Growthus | Contact Us");
   return (
     <>
       <PageHero

@@ -2,7 +2,7 @@
 title: "The Benefits of Social Media Marketing for Your Business"
 date: "15 May 2023"
 excerpt: "Social media has become a vital part of any digital marketing strategy. With over 3 billion active users worldwide, platforms like Facebook, Instagram, and LinkedIn offer businesses a powerful way to connect with their audience and drive engagement. Learn how to harness the power of social media for your business."
-tags: 
+tags:
   - Development
   - Content
 thumbnail: "/images/blog/featured-thumb4.png"
@@ -10,6 +10,7 @@ featureImage: "/images/blog/featured-thumb4.png"
 author: Kristin Watson
 authorDesignation: Lead Content Writer
 authorImage: "/images/blog/profile-picture.png"
+category: Content
 ---
 
 User experience (UX) is an important aspect of web design that can make or break the success of a website. In today's digital age, where the competition is fierce and attention spans are short, a website that provides a positive user experience is essential to engage and retain visitors.

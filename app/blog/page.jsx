@@ -1,10 +1,14 @@
 import PageHero from "@/components/Common/PageHero.jsx";
-import BlogPostMetaData from "@/components/Blog/BlogPostMetaData.js";
 import CallToAction from "@/components/CallToAction";
-import AllBlogs from "@/components/AllBlogs/AllBlogs";
+import AllBlogs from "@/components/AllBlogs";
+import getMarkDownData from "@/utils/GetMarkDownData";
+
+export const metadata = {
+  title: "Growthus | Blog",
+};
 
 function Blog() {
-  const posts = BlogPostMetaData();
+  const posts = getMarkDownData("data/posts/");
 
   return (
     <>

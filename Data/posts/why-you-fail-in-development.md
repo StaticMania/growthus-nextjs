@@ -2,7 +2,7 @@
 title: "Why You're Failing at Devlopment"
 date: "18 May 2023"
 excerpt: "Despite the rise of social media and other digital channels, email marketing remains one of the most effective ways to reach and engage your audience. In this post, we explore the benefits of email marketing and share tips for creating a successful email campaign."
-tags: 
+tags:
   - SEO
   - Content
 thumbnail: "/images/blog/featured-thumb5.png"
@@ -10,6 +10,7 @@ featureImage: "/images/blog/featured-thumb5.png"
 author: Kristin Watson
 authorDesignation: Lead Content Writer
 authorImage: "/images/blog/profile-picture.png"
+category: Content
 ---
 
 User experience (UX) is an important aspect of web design that can make or break the success of a website. In today's digital age, where the competition is fierce and attention spans are short, a website that provides a positive user experience is essential to engage and retain visitors.
