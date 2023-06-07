@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 import Image from "next/image";
 import { imageStyle } from "@/data/data";
 function CareerHeroItem({ data }) {

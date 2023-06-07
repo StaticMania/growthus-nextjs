@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 import CareerHeroItem from "./CareerHeroItem";
 import { CareerHeroData } from "@/data/data.js";
 function CareerHero() {
