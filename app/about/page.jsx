@@ -11,7 +11,7 @@ import {
   AboutStory,
   AboutHeroData,
   FooterDatas,
-} from "@/data/Data.js";
+} from "@/data/data.js";
 import Team from "@/components/Team";
 import CompanyAddress from "@/components/CompanyAddress";
 import AboutHero from "@/components/AboutHero";

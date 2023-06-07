@@ -1,6 +1,6 @@
 "use client";
 import SectionHeader from "./Common/SectionTitle";
-import { ClientImageData } from "@/data/Data.js";
+import { ClientImageData } from "@/data/data.js";
 import Image from "next/image";
 
 const Client = (props) => {

@@ -8,8 +8,7 @@ import ServiceHero from "@/components/ServiceHero";
 import SectionHeader from "@/components/Common/SectionTitle";
 import BusinessServices from "@/components/BusinessServices";
 import { CaseStudy, Caret } from "@/components/CaseStudy";
-import CaseStudyData from "@/data/caseStudy.js";
-import serviceData from "@/data/serviceData.js";
+import { caseStudyData, servicesData } from "@/data/data.js";
 import useTitle from "@/hooks/useTitle";
 
 const Service = () => {
@@ -30,7 +29,7 @@ const Service = () => {
           </div>
         </div>
         <div className="container">
-          {serviceData.map((services) => (
+          {servicesData.map((services) => (
             <BusinessServices key={services.slug} props={services} />
           ))}
         </div>
@@ -48,7 +47,7 @@ const Service = () => {
         </div>
         <div className="container">
           <div className="row">
-            {CaseStudyData.slice(0, 6).map((caseStudy, i) => (
+            {caseStudyData.slice(0, 6).map((caseStudy, i) => (
               <CaseStudy key={i} props={caseStudy} />
             ))}
             <Caret />

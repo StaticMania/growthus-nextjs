@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CaretRight } from "@phosphor-icons/react";
-import { imageStyle } from "@/data/Data";
+import { imageStyle } from "@/data/data";
 const BusinessServices = ({ props }) => {
   return (
     <div className="row work-item-container align-items-center">

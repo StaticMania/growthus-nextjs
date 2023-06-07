@@ -3,7 +3,7 @@
 import PageHero from "@/components/Common/PageHero";
 import ContactForm from "@/components/Contact/ContactForm";
 import SectionTitle from "@/components/Common/SectionTitle";
-import { ContactFormData } from "@/data/Data";
+import { ContactFormData } from "@/data/data";
 import ContactAddress from "@/components/Contact/ContactAddress";
 import ContactExperts from "@/components/Contact/ContactExperts";
 import CallToAction from "@/components/CallToAction";

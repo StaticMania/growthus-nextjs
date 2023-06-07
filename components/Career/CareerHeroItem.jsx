@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { imageStyle } from "@/data/Data";
+import { imageStyle } from "@/data/data";
 function CareerHeroItem({ data }) {
   return (
     <>

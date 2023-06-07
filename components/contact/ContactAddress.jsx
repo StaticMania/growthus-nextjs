@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { imageStyle } from "@/data/Data";
+import { imageStyle } from "@/data/data";
 const ContactAddress = ({ ContactAddress }) => {
   const { address } = ContactAddress;
 

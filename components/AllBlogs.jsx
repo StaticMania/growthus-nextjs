@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import Caret from "./Common/Caret";
 import Pagination from "./Pagination";
-import { imageStyle } from "@/data/Data";
+import { imageStyle } from "@/data/data";
 
 const AllBlogs = ({ posts }) => {
   const [currentPage, setCurrentPage] = useState(1);

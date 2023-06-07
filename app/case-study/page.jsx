@@ -3,7 +3,7 @@
 import CallToAction from "@/components/CallToAction";
 import PageHero from "@/components/Common/PageHero.jsx";
 import { CaseStudy } from "@/components/CaseStudy";
-import CaseStudyData from "@/data/caseStudy.js";
+import { caseStudyData } from "@/data/data.js";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import useTitle from "@/hooks/useTitle";
@@ -11,18 +11,18 @@ import useTitle from "@/hooks/useTitle";
 export default function CaseStudyPage() {
   useTitle("Grouwthus | Case Study");
   const categories = ["All project", "Design", "Development", "Marketing"];
-  const [filterData, setFilterData] = useState([...CaseStudyData]);
+  const [filterData, setFilterData] = useState([...caseStudyData]);
   const [active, setActive] = useState(0);
 
   const handleClick = (category) => {
     if (category !== "All project") {
-      const data = CaseStudyData.filter((item) =>
+      const data = caseStudyData.filter((item) =>
         item.category.includes(category)
       );
       setFilterData(data);
       return;
     }
-    setFilterData(CaseStudyData);
+    setFilterData(caseStudyData);
   };
 
   return (

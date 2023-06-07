@@ -7,8 +7,9 @@ import Community from "@/components/Community";
 import Counter from "@/components/Counter";
 import Testimonials from "@/components/Testimonials/Testimonial";
 import CallToAction from "@/components/CallToAction";
-import { WorkProcessData } from "@/data/Data";
+
 import { useEffect } from "react";
+import { WorkProcessData } from "../data/data.js";
 
 export default function Home() {
   useEffect(() => {

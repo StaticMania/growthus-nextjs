@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { menuData } from "@/data/Data.js";
+import { menuData } from "@/data/data.js";
 import Image from "next/image";
 import * as Icon from "@phosphor-icons/react";
 const Navbar = () => {

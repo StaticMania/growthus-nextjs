@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { imageStyle } from "@/data/Data.js";
+import { imageStyle } from "@/data/data.js";
 
 function AboutHero({ data }) {
   const { images, title, paragraph } = data;
