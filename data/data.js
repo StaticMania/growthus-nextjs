@@ -41,7 +41,7 @@ export const menuData = {
         {
           id: 71,
           title: "Service Details",
-          path: "/services/design-service",
+          path: "/services",
           newTab: false,
         },
         {
