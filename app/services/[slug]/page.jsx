@@ -7,8 +7,7 @@ import Testimonials from "@/components/Testimonials/Testimonial";
 import CallToAction from "@/components/CallToAction";
 import SectionHeader from "@/components/Common/SectionTitle";
 import { CaseStudy, Caret } from "@/components/CaseStudy";
-import { caseStudyData, servicesData } from "@/data/data.js";
-import { imageStyle } from "@/data/data";
+import { caseStudyData, servicesData, imageStyle } from "@/data/data.js";
 import useTitle from "@/hooks/useTitle";
 
 const PostPage = (props) => {

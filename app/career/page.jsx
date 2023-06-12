@@ -6,7 +6,7 @@ import CareerList from "@/components/Career/CareerList";
 import CompanyAddress from "@/components/CompanyAddress";
 import CareerHero from "@/components/Career/CareerHero";
 import CallToAction from "@/components/CallToAction";
-import { FooterDatas, TeamData } from "@/data/data";
+import { footerDatas, teamData } from "@/data/data";
 
 export const metadata = {
   title: "Growthus | Career",
@@ -42,8 +42,8 @@ const Career = () => {
       </section>
 
       <Client border="border-bottom" />
-      <Team data={TeamData} />
-      <CompanyAddress data={FooterDatas} />
+      <Team data={teamData} />
+      <CompanyAddress data={footerDatas} />
       <CallToAction
         title={
           <>

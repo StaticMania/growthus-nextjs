@@ -6,11 +6,11 @@ import BusinessSolution from "@/components/BusinessSolution/BusinessSolution";
 import Community from "@/components/Community";
 import AboutContent from "@/components/AboutContent";
 import {
-  JoinTeam,
-  TeamData,
-  AboutStory,
-  AboutHeroData,
-  FooterDatas,
+  joinTeam,
+  teamData,
+  aboutStory,
+  aboutHeroData,
+  footerDatas,
 } from "@/data/data.js";
 import Team from "@/components/Team";
 import CompanyAddress from "@/components/CompanyAddress";
@@ -21,15 +21,15 @@ const AboutUs = () => {
   useTitle("Growthus | About Us");
   return (
     <>
-      <AboutHero data={AboutHeroData} />
+      <AboutHero data={aboutHeroData} />
       <Counter />
-      <AboutContent data={AboutStory} />
+      <AboutContent data={aboutStory} />
       <BusinessSolution />
       <Community />
       <Client />
-      <Team data={TeamData} />
-      <AboutContent data={JoinTeam} />
-      <CompanyAddress data={FooterDatas} />
+      <Team data={teamData} />
+      <AboutContent data={joinTeam} />
+      <CompanyAddress data={footerDatas} />
       <CallToAction
         title={
           <>

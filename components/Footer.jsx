@@ -3,7 +3,7 @@ import React from "react";
 import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FooterDatas } from "@/data/data.js";
+import { footerDatas } from "@/data/data.js";
 const FooterData = ({ FooterContent }) => {
   const { companyLinks, policyLinks, locations, socialLinks, resources } =
     FooterContent;
@@ -163,6 +163,6 @@ const Footer = () => {
   useEffect(() => {
     import("bootstrap/dist/js/bootstrap.bundle.min.js");
   }, []);
-  return <FooterData FooterContent={FooterDatas} />;
+  return <FooterData FooterContent={footerDatas} />;
 };
 export default Footer;

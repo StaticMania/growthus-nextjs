@@ -9,7 +9,7 @@ import Testimonials from "@/components/Testimonials/Testimonial";
 import CallToAction from "@/components/CallToAction";
 
 import { useEffect } from "react";
-import { WorkProcessData } from "../data/data.js";
+import { workProcessData } from "../data/data.js";
 
 export default function Home() {
   useEffect(() => {
@@ -21,7 +21,7 @@ export default function Home() {
       <Hero />
       <Client border="border-bottom" />
       <BusinessSolution />
-      <WorkProcess data={WorkProcessData} />
+      <WorkProcess data={workProcessData} />
       <Community />
       <Counter />
       <Testimonials />

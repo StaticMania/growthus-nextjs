@@ -1,6 +1,6 @@
 "use client";
 import SectionHeader from "./Common/SectionTitle";
-import { ClientImageData } from "@/data/data.js";
+import { clientImageData } from "@/data/data.js";
 import Image from "next/image";
 
 const Client = (props) => {
@@ -18,7 +18,7 @@ const Client = (props) => {
         <div className="row">
           <div className="col-md-12">
             <div className="client-item-wrapper d-flex justify-content-between align-items-center text-center">
-              {ClientImageData.map((item) => (
+              {clientImageData.map((item) => (
                 <div className="client-item" key={item.id}>
                   <Image
                     src={item.images}

@@ -86,7 +86,7 @@ export const menuData = {
 };
 
 // Client Data
-export const ClientImageData = [
+export const clientImageData = [
   {
     id: 1,
     images: "/images/client/client-logo-1.svg",
@@ -109,7 +109,7 @@ export const ClientImageData = [
   },
 ];
 // Business Solution
-export const BusinessSolutionData = [
+export const businessSolutionData = [
   {
     id: 1,
     icon: "/images/service/services-icon-1.svg",
@@ -134,7 +134,7 @@ export const BusinessSolutionData = [
 ];
 
 //WorkProcess Data
-export const WorkProcessData = [
+export const workProcessData = [
   {
     id: 1,
     title: "Create your web masterpiece",
@@ -193,7 +193,7 @@ export const counterData = [
 ];
 
 // Testimonial Data
-export const TestimonialData = [
+export const testimonialData = [
   {
     id: 1,
     author: "Sabo Masties",
@@ -203,7 +203,7 @@ export const TestimonialData = [
     rating: 4,
     ratingImage: "/images/testimonial/star.svg",
     authorImage: "/images/testimonial/testimonial-thumb-1.png",
-    emoji: "/images/testimonial/icon-love.svg",
+    emoji: "/images/testimonial/Icon-love.svg",
   },
   {
     id: 2,
@@ -214,7 +214,7 @@ export const TestimonialData = [
     rating: 5,
     ratingImage: "/images/testimonial/star.svg",
     authorImage: "/images/testimonial/testimonial-thumb-1.png",
-    emoji: "/images/testimonial/icon-love.svg",
+    emoji: "/images/testimonial/Icon-love.svg",
   },
   {
     id: 3,
@@ -225,7 +225,7 @@ export const TestimonialData = [
     rating: 3,
     ratingImage: "/images/testimonial/star.svg",
     authorImage: "/images/testimonial/testimonial-thumb-1.png",
-    emoji: "/images/testimonial/icon-love.svg",
+    emoji: "/images/testimonial/Icon-love.svg",
   },
   {
     id: 4,
@@ -236,7 +236,7 @@ export const TestimonialData = [
     rating: 2,
     ratingImage: "/images/testimonial/star.svg",
     authorImage: "/images/testimonial/testimonial-thumb-1.png",
-    emoji: "/images/testimonial/icon-love.svg",
+    emoji: "/images/testimonial/Icon-love.svg",
   },
   {
     id: 5,
@@ -247,12 +247,12 @@ export const TestimonialData = [
     rating: 1,
     ratingImage: "/images/testimonial/star.svg",
     authorImage: "/images/testimonial/testimonial-thumb-1.png",
-    emoji: "/images/testimonial/icon-love.svg",
+    emoji: "/images/testimonial/Icon-love.svg",
   },
 ];
 
 //Footer Data
-export const FooterDatas = {
+export const footerDatas = {
   logo: "/images/footer-logo.svg",
   footerText:
     "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing .",
@@ -343,7 +343,7 @@ export const FooterDatas = {
 };
 
 // About Hero Data
-export const AboutHeroData = {
+export const aboutHeroData = {
   title: "We make strategies, development to grow your business",
   paragraph:
     "At our agency, we're always looking for talented individuals who are passionate about what they do. We believe that our success is driven by our team, and we are committed to creating an environment where our employees can thrive. We offer a collaborative and dynamic work environment where creativity and innovation are encouraged. Our team members are not just employees, they are partners in our success. We value diversity and are committed to creating an inclusive and supportive work environment. If you are ready to take your career to the next level, then we invite you to join our team. We offer competitive salaries, comprehensive benefits, and opportunities for professional growth and development.",
@@ -363,7 +363,7 @@ export const AboutHeroData = {
   ],
 };
 // About Story Data
-export const AboutStory = {
+export const aboutStory = {
   title: "Our Story",
   paragraph:
     "Founded in 1994, our agency started with a simple goal: to help businesses grow and thrive in the ever-evolving digital landscape. Over the years, we've worked with countless clients, helping them achieve their goals and reach their full potential through our customized strategies and services. Our team of experts is passionate about what we do, and we're dedicated to staying on the cutting edge of technology and innovation. We're committed to delivering exceptional results that exceed our clients' expectations, and we're proud to have built long-lasting relationships with many of them.",
@@ -372,7 +372,7 @@ export const AboutStory = {
   videoLink: "#storyModal",
 };
 // Join Team Data
-export const JoinTeam = {
+export const joinTeam = {
   title: "Join Our Team",
   paragraph:
     "Looking for a career in digital marketing? Join our team of experts! We offer opportunities across various departments and a supportive team culture that values collaboration and innovation. With competitive compensation and flexible work arrangements, we're confident that you'll love working with us. Check out our current openings and apply today to take your career to the next level.",
@@ -382,7 +382,7 @@ export const JoinTeam = {
 };
 
 // Team Members
-export const TeamData = {
+export const teamData = {
   Leads: [
     {
       id: 1,
@@ -444,7 +444,7 @@ export const TeamData = {
 };
 
 //Business Service Data
-export const BusinessServicesData = [
+export const businessServicesData = [
   {
     id: 1,
     title: "Web Development",
@@ -522,7 +522,7 @@ export const BusinessServicesData = [
 ];
 
 // Career Hero Data
-export const CareerHeroData = {
+export const careerHeroData = {
   title: "We are looking for next talent! are you ready?",
   paragraph:
     "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable.",
@@ -531,7 +531,7 @@ export const CareerHeroData = {
   image: "/images/career/career-banner.png",
 };
 
-export const ContactFormData = {
+export const contactFormData = {
   image: "/images/contact/contact.png",
   Email: "info@growthus.com",
   phone: "+96099969996",

@@ -1,9 +1,8 @@
 "use client";
 import Image from "next/image";
 import PageHero from "@/components/Common/PageHero.jsx";
-import { caseStudyData } from "@/data/data.js";
+import { caseStudyData, imageStyle } from "@/data/data.js";
 import Link from "next/link";
-import { imageStyle } from "@/data/data";
 import useTitle from "@/hooks/useTitle";
 
 const CaseStudyPost = (props) => {
