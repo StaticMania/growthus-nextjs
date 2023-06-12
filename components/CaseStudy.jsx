@@ -2,9 +2,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import React from "react";
 import { CaretRight } from "@phosphor-icons/react";
-import { imageStyle } from "@/data/Data";
+import { imageStyle } from "@/data/data";
 
 export const Caret = () => {
   return (

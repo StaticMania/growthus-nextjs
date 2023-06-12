@@ -1,5 +1,5 @@
 "use client";
-import { counterData } from "@/data/Data.js";
+import { counterData } from "@/data/data.js";
 import CounterAnimation from "./CounterAnimation";
 
 const Counter = () => {

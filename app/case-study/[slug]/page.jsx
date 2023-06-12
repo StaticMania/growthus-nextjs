@@ -1,16 +1,16 @@
 "use client";
 import Image from "next/image";
 import PageHero from "@/components/Common/PageHero.jsx";
-import CaseStudyData from "@/data/caseStudy.js";
+import { caseStudyData } from "@/data/data.js";
 import Link from "next/link";
-import { imageStyle } from "@/data/Data";
+import { imageStyle } from "@/data/data";
 import useTitle from "@/hooks/useTitle";
 
 const CaseStudyPost = (props) => {
   useTitle("Grouwthus | Case Study");
   const slug = props.params.slug;
-  const data = CaseStudyData.find((post) => post.slug === slug);
-  const relatedPost = CaseStudyData.filter((post) =>
+  const data = caseStudyData.find((post) => post.slug === slug);
+  const relatedPost = caseStudyData.filter((post) =>
     post.category.includes(...data.category)
   );
 

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { imageStyle } from "@/data/Data";
+import { imageStyle } from "@/data/data";
 const ContactExperts = ({ contactExperts }) => {
   const { experts } = contactExperts;
   return (

@@ -3,7 +3,7 @@ import React from "react";
 import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FooterDatas } from "@/data/Data.js";
+import { FooterDatas } from "@/data/data.js";
 const FooterData = ({ FooterContent }) => {
   const { companyLinks, policyLinks, locations, socialLinks, resources } =
     FooterContent;

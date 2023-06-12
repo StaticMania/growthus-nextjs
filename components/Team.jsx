@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import SectionHeader from "./Common/SectionTitle";
-import { imageStyle } from "@/data/Data";
+import { imageStyle } from "@/data/data";
 
 function Team({ data }) {
   const { Leads, Members } = data;

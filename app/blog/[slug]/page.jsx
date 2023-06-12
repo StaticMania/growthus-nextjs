@@ -3,7 +3,7 @@ import Image from "next/image";
 import Markdown from "react-markdown";
 import RelatedBlog from "@/components/RelatedBlog";
 import CallToAction from "@/components/CallToAction";
-import { imageStyle } from "@/data/Data";
+import { imageStyle } from "@/data/data";
 import getMarkDownContent from "@/utils/GetMarkDownContent";
 import getMarkDownData from "@/utils/GetMarkDownData";
 

@@ -7,15 +7,14 @@ import Testimonials from "@/components/Testimonials/Testimonial";
 import CallToAction from "@/components/CallToAction";
 import SectionHeader from "@/components/Common/SectionTitle";
 import { CaseStudy, Caret } from "@/components/CaseStudy";
-import CaseStudyData from "@/data/caseStudy.js";
-import serviceData from "@/data/serviceData.js";
-import { imageStyle } from "@/data/Data";
+import { caseStudyData, servicesData } from "@/data/data.js";
+import { imageStyle } from "@/data/data";
 import useTitle from "@/hooks/useTitle";
 
 const PostPage = (props) => {
   useTitle("Growthus | Services");
   const slug = props.params.slug;
-  const data = serviceData.find((post) => post.slug === slug);
+  const data = servicesData.find((post) => post.slug === slug);
   return (
     <>
       <section className="service-hero services-desc-hero pt-8">
@@ -128,7 +127,7 @@ const PostPage = (props) => {
         </div>
         <div className="container">
           <div className="row">
-            {CaseStudyData.slice(0, 6).map((caseStudy, i) => (
+            {caseStudyData.slice(0, 6).map((caseStudy, i) => (
               <CaseStudy key={i} props={caseStudy} />
             ))}
             <Caret />

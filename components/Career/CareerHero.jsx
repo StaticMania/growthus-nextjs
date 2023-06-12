@@ -1,6 +1,6 @@
-import React from "react";
+"use client";
 import CareerHeroItem from "./CareerHeroItem";
-import { CareerHeroData } from "@/data/Data.js";
+import { CareerHeroData } from "@/data/data.js";
 function CareerHero() {
   return <CareerHeroItem data={CareerHeroData} />;
 }

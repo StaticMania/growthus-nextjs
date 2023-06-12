@@ -2,7 +2,7 @@
 
 import SectionHeader from "../Common/SectionTitle";
 import BusinessSolutionItems from "./BusinessSolutionItems";
-import { BusinessSolutionData } from "@/data/Data.js";
+import { BusinessSolutionData } from "@/data/data.js";
 function BusinessSolution() {
   return (
     <section className="services py-7 py-md-9">

@@ -1,3 +1,4 @@
+"use client";
 const CareerForm = () => {
   return (
     <section className="career-contact-form contact-form py-7">
