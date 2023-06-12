@@ -2,7 +2,7 @@
 
 import SectionHeader from "../Common/SectionTitle";
 import BusinessSolutionItems from "./BusinessSolutionItems";
-import { BusinessSolutionData } from "@/data/data.js";
+import { businessSolutionData } from "@/data/data.js";
 function BusinessSolution() {
   return (
     <section className="services py-7 py-md-9">
@@ -16,7 +16,7 @@ function BusinessSolution() {
           </div>
         </div>
         <div className="row">
-          {BusinessSolutionData.map((item) => (
+          {businessSolutionData.map((item) => (
             <BusinessSolutionItems key={item.id} data={item} />
           ))}
         </div>

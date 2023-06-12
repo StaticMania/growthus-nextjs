@@ -3,7 +3,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { TestimonialData } from "@/data/data.js";
+import { testimonialData } from "@/data/data.js";
 import TestimonialItems from "./TestimonialItems";
 import { CaretRight, CaretLeft } from "@phosphor-icons/react";
 function SampleNextArrow(props) {
@@ -69,7 +69,7 @@ const Testimonial = () => {
                 {...settings}
                 className="testimonials-slider position-relative"
               >
-                {TestimonialData.map((item) => (
+                {testimonialData.map((item) => (
                   <TestimonialItems key={item.id} data={item} />
                 ))}
               </Slider>

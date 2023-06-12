@@ -3,7 +3,7 @@
 import PageHero from "@/components/Common/PageHero";
 import ContactForm from "@/components/Contact/ContactForm";
 import SectionTitle from "@/components/Common/SectionTitle";
-import { ContactFormData } from "@/data/data";
+import { contactFormData } from "@/data/data";
 import ContactAddress from "@/components/Contact/ContactAddress";
 import ContactExperts from "@/components/Contact/ContactExperts";
 import CallToAction from "@/components/CallToAction";
@@ -21,7 +21,7 @@ const Contact = () => {
         }
       />
       <ContactForm />
-      <ContactAddress ContactAddress={ContactFormData} />
+      <ContactAddress ContactAddress={contactFormData} />
 
       <section className="team contact-team py-3 pb-md-10">
         <div className="container">
@@ -34,7 +34,7 @@ const Contact = () => {
           <div className="row">
             <div className="col-12">
               <div className="team-wrapper d-grid grid-template-3">
-                <ContactExperts contactExperts={ContactFormData} />
+                <ContactExperts contactExperts={contactFormData} />
               </div>
             </div>
           </div>

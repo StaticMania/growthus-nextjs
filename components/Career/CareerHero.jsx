@@ -1,8 +1,8 @@
 "use client";
 import CareerHeroItem from "./CareerHeroItem";
-import { CareerHeroData } from "@/data/data.js";
+import { careerHeroData } from "@/data/data.js";
 function CareerHero() {
-  return <CareerHeroItem data={CareerHeroData} />;
+  return <CareerHeroItem data={careerHeroData} />;
 }
 
 export default CareerHero;
