@@ -572,7 +572,6 @@ export const contactFormData = {
 
 // Common Image style
 export const imageStyle = {
-  width: "auto",
   maxWidth: "100%",
   height: "auto",
 };

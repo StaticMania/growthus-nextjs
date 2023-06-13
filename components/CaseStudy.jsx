@@ -34,12 +34,10 @@ export const CaseStudy = ({ props }) => {
       <motion.div className="project-item-wrapper">
         <motion.a href={`/case-study/${props.slug}`} className="project-item">
           <motion.div className="project-item-thumb">
-            <Image
+            <img
               src={props.thumbnail}
               alt="project-thumbnail"
-              width={300}
-              height={300}
-              style={imageStyle}
+              className="w-100"
             />
             <motion.span>{props.tag}</motion.span>
           </motion.div>

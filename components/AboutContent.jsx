@@ -18,10 +18,10 @@ const AboutContent = ({ data }) => {
                   }`}
                 >
                   <Image
-                    src={imageShape}
-                    alt="About Story images"
-                    width={500}
-                    height={500}
+                    src="/images/work/work-shap.svg"
+                    alt="hero images"
+                    width={530}
+                    height={575}
                     style={imageStyle}
                   />
                 </div>
@@ -31,8 +31,8 @@ const AboutContent = ({ data }) => {
                   <Image
                     src={image}
                     alt="About Story images"
-                    width={500}
-                    height={500}
+                    width={540}
+                    height={590}
                     style={imageStyle}
                   />
                 </div>
