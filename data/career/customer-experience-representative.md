@@ -1,6 +1,6 @@
 ---
 title: "Customer Experience Representative"
-publishDate: 25-05-2023
+publishDate: 25 May 2023
 jobType: remote
 tag: new
 ---
