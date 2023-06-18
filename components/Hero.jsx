@@ -1,6 +1,6 @@
 "use client";
 import * as Icon from "@phosphor-icons/react";
-import { motion } from "framer-motion";
+import {motion} from "framer-motion";
 
 const Hero = () => {
   const imageShapeStyle = {
@@ -19,7 +19,7 @@ const Hero = () => {
 
   // Animation
   const container = {
-    hidden: { opacity: 1, scale: 1 },
+    hidden: {opacity: 1, scale: 1},
     visible: {
       opacity: 1,
       scale: 1,
@@ -30,14 +30,14 @@ const Hero = () => {
     },
   };
   const item1 = {
-    hidden: { y: 50, opacity: 0 },
+    hidden: {y: 50, opacity: 0},
     visible: {
       y: 0,
       opacity: 1,
     },
   };
   const item2 = {
-    hidden: { y: 70, opacity: 0 },
+    hidden: {y: 70, opacity: 0},
     visible: {
       y: 0,
       opacity: 1,
@@ -63,17 +63,11 @@ const Hero = () => {
             }}
             className="col-lg-7 col-xl-6"
           >
-            <motion.div
-              className="hero-content text-center text-lg-start"
-              data-aos="fade-up"
-              data-aos-duration="600"
-              data-aos-once="true"
-            >
+            <motion.div className="hero-content text-center text-lg-start">
               <motion.h1>We Build Relationships that Drive Growth</motion.h1>
               <motion.p className="w-lg-75">
-                At our agency, we believe in building strong relationships with
-                our clients. Understanding your business goals, we can help you
-                achieve success.
+                At our agency, we believe in building strong relationships with our clients. Understanding your business
+                goals, we can help you achieve success.
               </motion.p>
               <motion.div className="d-lg-flex">
                 <motion.a
@@ -82,17 +76,22 @@ const Hero = () => {
                 >
                   Let’s Talk
                 </motion.a>
-                <motion.a href="/case-study" className="btn btn-outline">
+                <motion.a
+                  href="/case-study"
+                  className="btn btn-outline"
+                >
                   Check Our Work
                 </motion.a>
               </motion.div>
               <motion.div className="review-wrapper">
                 <motion.div className="star-block-hero">
-                  <Icon.Star size={18} weight="fill" />
+                  <Icon.Star
+                    size={18}
+                    weight="fill"
+                  />
                 </motion.div>
                 <motion.div>
-                  Rated <motion.strong>4.8/5</motion.strong> from over{" "}
-                  <motion.strong>500+</motion.strong> reviews.
+                  Rated <motion.strong>4.8/5</motion.strong> from over <motion.strong>500+</motion.strong> reviews.
                 </motion.div>
               </motion.div>
             </motion.div>
@@ -104,13 +103,7 @@ const Hero = () => {
             }}
             className="col-lg-5 col-xl-6"
           >
-            <motion.div
-              className="hero-banner"
-              data-aos="fade-up"
-              data-aos-duration="600"
-              data-aos-delay="200"
-              data-aos-once="true"
-            >
+            <motion.div className="hero-banner">
               <motion.div className="hero-shape-wrapper position-absolute w-100 h-100">
                 <motion.div className="hero-shape position-absolute bg-turquoise rounded-circle">
                   <motion.img

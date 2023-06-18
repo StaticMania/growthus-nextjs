@@ -8,8 +8,8 @@ import Counter from "@/components/Counter";
 import Testimonials from "@/components/Testimonials/Testimonial";
 import CallToAction from "@/components/CallToAction";
 
-import { useEffect } from "react";
-import { workProcessData } from "../data/data.js";
+import {useEffect} from "react";
+import {workProcessData} from "../data/data.js";
 
 export default function Home() {
   useEffect(() => {
@@ -28,11 +28,9 @@ export default function Home() {
       <CallToAction
         title={
           <>
-            <span>Sounds Good? </span> <br />{" "}
-            <span>Let’s Grow your Business.</span>
+            <span>Sounds Good? </span> <br /> <span>Let’s Grow your Business.</span>
           </>
         }
-        link="/"
       />
     </>
   );

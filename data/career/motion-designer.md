@@ -1,6 +1,6 @@
 ---
 title: "Motion Designer"
-publishDate: 25-05-2023
+publishDate: 25 May 2023
 jobType: Office
 tag: new
 ---
