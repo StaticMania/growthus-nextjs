@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { imageStyle } from "@/data/data";
+import {imageStyle} from "@/data/data";
 
 const ServiceHero = () => {
   return (
@@ -13,7 +13,7 @@ const ServiceHero = () => {
                 <div className="work-item-shape bg-primary-light">
                   <Image
                     src="/images/work/work-shap.svg"
-                    alt="About Story images"
+                    alt="Service Hero Shape"
                     width={500}
                     height={500}
                     style={imageStyle}
@@ -24,9 +24,9 @@ const ServiceHero = () => {
                 <div className="work-item-wraper-banner">
                   <Image
                     src="/images/service/service-header-banner.png"
-                    alt="About Story images"
-                    width={500}
-                    height={500}
+                    alt="Service Hero image"
+                    width={540}
+                    height={590}
                     style={imageStyle}
                   />
                 </div>
@@ -36,16 +36,16 @@ const ServiceHero = () => {
           <div className="col-lg-6">
             <div className="work-item">
               <div className="work-content service-hero-content">
-                <h1 className="service-title">
-                  Services We provide for your Bussiness
-                </h1>
+                <h1 className="service-title">Services We provide for your Bussiness</h1>
                 <p>
-                  Discover how our services can grow your business. From digital
-                  marketing to web development and design, our team delivers
-                  tailored solutions to exceed your expectations.
+                  Discover how our services can grow your business. From digital marketing to web development and
+                  design, our team delivers tailored solutions to exceed your expectations.
                 </p>
 
-                <a href="#service-item" className="service-topTobottom">
+                <a
+                  href="#service-item"
+                  className="service-topTobottom"
+                >
                   <svg
                     width="45"
                     height="63"
