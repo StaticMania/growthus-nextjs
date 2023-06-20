@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import Image from "next/image";
 import Link from "next/link";
@@ -32,21 +33,19 @@ export const CaseStudy = ({ props }) => {
       className="col-md-4"
     >
       <motion.div className="project-item-wrapper">
-        <motion.a href={`/case-study/${props.slug}`} className="project-item">
+        <Link href={`/case-study/${props.slug}`} className="project-item">
           <motion.div className="project-item-thumb">
-            <Image
+            <img
               src={props.thumbnail}
               alt="project-thumbnail"
-              width={300}
-              height={300}
-              style={imageStyle}
+              className="w-100"
             />
             <motion.span>{props.tag}</motion.span>
           </motion.div>
           <motion.div className="project-item-content">
             <motion.h3>{props.title}</motion.h3>
           </motion.div>
-        </motion.a>
+        </Link>
       </motion.div>
     </motion.div>
   );
