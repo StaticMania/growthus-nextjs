@@ -14,8 +14,8 @@ const ServiceHero = () => {
                   <Image
                     src="/images/work/work-shap.svg"
                     alt="About Story images"
-                    width={500}
-                    height={500}
+                    width={530}
+                    height={575}
                     style={imageStyle}
                   />
                 </div>
@@ -25,8 +25,8 @@ const ServiceHero = () => {
                   <Image
                     src="/images/service/service-header-banner.png"
                     alt="About Story images"
-                    width={500}
-                    height={500}
+                    width={553}
+                    height={560}
                     style={imageStyle}
                   />
                 </div>
