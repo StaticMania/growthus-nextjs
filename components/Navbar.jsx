@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { menuData } from "@/data/data.js";
+import {useEffect, useState} from "react";
+import {menuData} from "@/data/data.js";
 import Image from "next/image";
 import * as Icon from "@phosphor-icons/react";
 const Navbar = () => {
@@ -18,8 +18,12 @@ const Navbar = () => {
     window.addEventListener("scroll", handleStickyNavbar);
   }, []);
 
+  // Mobile Menu handler
+  const [toggler, setToggler] = useState(true);
+
   // submenu handler
   const [collapsed, setCollapsed] = useState(true);
+
   // Menu acive
   const [active, setActive] = useState(null);
   return (
@@ -39,20 +43,23 @@ const Navbar = () => {
             href="/"
             onClick={() => setActive(null)}
           >
-            <Image src={menuData.logo} alt="logo" width={140} height={30} />
+            <Image
+              src={menuData.logo}
+              alt="logo"
+              width={140}
+              height={30}
+            />
           </Link>
           <button
             type="button"
             data-bs-toggle="collapse"
-            className={
-              collapsed ? "navbar-toggler collapsed p-3" : "navbar-toggler p-3"
-            }
+            className={toggler ? "navbar-toggler collapsed p-3" : "navbar-toggler p-3"}
             onClick={() => {
-              setCollapsed(!collapsed);
+              setToggler(!toggler);
             }}
             data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
-            aria-expanded={collapsed ? false : true}
+            aria-expanded={toggler ? false : true}
             aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-default">
@@ -83,19 +90,13 @@ const Navbar = () => {
             </span>
           </button>
           <div
-            className={
-              collapsed
-                ? "collapse navbar-collapse"
-                : "collapse navbar-collapse show"
-            }
+            className={toggler ? "collapse navbar-collapse" : "collapse navbar-collapse show"}
             id="navbarSupportedContent"
           >
             <ul className="navbar-nav ms-xl-5">
               {menuData.menuContent.map((menuItem) => (
                 <li
-                  className={`${
-                    menuItem.path ? " nav-item " : "nav-item dropdown"
-                  }`}
+                  className={`${menuItem.path ? " nav-item " : "nav-item dropdown"}`}
                   key={menuItem.id}
                 >
                   {menuItem.path ? (
@@ -103,9 +104,7 @@ const Navbar = () => {
                       <Link
                         href={menuItem.path}
                         onClick={() => setActive(menuItem)}
-                        className={`nav-link ${
-                          active === menuItem ? "active" : ""
-                        }`}
+                        className={`nav-link ${active === menuItem ? "active" : ""}`}
                       >
                         {menuItem.title}
                       </Link>
@@ -113,14 +112,16 @@ const Navbar = () => {
                   ) : (
                     <>
                       <a
-                        className="nav-link dropdown-toggle"
+                        className={collapsed ? "nav-link dropdown-toggle" : "nav-link dropdown-toggle show"}
                         role="button"
-                        data-bs-toggle="dropdown"
+                        onClick={() => {
+                          setCollapsed(!collapsed);
+                        }}
                       >
                         {menuItem.title}
                         <Icon.CaretDown size={16} />
                       </a>
-                      <ul className="dropdown-menu">
+                      <ul className={collapsed ? "dropdown-menu" : "dropdown-menu show"}>
                         <li className="dropdown-menu-wrapper">
                           <ul className="list-unstyled">
                             {menuItem.submenu.map((submenuItem) => (
@@ -128,9 +129,7 @@ const Navbar = () => {
                                 className="dropdown-menu-item"
                                 key={submenuItem.id}
                               >
-                                <Link href={submenuItem.path}>
-                                  {submenuItem.title}
-                                </Link>
+                                <Link href={submenuItem.path}>{submenuItem.title}</Link>
                               </li>
                             ))}
                           </ul>

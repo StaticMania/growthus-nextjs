@@ -114,7 +114,7 @@ const WorkProcessItems = ({data}) => {
                   <div className="work-shape-three-content">
                     <div className="work-shape-three-content-item">
                       <h5>Which Date</h5>
-                      <span>${paymentDate}</span>
+                      <span>{paymentDate}</span>
                     </div>
                     <div className="work-shape-three-content-item">
                       <h5>Recieved</h5>
